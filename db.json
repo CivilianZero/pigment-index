@@ -1,0 +1,41 @@
+{
+  "index": [
+    {
+      "id": "rk8t6lbMe",
+      "name": {
+        "common": "Ultramarine",
+        "pronunc": "''",
+        "etym": "Latin: ultramarinus, \"beyond the sea\"",
+        "altNames": "Fra Angelico blue"
+      },
+      "descript": "Ultramarine is a brilliant blue pigment derived from lapis lazuli, a semi-precious stoned, historically mined in Afghanistan. While still available in its natural form today, it's intensive production process makes it quite expensive. It has been replaced in the modern  day with its artificial counterpart.",
+      "origins": {
+        "source": "Lapis lazuli, a semi-precious stone",
+        "location": "Sar-e-sang, Afghanistan",
+        "production": "After being pulverized, the powder is mixed with molten wax, resin, and oil. This combination is wrapped in muslin and immersed in a lye bath and kneaded under the surface. The blue particles will settle to the bottom and once removed from the bath, allowed to dry. ",
+        "useStart": "13th century",
+        "useEnd": "1828"
+      },
+      "anecdote": "Ultramarine blue is a color illustrious, beautiful, and most perfect, beyond all other colors; one could not say anything about it, or do anything with it, that its quality would not still surpass. And, because of its excellence, I want to discuss it at length, and to show you in detail how it is made. And pay close attention to this, for you will gain great honor and service from it. And let some of that color, combined with gold, which adorns all the works of our profession, whether on wall or on panel, shine forth in every object.",
+      "practical": {
+        "suitable": "Oil, acrylic, watercolor, gouache, tempera",
+        "ratio": "''",
+        "charInOil": "''",
+        "modernAlt": "French ultramarine (artificial)"
+      },
+      "chemistry": {
+        "chemType": "Inorganic",
+        "chemForm": "Na6-8Al6Si6O24S2-4",
+        "chemDesc": "Sodium sulfosilicate from lapis lazuli",
+        "toxic": "Not considered toxic."
+      },
+      "images": {
+        "iconImg": "#",
+        "sourceImg": "http://geology.com/gemstones/lapis-lazuli/banded-lapis.jpg",
+        "pigImg": "https://upload.wikimedia.org/wikipedia/commons/6/67/Ultramarinepigment.jpg",
+        "colorCode": "#3F00FF"
+      },
+      "example": "https://upload.wikimedia.org/wikipedia/commons/4/48/Sassoferrato_-_Jungfrun_i_b%C3%B6n.jpg"
+    }
+  ]
+}
