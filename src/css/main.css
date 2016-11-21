@@ -7,3 +7,11 @@
 	content: '';
 	display: table;
 }
+
+input,
+textarea,
+button {
+	display: block;
+	margin: 10px 40px;
+	padding: 10px;
+}

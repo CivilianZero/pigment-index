@@ -5,13 +5,18 @@ var React = require('react'),
 var Router = ReactRouter.Router,
 	Route = ReactRouter.Route,
 	IndexRoute = ReactRouter.IndexRoute,
-	hashHistory = ReactRouter.hashHistory;
+	hashHistory = ReactRouter.hashHistory; 
 
-var App = require('./components/App.jsx');
+var App = require('./components/App.jsx'),
+	DataEntry = require('./components/DataEntry.jsx'),
+	PigmentData = require('./components/PigmentData.jsx');
 
 var jsx = (
 	<Router history={hashHistory}>
-		<Route path='/' component={App}></Route>
+		<Route path='/' component={App}>
+			<Route path='/devTools' component={DataEntry} />
+			<Route path='/devTools/:id' component={PigmentData} />
+		</Route>
 	</Router>
 );
 

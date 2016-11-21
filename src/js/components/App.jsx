@@ -13,6 +13,7 @@ var App = React.createClass({
 			<div>
 				<header>
 					<Link to='/' className={getActiveClass('/')}>Home</Link>
+					<Link to='/devTools' className={getActiveClass('/devTools')}>Enter Data</Link>
 				</header>
 				<main>
 					<h1>App</h1>
@@ -23,4 +24,4 @@ var App = React.createClass({
 	}
 });
 
-module.exports= App;
+module.exports = App;
