@@ -33,14 +33,6 @@ app.post('/devTools', function (req, res) {
 		useStart = body.origins.useStart,
 		useEnd = body.origins.useEnd,
 		anecdote = body.anecdote,
-		suitable = body.practical.suitable,
-		ratio = body.practical.ratio,
-		charInOil = body.practical.charInOil,
-		modernAlt = body.practical.modernAlt,
-		chemType = body.chemistry.chemType,
-		chemForm = body.chemistry.chemForm,
-		chemDesc = body.chemistry.chemDesc,
-		toxic = body.chemistry.toxic,
 		iconImg = body.images.iconImg,
 		sourceImg = body.images.sourceImg,
 		pigImg = body.images.pigImg,
@@ -55,11 +47,6 @@ app.post('/devTools', function (req, res) {
 		production &&
 		useStart &&
 		useEnd &&
-		suitable &&
-		chemType &&
-		chemForm &&
-		chemDesc &&
-		toxic &&
 		iconImg &&
 		sourceImg &&
 		pigImg &&
@@ -83,18 +70,6 @@ app.post('/devTools', function (req, res) {
 				useEnd: useEnd,
 			},
 			anecdote: anecdote,
-			practical: {
-				suitable: suitable,
-				ratio: ratio,
-				charInOil: charInOil,
-				modernAlt: modernAlt,
-			},
-			chemistry: {
-				chemType: chemType,
-				chemForm: chemForm,
-				chemDesc: chemDesc,
-				toxic: toxic,
-			},
 			images: {
 				iconImg: iconImg,
 				sourceImg: sourceImg,
@@ -144,14 +119,6 @@ app.put('/devTools/:id', function (req, res) {
 		useStart = body.origins.useStart,
 		useEnd = body.origins.useEnd,
 		anecdote = body.anecdote,
-		suitable = body.practical.suitable,
-		ratio = body.practical.ratio,
-		charInOil = body.practical.charInOil,
-		modernAlt = body.practical.modernAlt,
-		chemType = body.chemistry.chemType,
-		chemForm = body.chemistry.chemForm,
-		chemDesc = body.chemistry.chemDesc,
-		toxic = body.chemistry.toxic,
 		iconImg = body.images.iconImg,
 		sourceImg = body.images.sourceImg,
 		pigImg = body.images.pigImg,
@@ -175,18 +142,6 @@ app.put('/devTools/:id', function (req, res) {
 				useEnd: useEnd,
 			},
 			anecdote: anecdote,
-			practical: {
-				suitable: suitable,
-				ratio: ratio,
-				charInOil: charInOil,
-				modernAlt: modernAlt,
-			},
-			chemistry: {
-				chemType: chemType,
-				chemForm: chemForm,
-				chemDesc: chemDesc,
-				toxic: toxic,
-			},
 			images: {
 				iconImg: iconImg,
 				sourceImg: sourceImg,

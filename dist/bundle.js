@@ -26440,14 +26440,6 @@
 				useStartValue: '',
 				useEndValue: '',
 				anecdoteValue: '',
-				suitableValue: '',
-				ratioValue: '',
-				charInOilValue: '',
-				modernAltValue: '',
-				chemTypeValue: '',
-				chemFormValue: '',
-				chemDescValue: '',
-				toxicValue: '',
 				iconImgValue: '',
 				sourceImgValue: '',
 				pigImgValue: '',
@@ -26544,53 +26536,6 @@
 					placeholder: 'anecdote',
 					onChange: this.handleChange }),
 				React.createElement('input', {
-					type: 'text',
-					ref: 'suitable',
-					value: this.state.suitableValue,
-					placeholder: 'suitable',
-					onChange: this.handleChange }),
-				React.createElement('input', {
-					type: 'text',
-					ref: 'ratio',
-					value: this.state.ratioValue,
-					placeholder: 'ratio',
-					onChange: this.handleChange }),
-				React.createElement('input', {
-					type: 'text',
-					ref: 'charInOil',
-					value: this.state.charInOilValue,
-					placeholder: 'charInOil',
-					onChange: this.handleChange }),
-				React.createElement('input', {
-					type: 'text',
-					ref: 'modernAlt',
-					value: this.state.modernAltValue,
-					placeholder: 'modernAlt',
-					onChange: this.handleChange }),
-				React.createElement('input', {
-					type: 'text',
-					ref: 'chemType',
-					value: this.state.chemTypeValue,
-					placeholder: 'chemType',
-					onChange: this.handleChange }),
-				React.createElement('input', {
-					type: 'text',
-					ref: 'chemForm',
-					value: this.state.chemFormValue,
-					placeholder: 'chemForm',
-					onChange: this.handleChange }),
-				React.createElement('textarea', {
-					ref: 'chemDesc',
-					value: this.state.chemDescValue,
-					placeholder: 'chemDesc',
-					onChange: this.handleChange }),
-				React.createElement('textarea', {
-					type: 'text',
-					ref: 'toxic',
-					value: this.state.toxicValue,
-					placeholder: 'toxic',
-					onChange: this.handleChange }),
-				React.createElement('input', {
 					ref: 'iconImg',
 					value: this.state.iconImgValue,
 					placeholder: 'iconImg',
@@ -26633,8 +26578,8 @@
 		},
 
 		handleClick() {
-			if (this.state.commonValue, this.state.descriptValue, this.state.sourceValue, this.state.productionValue, this.state.useStartValue, this.state.useEndValue, this.state.suitableValue, this.state.chemTypeValue, this.state.chemFormValue, this.state.chemDescValue, this.state.toxicValue, this.state.iconImgValue, this.state.sourceImgValue, this.state.pigImgValue, this.state.colorCodeValue) {
-				pigmentStore.add(this.state.commonValue, this.state.pronuncValue, this.state.etymValue, this.state.altNamesValue, this.state.descriptValue, this.state.sourceValue, this.state.locationValue, this.state.productionValue, this.state.useStartValue, this.state.useEndValue, this.state.anecdoteValue, this.state.suitableValue, this.state.ratioValue, this.state.charInOilValue, this.state.modernAltValue, this.state.chemTypeValue, this.state.chemFormValue, this.state.chemDescValue, this.state.toxicValue, this.state.iconImgValue, this.state.sourceImgValue, this.state.pigImgValue, this.state.colorCodeValue, this.state.exampleValue);
+			if (this.state.commonValue, this.state.descriptValue, this.state.sourceValue, this.state.productionValue, this.state.useStartValue, this.state.useEndValue, this.state.iconImgValue, this.state.sourceImgValue, this.state.pigImgValue, this.state.colorCodeValue) {
+				pigmentStore.add(this.state.commonValue, this.state.pronuncValue, this.state.etymValue, this.state.altNamesValue, this.state.descriptValue, this.state.sourceValue, this.state.locationValue, this.state.productionValue, this.state.useStartValue, this.state.useEndValue, this.state.anecdoteValue, this.state.iconImgValue, this.state.sourceImgValue, this.state.pigImgValue, this.state.colorCodeValue, this.state.exampleValue);
 				this.setState({
 					commonValue: '',
 					pronuncValue: '',
@@ -26647,14 +26592,6 @@
 					useStartValue: '',
 					useEndValue: '',
 					anecdoteValue: '',
-					suitableValue: '',
-					ratioValue: '',
-					charInOilValue: '',
-					modernAltValue: '',
-					chemTypeValue: '',
-					chemFormValue: '',
-					chemDescValue: '',
-					toxicValue: '',
 					iconImgValue: '',
 					sourceImgValue: '',
 					pigImgValue: '',
@@ -26679,14 +26616,6 @@
 				useStartValue: this.refs.useStart.value,
 				useEndValue: this.refs.useEnd.value,
 				anecdoteValue: this.refs.anecdote.value,
-				suitableValue: this.refs.suitable.value,
-				ratioValue: this.refs.ratio.value,
-				charInOilValue: this.refs.charInOil.value,
-				modernAltValue: this.refs.modernAlt.value,
-				chemTypeValue: this.refs.chemType.value,
-				chemFormValue: this.refs.chemForm.value,
-				chemDescValue: this.refs.chemDesc.value,
-				toxicValue: this.refs.toxic.value,
 				iconImgValue: this.refs.iconImg.value,
 				sourceImgValue: this.refs.sourceImg.value,
 				pigImgValue: this.refs.pigImg.value,
@@ -26761,7 +26690,7 @@
 		}
 	};
 
-	pigmentStore.add = function (common, pronunc, etym, altNames, descript, source, location, production, useStart, useEnd, anecdote, suitable, ratio, charInOil, modernAlt, chemType, chemForm, chemDesc, toxic, iconImg, sourceImg, pigImg, colorCode, example) {
+	pigmentStore.add = function (common, pronunc, etym, altNames, descript, source, location, production, useStart, useEnd, anecdote, iconImg, sourceImg, pigImg, colorCode, example) {
 		var data = { data: {
 				name: {
 					common: common,
@@ -26778,18 +26707,6 @@
 					useEnd: useEnd
 				},
 				anecdote: anecdote,
-				practical: {
-					suitable: suitable,
-					ratio: ratio,
-					charInOil: charInOil,
-					modernAlt: modernAlt
-				},
-				chemistry: {
-					chemType: chemType,
-					chemForm: chemForm,
-					chemDesc: chemDesc,
-					toxic: toxic
-				},
 				images: {
 					iconImg: iconImg,
 					sourceImg: sourceImg,
@@ -26819,18 +26736,6 @@
 					useEnd: useEnd
 				},
 				anecdote: anecdote,
-				practical: {
-					suitable: suitable,
-					ratio: ratio,
-					charInOil: charInOil,
-					modernAlt: modernAlt
-				},
-				chemistry: {
-					chemType: chemType,
-					chemForm: chemForm,
-					chemDesc: chemDesc,
-					toxic: toxic
-				},
 				images: {
 					iconImg: iconImg,
 					sourceImg: sourceImg,
@@ -26846,7 +26751,7 @@
 		});
 	};
 
-	pigmentStore.edit = function (id, common, pronunc, etym, altNames, descript, source, location, production, useStart, useEnd, anecdote, suitable, ratio, charInOil, modernAlt, chemType, chemForm, chemDesc, toxic, iconImg, sourceImg, pigImg, colorCode, example) {
+	pigmentStore.edit = function (id, common, pronunc, etym, altNames, descript, source, location, production, useStart, useEnd, anecdote, iconImg, sourceImg, pigImg, colorCode, example) {
 		var pigment = findById(id);
 		if (pigment) {
 			$.ajax({
@@ -26868,18 +26773,6 @@
 						useEnd: useEnd
 					},
 					anecdote: anecdote,
-					practical: {
-						suitable: suitable,
-						ratio: ratio,
-						charInOil: charInOil,
-						modernAlt: modernAlt
-					},
-					chemistry: {
-						chemType: chemType,
-						chemForm: chemForm,
-						chemDesc: chemDesc,
-						toxic: toxic
-					},
 					images: {
 						iconImg: iconImg,
 						sourceImg: sourceImg,
@@ -37473,14 +37366,6 @@
 	            editingUseStartValue: '',
 	            editingUseEndValue: '',
 	            editingAnecdoteValue: '',
-	            editingSuitableValue: '',
-	            editingRatioValue: '',
-	            editingCharInOilValue: '',
-	            editingModernAltValue: '',
-	            editingChemTypeValue: '',
-	            editingChemFormValue: '',
-	            editingChemDescValue: '',
-	            editingToxicValue: '',
 	            editingIconImgValue: '',
 	            editingSourceImgValue: '',
 	            editingPigImgValue: '',
@@ -37669,124 +37554,6 @@
 	                            React.createElement('textarea', {
 	                                ref: 'Anecdote',
 	                                value: this.state.editingAnecdoteValue,
-	                                onChange: this.handleEditingChange
-	                            })
-	                        ),
-	                        React.createElement(
-	                            'dt',
-	                            null,
-	                            'Suitable:'
-	                        ),
-	                        React.createElement(
-	                            'dd',
-	                            null,
-	                            React.createElement('input', {
-	                                type: 'text',
-	                                ref: 'Suitable',
-	                                value: this.state.editingSuitableValue,
-	                                onChange: this.handleEditingChange
-	                            })
-	                        ),
-	                        React.createElement(
-	                            'dt',
-	                            null,
-	                            'Ratio:'
-	                        ),
-	                        React.createElement(
-	                            'dd',
-	                            null,
-	                            React.createElement('input', {
-	                                type: 'text',
-	                                ref: 'Ratio',
-	                                value: this.state.editingRatioValue,
-	                                onChange: this.handleEditingChange
-	                            })
-	                        ),
-	                        React.createElement(
-	                            'dt',
-	                            null,
-	                            'CharInOil:'
-	                        ),
-	                        React.createElement(
-	                            'dd',
-	                            null,
-	                            React.createElement('input', {
-	                                type: 'text',
-	                                ref: 'CharInOil',
-	                                value: this.state.editingCharInOilValue,
-	                                onChange: this.handleEditingChange
-	                            })
-	                        ),
-	                        React.createElement(
-	                            'dt',
-	                            null,
-	                            'ModernAlt:'
-	                        ),
-	                        React.createElement(
-	                            'dd',
-	                            null,
-	                            React.createElement('input', {
-	                                type: 'text',
-	                                ref: 'ModernAlt',
-	                                value: this.state.editingModernAltValue,
-	                                onChange: this.handleEditingChange
-	                            })
-	                        ),
-	                        React.createElement(
-	                            'dt',
-	                            null,
-	                            'ChemType:'
-	                        ),
-	                        React.createElement(
-	                            'dd',
-	                            null,
-	                            React.createElement('input', {
-	                                type: 'text',
-	                                ref: 'ChemType',
-	                                value: this.state.editingChemTypeValue,
-	                                onChange: this.handleEditingChange
-	                            })
-	                        ),
-	                        React.createElement(
-	                            'dt',
-	                            null,
-	                            'ChemForm:'
-	                        ),
-	                        React.createElement(
-	                            'dd',
-	                            null,
-	                            React.createElement('input', {
-	                                type: 'text',
-	                                ref: 'ChemForm',
-	                                value: this.state.editingChemFormValue,
-	                                onChange: this.handleEditingChange
-	                            })
-	                        ),
-	                        React.createElement(
-	                            'dt',
-	                            null,
-	                            'ChemDesc:'
-	                        ),
-	                        React.createElement(
-	                            'dd',
-	                            null,
-	                            React.createElement('textarea', {
-	                                ref: 'ChemDesc',
-	                                value: this.state.editingChemDescValue,
-	                                onChange: this.handleEditingChange
-	                            })
-	                        ),
-	                        React.createElement(
-	                            'dt',
-	                            null,
-	                            'Toxic:'
-	                        ),
-	                        React.createElement(
-	                            'dd',
-	                            null,
-	                            React.createElement('textarea', {
-	                                ref: 'Toxic',
-	                                value: this.state.editingToxicValue,
 	                                onChange: this.handleEditingChange
 	                            })
 	                        ),
@@ -37988,86 +37755,6 @@
 	                            'dd',
 	                            null,
 	                            pigment.anecdote
-	                        ),
-	                        React.createElement(
-	                            'dt',
-	                            null,
-	                            'suitable:'
-	                        ),
-	                        React.createElement(
-	                            'dd',
-	                            null,
-	                            pigment.practical.suitable
-	                        ),
-	                        React.createElement(
-	                            'dt',
-	                            null,
-	                            'ratio:'
-	                        ),
-	                        React.createElement(
-	                            'dd',
-	                            null,
-	                            pigment.practical.ratio
-	                        ),
-	                        React.createElement(
-	                            'dt',
-	                            null,
-	                            'charInOil:'
-	                        ),
-	                        React.createElement(
-	                            'dd',
-	                            null,
-	                            pigment.practical.charInOil
-	                        ),
-	                        React.createElement(
-	                            'dt',
-	                            null,
-	                            'modernAlt:'
-	                        ),
-	                        React.createElement(
-	                            'dd',
-	                            null,
-	                            pigment.practical.modernAlt
-	                        ),
-	                        React.createElement(
-	                            'dt',
-	                            null,
-	                            'chemType:'
-	                        ),
-	                        React.createElement(
-	                            'dd',
-	                            null,
-	                            pigment.chemistry.chemType
-	                        ),
-	                        React.createElement(
-	                            'dt',
-	                            null,
-	                            'chemForm:'
-	                        ),
-	                        React.createElement(
-	                            'dd',
-	                            null,
-	                            pigment.chemistry.chemForm
-	                        ),
-	                        React.createElement(
-	                            'dt',
-	                            null,
-	                            'chemDesc:'
-	                        ),
-	                        React.createElement(
-	                            'dd',
-	                            null,
-	                            pigment.chemistry.chemDesc
-	                        ),
-	                        React.createElement(
-	                            'dt',
-	                            null,
-	                            'toxic:'
-	                        ),
-	                        React.createElement(
-	                            'dd',
-	                            null,
-	                            pigment.chemistry.toxic
 	                        ),
 	                        React.createElement(
 	                            'dt',

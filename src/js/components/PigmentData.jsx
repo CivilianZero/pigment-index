@@ -24,14 +24,6 @@ var PigmentData = React.createClass({
             editingUseStartValue: '',
             editingUseEndValue: '',
             editingAnecdoteValue: '',
-            editingSuitableValue: '',
-            editingRatioValue: '',
-            editingCharInOilValue: '',
-            editingModernAltValue: '',
-            editingChemTypeValue: '',
-            editingChemFormValue: '',
-            editingChemDescValue: '',
-            editingToxicValue: '',
             editingIconImgValue: '',
             editingSourceImgValue: '',
             editingPigImgValue: '',
@@ -154,76 +146,6 @@ var PigmentData = React.createClass({
                                     onChange={this.handleEditingChange}
                                     />
                             </dd>
-                            <dt>Suitable:</dt>
-                            <dd>
-                                <input
-                                    type="text"
-                                    ref='Suitable'
-                                    value={this.state.editingSuitableValue}
-                                    onChange={this.handleEditingChange}
-                                    />
-                            </dd>
-                            <dt>Ratio:</dt>
-                            <dd>
-                                <input
-                                    type="text"
-                                    ref='Ratio'
-                                    value={this.state.editingRatioValue}
-                                    onChange={this.handleEditingChange}
-                                    />
-                            </dd>
-                            <dt>CharInOil:</dt>
-                            <dd>
-                                <input
-                                    type="text"
-                                    ref='CharInOil'
-                                    value={this.state.editingCharInOilValue}
-                                    onChange={this.handleEditingChange}
-                                    />
-                            </dd>
-                            <dt>ModernAlt:</dt>
-                            <dd>
-                                <input
-                                    type="text"
-                                    ref='ModernAlt'
-                                    value={this.state.editingModernAltValue}
-                                    onChange={this.handleEditingChange}
-                                    />
-                            </dd>
-                            <dt>ChemType:</dt>
-                            <dd>
-                                <input
-                                    type="text"
-                                    ref='ChemType'
-                                    value={this.state.editingChemTypeValue}
-                                    onChange={this.handleEditingChange}
-                                    />
-                            </dd>
-                            <dt>ChemForm:</dt>
-                            <dd>
-                                <input
-                                    type="text"
-                                    ref='ChemForm'
-                                    value={this.state.editingChemFormValue}
-                                    onChange={this.handleEditingChange}
-                                    />
-                            </dd>
-                            <dt>ChemDesc:</dt>
-                            <dd>
-                                <textarea
-                                    ref='ChemDesc'
-                                    value={this.state.editingChemDescValue}
-                                    onChange={this.handleEditingChange}
-                                    />
-                            </dd>
-                            <dt>Toxic:</dt>
-                            <dd>
-                                <textarea
-                                    ref='Toxic'
-                                    value={this.state.editingToxicValue}
-                                    onChange={this.handleEditingChange}
-                                    />
-                            </dd>
                             <dt>IconImg:</dt>
                             <dd>
                                 <input
@@ -299,22 +221,6 @@ var PigmentData = React.createClass({
                             <dd>{pigment.origins.useEnd}</dd>
                             <dt>anecdote:</dt>
                             <dd>{pigment.anecdote}</dd>
-                            <dt>suitable:</dt>
-                            <dd>{pigment.practical.suitable}</dd>
-                            <dt>ratio:</dt>
-                            <dd>{pigment.practical.ratio}</dd>
-                            <dt>charInOil:</dt>
-                            <dd>{pigment.practical.charInOil}</dd>
-                            <dt>modernAlt:</dt>
-                            <dd>{pigment.practical.modernAlt}</dd>
-                            <dt>chemType:</dt>
-                            <dd>{pigment.chemistry.chemType}</dd>
-                            <dt>chemForm:</dt>
-                            <dd>{pigment.chemistry.chemForm}</dd>
-                            <dt>chemDesc:</dt>
-                            <dd>{pigment.chemistry.chemDesc}</dd>
-                            <dt>toxic:</dt>
-                            <dd>{pigment.chemistry.toxic}</dd>
                             <dt>iconImg:</dt>
                             <dd>{pigment.images.iconImg}</dd>
                             <dt>sourceImg:</dt>

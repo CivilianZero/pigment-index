@@ -63,14 +63,6 @@ pigmentStore.add = function(
 		useStart,
 		useEnd,
 		anecdote,
-		suitable,
-		ratio,
-		charInOil,
-		modernAlt,
-		chemType,
-		chemForm,
-		chemDesc,
-		toxic,
 		iconImg,
 		sourceImg,
 		pigImg,
@@ -93,18 +85,6 @@ pigmentStore.add = function(
 				useEnd: useEnd
 			},
 			anecdote: anecdote,
-			practical: {
-				suitable: suitable,
-				ratio: ratio,
-				charInOil: charInOil,
-				modernAlt: modernAlt
-			},
-			chemistry: {
-				chemType: chemType,
-				chemForm: chemForm,
-				chemDesc: chemDesc,
-				toxic: toxic
-			},
 			images: {
 				iconImg: iconImg,
 				sourceImg: sourceImg,
@@ -134,18 +114,6 @@ pigmentStore.add = function(
 				useEnd: useEnd
 			},
 			anecdote: anecdote,
-			practical: {
-				suitable: suitable,
-				ratio: ratio,
-				charInOil: charInOil,
-				modernAlt: modernAlt
-			},
-			chemistry: {
-				chemType: chemType,
-				chemForm: chemForm,
-				chemDesc: chemDesc,
-				toxic: toxic
-			},
 			images: {
 				iconImg: iconImg,
 				sourceImg: sourceImg,
@@ -174,14 +142,6 @@ pigmentStore.edit = function (
 		useStart,
 		useEnd,
 		anecdote,
-		suitable,
-		ratio,
-		charInOil,
-		modernAlt,
-		chemType,
-		chemForm,
-		chemDesc,
-		toxic,
 		iconImg,
 		sourceImg,
 		pigImg,
@@ -208,18 +168,6 @@ pigmentStore.edit = function (
 				useEnd: useEnd,
 			},
 			anecdote: anecdote,
-			practical: {
-				suitable: suitable,
-				ratio: ratio,
-				charInOil: charInOil,
-				modernAlt: modernAlt,
-			},
-			chemistry: {
-				chemType: chemType,
-				chemForm: chemForm,
-				chemDesc: chemDesc,
-				toxic: toxic,
-			},
 			images: {
 				iconImg: iconImg,
 				sourceImg: sourceImg,

@@ -20,14 +20,6 @@ var DataEntry = React.createClass({
 			useStartValue: '',
 			useEndValue: '',
 			anecdoteValue: '',
-			suitableValue: '',
-			ratioValue: '',
-			charInOilValue: '',
-			modernAltValue: '',
-			chemTypeValue: '',
-			chemFormValue: '',
-			chemDescValue: '',
-			toxicValue: '',
 			iconImgValue: '',
 			sourceImgValue: '',
 			pigImgValue: '',
@@ -119,53 +111,6 @@ var DataEntry = React.createClass({
 					placeholder='anecdote' 
 					onChange={this.handleChange} />
 				<input 
-					type='text'
-					ref='suitable' 
-					value={this.state.suitableValue} 
-					placeholder='suitable' 
-					onChange={this.handleChange} />
-				<input 
-					type='text'
-					ref='ratio' 
-					value={this.state.ratioValue} 
-					placeholder='ratio' 
-					onChange={this.handleChange} />
-				<input 
-					type='text'
-					ref='charInOil' 
-					value={this.state.charInOilValue} 
-					placeholder='charInOil' 
-					onChange={this.handleChange} />
-				<input 
-					type='text'
-					ref='modernAlt' 
-					value={this.state.modernAltValue} 
-					placeholder='modernAlt' 
-					onChange={this.handleChange} />
-				<input 
-					type='text'
-					ref='chemType' 
-					value={this.state.chemTypeValue} 
-					placeholder='chemType' 
-					onChange={this.handleChange} />
-				<input 
-					type='text'
-					ref='chemForm' 
-					value={this.state.chemFormValue} 
-					placeholder='chemForm' 
-					onChange={this.handleChange} />
-				<textarea 
-					ref='chemDesc' 
-					value={this.state.chemDescValue} 
-					placeholder='chemDesc' 
-					onChange={this.handleChange} />
-				<textarea 
-					type='text'
-					ref='toxic' 
-					value={this.state.toxicValue} 
-					placeholder='toxic' 
-					onChange={this.handleChange} />
-				<input 
 					ref='iconImg' 
 					value={this.state.iconImgValue} 
 					placeholder='iconImg' 
@@ -208,11 +153,6 @@ var DataEntry = React.createClass({
 			this.state.productionValue,
 			this.state.useStartValue,
 			this.state.useEndValue,
-			this.state.suitableValue,
-			this.state.chemTypeValue,
-			this.state.chemFormValue,
-			this.state.chemDescValue,
-			this.state.toxicValue,
 			this.state.iconImgValue,
 			this.state.sourceImgValue,
 			this.state.pigImgValue,
@@ -231,14 +171,6 @@ var DataEntry = React.createClass({
 				this.state.useStartValue,
 				this.state.useEndValue,
 				this.state.anecdoteValue,
-				this.state.suitableValue,
-				this.state.ratioValue,
-				this.state.charInOilValue,
-				this.state.modernAltValue,
-				this.state.chemTypeValue,
-				this.state.chemFormValue,
-				this.state.chemDescValue,
-				this.state.toxicValue,
 				this.state.iconImgValue,
 				this.state.sourceImgValue,
 				this.state.pigImgValue,
@@ -257,14 +189,6 @@ var DataEntry = React.createClass({
 				useStartValue: '',
 				useEndValue: '',
 				anecdoteValue: '',
-				suitableValue: '',
-				ratioValue: '',
-				charInOilValue: '',
-				modernAltValue: '',
-				chemTypeValue: '',
-				chemFormValue: '',
-				chemDescValue: '',
-				toxicValue: '',
 				iconImgValue: '',
 				sourceImgValue: '',
 				pigImgValue: '',
@@ -289,14 +213,6 @@ var DataEntry = React.createClass({
 			useStartValue: this.refs.useStart.value,
 			useEndValue: this.refs.useEnd.value,
 			anecdoteValue: this.refs.anecdote.value,
-			suitableValue: this.refs.suitable.value,
-			ratioValue: this.refs.ratio.value,
-			charInOilValue: this.refs.charInOil.value,
-			modernAltValue: this.refs.modernAlt.value,
-			chemTypeValue: this.refs.chemType.value,
-			chemFormValue: this.refs.chemForm.value,
-			chemDescValue: this.refs.chemDesc.value,
-			toxicValue: this.refs.toxic.value,
 			iconImgValue: this.refs.iconImg.value,
 			sourceImgValue: this.refs.sourceImg.value,
 			pigImgValue: this.refs.pigImg.value,
