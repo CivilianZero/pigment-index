@@ -153,28 +153,28 @@ pigmentStore.edit = function (
             url: resourceRoot + id,
             method: 'PUT',
             data: {
-                name: {
-				common: common,
-				pronunc: pronunc,
-				etym: etym,
-				altNames: altNames
-			},
-			descript: descript,
-			origins: {
-				source: source,
-				location: location,
-				production: production,
-				useStart: useStart,
-				useEnd: useEnd,
-			},
-			anecdote: anecdote,
-			images: {
-				iconImg: iconImg,
-				sourceImg: sourceImg,
-				pigImg: pigImg,
-				colorCode: colorCode,
-			},
-			example: example
+				name: {
+					common: common,
+					pronunc: pronunc,
+					etym: etym,
+					altNames: altNames
+				},
+				descript: descript,
+				origins: {
+					source: source,
+					location: location,
+					production: production,
+					useStart: useStart,
+					useEnd: useEnd,
+				},
+				anecdote: anecdote,
+				images: {
+					iconImg: iconImg,
+					sourceImg: sourceImg,
+					pigImg: pigImg,
+					colorCode: colorCode,
+				},
+				example: example
             },
             success: function(response) {
                 index.splice(index.indexOf(pigment), 1, response);

@@ -37833,8 +37833,22 @@
 	        var pigment = pigmentStore.get(this.state.pigmentId);
 	        this.setState({
 	            pigment: pigment,
-	            editingNameValue: pigment ? pigment.name : '',
-	            editingSpeciesValue: pigment ? pigment.species : ''
+	            editingCommonValue: pigment ? pigment.name.common : '',
+	            editingPronuncValue: pigment ? pigment.name.pronunc : '',
+	            editingEtymValue: pigment ? pigment.name.etym : '',
+	            editingAltNamesValue: pigment ? pigment.name.altNames : '',
+	            editingDescriptValue: pigment ? pigment.descript : '',
+	            editingSourceValue: pigment ? pigment.origins.source : '',
+	            editingLocationValue: pigment ? pigment.origins.location : '',
+	            editingProductionValue: pigment ? pigment.origins.production : '',
+	            editingUseStartValue: pigment ? pigment.origins.useStart : '',
+	            editingUseEndValue: pigment ? pigment.origins.useEnd : '',
+	            editingAnecdoteValue: pigment ? pigment.anecdote : '',
+	            editingIconImgValue: pigment ? pigment.images.iconImg : '',
+	            editingSourceImgValue: pigment ? pigment.images.sourceImg : '',
+	            editingPigImgValue: pigment ? pigment.images.pigImg : '',
+	            editingColorCodeValue: pigment ? pigment.images.colorCode : '',
+	            editingExampleValue: pigment ? pigment.example : ''
 	        });
 	    },
 
@@ -37844,9 +37858,24 @@
 	        });
 	    },
 
-	    handleEditingChange: function (e) {
+	    handleEditingChange: function () {
 	        this.setState({
-	            editingNameValue: e.target.value
+	            editingCommonValue: this.refs.Common.value,
+	            editingPronuncValue: this.refs.Pronunc.value,
+	            editingEtymValue: this.refs.Etym.value,
+	            editingAltNamesValue: this.refs.AltNames.value,
+	            editingDescriptValue: this.refs.Descript.value,
+	            editingSourceValue: this.refs.Source.value,
+	            editingLocationValue: this.refs.Location.value,
+	            editingProductionValue: this.refs.Production.value,
+	            editingUseStartValue: this.refs.UseStart.value,
+	            editingUseEndValue: this.refs.UseEnd.value,
+	            editingAnecdoteValue: this.refs.Anecdote.value,
+	            editingIconImgValue: this.refs.IconImg.value,
+	            editingSourceImgValue: this.refs.SourceImg.value,
+	            editingPigImgValue: this.refs.PigImg.value,
+	            editingColorCodeValue: this.refs.ColorCode.value,
+	            editingExampleValue: this.refs.Example.value
 	        });
 	    },
 
@@ -37854,7 +37883,7 @@
 	        this.setState({
 	            editing: false
 	        });
-	        pigmentStore.edit(this.state.pigment.id, this.state.editingNameValue, this.state.editingSpeciesValue);
+	        pigmentStore.edit(this.state.pigment.id, this.state.editingCommonValue, this.state.editingPronuncValue, this.state.editingEtymValue, this.state.editingAltNamesValue, this.state.editingDescriptValue, this.state.editingSourceValue, this.state.editingLocationValue, this.state.editingProductionValue, this.state.editingUseStartValue, this.state.editingUseEndValue, this.state.editingAnecdoteValue, this.state.editingIconImgValue, this.state.editingSourceImgValue, this.state.editingPigImgValue, this.state.editingColorCodeValue, this.state.editingExampleValue);
 	    },
 
 	    handleDeleteClick: function () {
