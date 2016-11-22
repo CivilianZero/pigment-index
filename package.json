@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:js": "webpack --watch",
     "build:js": "webpack",
-    "dev": "npm run watch:js & npm start",
+    "dev": "npm run watch:js & npm run serve & npm start",
+    "serve": "browser-sync start --proxy 'http://localhost:3000' --files 'dist/*.css, js/*.js'",
     "postinstall": "cp node_modules/normalize.css/normalize.css lib/"
   },
   "author": "civilianzero",
@@ -20,6 +21,7 @@
     "babel-loader": "^6.2.7",
     "babel-preset-react": "^6.16.0",
     "body-parser": "^1.15.2",
+    "browser-sync": "^2.18.2",
     "eventemitter3": "^2.0.2",
     "express": "^4.14.0",
     "jquery": "^3.1.1",

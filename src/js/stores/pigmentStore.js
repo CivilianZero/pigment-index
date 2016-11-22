@@ -43,7 +43,6 @@ pigmentStore.fetch = function (id) {
             url: resourceRoot,
             success: function (response) {
                 index = response;
-                console.log(response);
                 pigmentStore.emit('update');
             }
         });
