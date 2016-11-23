@@ -26,9 +26,11 @@ app.post('/devTools', function (req, res) {
 		pronunc = body.name.pronunc,
 		etym = body.name.etym,
 		altNames = body.name.altNames,
+		shortDescript = body.shortDescript,
 		descript = body.descript,
 		source = body.origins.source,
 		location = body.origins.location,
+		sourceDescript = body.origins.sourceDescript,
 		production = body.origins.production,
 		useStart = body.origins.useStart,
 		useEnd = body.origins.useEnd,
@@ -36,21 +38,30 @@ app.post('/devTools', function (req, res) {
 		iconImg = body.images.iconImg,
 		sourceImg = body.images.sourceImg,
 		pigImg = body.images.pigImg,
-		colorCode = body.images.colorCode,
-		example = body.example;
+		prodImg = body.images.prodImg,
+		primary = body.images.primary,
+		secondary = body.images.secondary,
+		tertiary = body.images.tertiary,
+		quarter = body.images.quarter,
+		example = body.example.example,
+		exTitle = body.example.exTitle,
+		exArtist = body.example.exArtist,
+		exMedium = body.example.exMedium,
+		exDate = body.example.exDate,
+		exDescript = body.example.exDescript;
 
 
 	if (
 		common &&
+		shortDescript &&
 		descript &&
 		source &&
-		production &&
+		sourceDescript &&
 		useStart &&
 		useEnd &&
 		iconImg &&
 		sourceImg &&
-		pigImg &&
-		colorCode
+		pigImg
 	) 
 	{
 		let pigment = {
@@ -61,22 +72,35 @@ app.post('/devTools', function (req, res) {
 				etym: etym,
 				altNames: altNames
 			},
+			shortDescript: shortDescript,
 			descript: descript,
 			origins: {
 				source: source,
 				location: location,
+				sourceDescript: sourceDescript,
 				production: production,
 				useStart: useStart,
-				useEnd: useEnd,
+				useEnd: useEnd
 			},
 			anecdote: anecdote,
 			images: {
 				iconImg: iconImg,
 				sourceImg: sourceImg,
 				pigImg: pigImg,
-				colorCode: colorCode,
+				prodImg: prodImg,
+				primary: primary,
+				secondary: secondary,
+				tertiary: tertiary,
+				quarter: quarter,
 			},
-			example: example
+			example: {
+				example: example,
+				exTitle: exTitle,
+				exArtist: exArtist,
+				exMedium: exMedium,
+				exDate: exDate,
+				exDescript: exDescript
+			}
 		};
 		db.get('index').push(pigment).value();
 		res.json(pigment);
@@ -99,7 +123,7 @@ app.get('/devTools/:id', function (req, res) {
 		return;
 	}
 	res.status(404);
-	res.json({ error: 'Pigmen with that id not found.' });
+	res.json({ error: 'Pigment with that id not found.' });
 });
 
 app.put('/devTools/:id', function (req, res) {
@@ -112,9 +136,11 @@ app.put('/devTools/:id', function (req, res) {
 		pronunc = body.name.pronunc,
 		etym = body.name.etym,
 		altNames = body.name.altNames,
+		shortDescript = body.shortDescript,
 		descript = body.descript,
 		source = body.origins.source,
 		location = body.origins.location,
+		sourceDescript = body.origins.sourceDescript,
 		production = body.origins.production,
 		useStart = body.origins.useStart,
 		useEnd = body.origins.useEnd,
@@ -122,8 +148,17 @@ app.put('/devTools/:id', function (req, res) {
 		iconImg = body.images.iconImg,
 		sourceImg = body.images.sourceImg,
 		pigImg = body.images.pigImg,
-		colorCode = body.images.colorCode,
-		example = body.example;
+		prodImg = body.images.prodImg,
+		primary = body.images.primary,
+		secondary = body.images.secondary,
+		tertiary = body.images.tertiary,
+		quarter = body.images.quarter,
+		example = body.example.example,
+		exTitle = body.example.exTitle,
+		exArtist = body.example.exArtist,
+		exMedium = body.example.exMedium,
+		exDate = body.example.exDate,
+		exDescript = body.example.exDescript;
 		
 	if (pigment.value()) {
 		pigment = pigment.assign({
@@ -133,22 +168,35 @@ app.put('/devTools/:id', function (req, res) {
 				etym: etym,
 				altNames: altNames
 			},
+			shortDescript: shortDescript,
 			descript: descript,
 			origins: {
 				source: source,
 				location: location,
+				sourceDescript: sourceDescript,
 				production: production,
 				useStart: useStart,
-				useEnd: useEnd,
+				useEnd: useEnd
 			},
 			anecdote: anecdote,
 			images: {
 				iconImg: iconImg,
 				sourceImg: sourceImg,
 				pigImg: pigImg,
-				colorCode: colorCode,
+				prodImg: prodImg,
+				primary: primary,
+				secondary: secondary,
+				tertiary: tertiary,
+				quarter: quarter,
 			},
-			example: example
+			example: {
+				example: example,
+				exTitle: exTitle,
+				exArtist: exArtist,
+				exMedium: exMedium,
+				exDate: exDate,
+				exDescript: exDescript
+			}
 		}).value();
 		res.json(pigment);
 		return

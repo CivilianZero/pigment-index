@@ -8,9 +8,9 @@ var resourceRoot = '/devTools/';
 var index = [];
 
 function findById (id) {
-    return index.find(function (p) {
-        return p.id === id;
-    });
+	return index.find(function (p) {
+		return p.id === id;
+	});
 }
 
 pigmentStore.get = function(id) {
@@ -22,42 +22,44 @@ pigmentStore.get = function(id) {
 }
 
 pigmentStore.fetch = function (id) {
-    if (id) {
-        $.ajax({
-            url: resourceRoot + id,
-            success: function (response) {
-                var existing = findById(response.id);
-                if (!existing) {
-                    index.push(response);
-                } else {
-                    // Will splice the existing object and insert the new one
-                    // from the server.
-                    index.splice(index.indexOf(existing), 1, response);
-                }
-                pigmentStore.emit('update');
-            }
-        });
-        return findById(id);
-    } else {
-        $.ajax({
-            url: resourceRoot,
-            success: function (response) {
-                index = response;
-                pigmentStore.emit('update');
-            }
-        });
-        return index;
-    }
+	if (id) {
+		$.ajax({
+			url: resourceRoot + id,
+			success: function (response) {
+				var existing = findById(response.id);
+				if (!existing) {
+					index.push(response);
+				} else {
+					// Will splice the existing object and insert the new one
+					// from the server.
+					index.splice(index.indexOf(existing), 1, response);
+				}
+				pigmentStore.emit('update');
+			}
+		});
+		return findById(id);
+	} else {
+		$.ajax({
+			url: resourceRoot,
+			success: function (response) {
+				index = response;
+				pigmentStore.emit('update');
+			}
+		});
+		return index;
+	}
 }
 
 pigmentStore.add = function(
-		common, 
-		pronunc, 
-		etym, 
+		common,
+		pronunc,
+		etym,
 		altNames,
+		shortDescript,
 		descript,
 		source,
 		location,
+		sourceDescript,
 		production,
 		useStart,
 		useEnd,
@@ -65,35 +67,18 @@ pigmentStore.add = function(
 		iconImg,
 		sourceImg,
 		pigImg,
-		colorCode,
-		example) 
+		prodImg,
+		primary,
+		secondary,
+		tertiary,
+		quarter,
+		example,
+		exTitle,
+		exArtist,
+		exMedium,
+		exDate,
+		exDescript) 
 {
-	var data = {data: {
-			name: {
-				common: common,
-				pronunc: pronunc,
-				etym: etym,
-				altNames: altNames
-			},
-			descript: descript,
-			origins: {
-				source: source,
-				location: location,
-				production: production,
-				useStart: useStart,
-				useEnd: useEnd
-			},
-			anecdote: anecdote,
-			images: {
-				iconImg: iconImg,
-				sourceImg: sourceImg,
-				pigImg: pigImg,
-				colorCode: colorCode
-			},
-			example: example
-		}
-	};
-	console.log(data);
 	$.ajax({
 		url: resourceRoot,
 		method: 'POST',
@@ -104,10 +89,12 @@ pigmentStore.add = function(
 				etym: etym,
 				altNames: altNames
 			},
+			shortDescript: shortDescript,
 			descript: descript,
 			origins: {
 				source: source,
 				location: location,
+				sourceDescript: sourceDescript,
 				production: production,
 				useStart: useStart,
 				useEnd: useEnd
@@ -117,9 +104,20 @@ pigmentStore.add = function(
 				iconImg: iconImg,
 				sourceImg: sourceImg,
 				pigImg: pigImg,
-				colorCode: colorCode
+				prodImg: prodImg,
+				primary: primary,
+				secondary: secondary,
+				tertiary: tertiary,
+				quarter: quarter,
 			},
-			example: example
+			example: {
+				example: example,
+				exTitle: exTitle,
+				exArtist: exArtist,
+				exMedium: exMedium,
+				exDate: exDate,
+				exDescript: exDescript
+			}
 		},
 		success: function(response) {
 			index.push(response);
@@ -130,13 +128,15 @@ pigmentStore.add = function(
 
 pigmentStore.edit = function (
 		id, 
-		common, 
-		pronunc, 
-		etym, 
+		common,
+		pronunc,
+		etym,
 		altNames,
+		shortDescript,
 		descript,
 		source,
 		location,
+		sourceDescript,
 		production,
 		useStart,
 		useEnd,
@@ -144,43 +144,65 @@ pigmentStore.edit = function (
 		iconImg,
 		sourceImg,
 		pigImg,
-		colorCode,
-		example) {
-    var pigment = findById(id);
-    if (pigment) {
-        $.ajax({
-            url: resourceRoot + id,
-            method: 'PUT',
-            data: {
+		prodImg,
+		primary,
+		secondary,
+		tertiary,
+		quarter,
+		example,
+		exTitle,
+		exArtist,
+		exMedium,
+		exDate,
+		exDescript) {
+	var pigment = findById(id);
+	if (pigment) {
+		$.ajax({
+			url: resourceRoot + id,
+			method: 'PUT',
+			data: {
 				name: {
 					common: common,
 					pronunc: pronunc,
 					etym: etym,
 					altNames: altNames
 				},
+				shortDescript: shortDescript,
 				descript: descript,
 				origins: {
 					source: source,
 					location: location,
+					sourceDescript: sourceDescript,
 					production: production,
 					useStart: useStart,
-					useEnd: useEnd,
+					useEnd: useEnd
 				},
 				anecdote: anecdote,
 				images: {
 					iconImg: iconImg,
 					sourceImg: sourceImg,
 					pigImg: pigImg,
-					colorCode: colorCode,
+					prodImg: prodImg,
+					primary: primary,
+					secondary: secondary,
+					tertiary: tertiary,
+					quarter: quarter,
 				},
-				example: example
-            },
-            success: function(response) {
-                index.splice(index.indexOf(pigment), 1, response);
-                pigmentStore.emit('update');
-            }
-        });
-    }
+				example: {
+					example: example,
+					exTitle: exTitle,
+					exArtist: exArtist,
+					exMedium: exMedium,
+					exDate: exDate,
+					exDescript: exDescript
+				}
+			},
+			success: function(response) {
+				index.splice(index.indexOf(pigment), 1, response);
+				pigmentStore.emit('update');
+			}
+		});
+	}
 }
 
 module.exports = pigmentStore;
