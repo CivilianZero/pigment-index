@@ -1,7 +1,8 @@
 var React = require('react');
 
 var pigmentStore = require('../stores/pigmentStore.js'),
-	dsColors = require('./d3Colors.js');
+	dsColors = require('./d3Colors.js'),
+	PigmentSheet = require('./PigmentSheet.jsx');
 
 var PigmentIndex = require('./PigmentIndex.jsx');
 
@@ -28,7 +29,11 @@ var FilterPage = React.createClass({
 	},
 
 	render() {
-		var filteredPigments = this.state.pigments;
+		var filteredPigments = this.state.pigments,
+			pigmentResult;
+		if(this.state.pigmentId) {
+			pigmentResult = <PigmentSheet id={this.state.pigmentId} />;
+		}
 		return (
 			<section>
 				<div className='color-filter'>color</div>
@@ -37,7 +42,7 @@ var FilterPage = React.createClass({
 					<PigmentIndex passedClick={this.handleSelect} pigments={filteredPigments}/>
 				</div>
 				<div className='map-view'>Here there be dragons</div>
-				<PigmentSheet />
+				{pigmentResult}
 			</section>
 		)
 	},
