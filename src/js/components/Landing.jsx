@@ -8,10 +8,16 @@ var Landing = React.createClass({
 		return (
 			<section className='Landing'>
 				<div>
-					<h1>Heading</h1>
-					<p></p>
+					<h1>SITE TITLE</h1>
+					<p>An explanation of what pigments are and a brief history.
+					A description of the site and an overview of the information
+					that the user can find within. An explanation of what pigments are
+					and a brief history. A description of the site and an overview
+					of the information the user can find within.</p>
 				</div>
-				<button><Link to='/pigmentIndex'>Letsa Go!</Link></button>
+				<button><Link to='/filter'>Explore</Link></button>
+				<span>Or</span>
+				<button><Link to='/about'>About</Link></button>
 			</section>
 		)
 	}

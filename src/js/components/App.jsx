@@ -9,14 +9,33 @@ function getActiveClass(path) {
 
 var App = React.createClass({
 	
+	getInitialState() {
+		return {
+			reveal: false
+		}
+	},
+
 	render() {
+		var devTools,
+			_this = this;
+		document.onkeydown = function(e) {
+			e = e || window.event;
+			if (e.ctrlKey && e.keyCode == 72) {
+				_this.setState({
+					reveal: !_this.state.reveal
+				});
+			}
+		};
+		if (this.state.reveal) {
+			devTools = <Link to='/devTools' className={getActiveClass('/devTools')}>Enter Data</Link>;
+		}
 		return (
 			<div>
 				<header>
 					<nav>
 						<Link to='/' className={getActiveClass('/')}>Home</Link>
-						<Link to='/devTools' className={getActiveClass('/devTools')}>Enter Data</Link>
-						<Link to='/pigmentIndex' className={getActiveClass('/pigmentIndex')}>Pigments</Link>
+						{devTools}
+						<Link to='/about' className={getActiveClass('/about')}>About</Link>
 					</nav>	
 				</header>
 				<main>
@@ -25,8 +44,8 @@ var App = React.createClass({
 				<footer>
 					<nav>
 						<Link to='/' className={getActiveClass('/')}>Home</Link>
-						<Link to='/devTools' className={getActiveClass('/devTools')}>Enter Data</Link>
-						<Link to='/pigmentIndex' className={getActiveClass('/pigmentIndex')}>Pigments</Link>
+						{devTools}
+						<Link to='/about' className={getActiveClass('/about')}>About</Link>
 					</nav>
 				</footer>
 			</div>

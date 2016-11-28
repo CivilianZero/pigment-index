@@ -48,7 +48,8 @@ app.post('/devTools', function (req, res) {
 		exArtist = body.example.exArtist,
 		exMedium = body.example.exMedium,
 		exDate = body.example.exDate,
-		exDescript = body.example.exDescript;
+		exDescript = body.example.exDescript,
+		colorFamily = body.colorFamily;
 
 
 	if (
@@ -100,7 +101,8 @@ app.post('/devTools', function (req, res) {
 				exMedium: exMedium,
 				exDate: exDate,
 				exDescript: exDescript
-			}
+			},
+			colorFamily: colorFamily
 		};
 		db.get('index').push(pigment).value();
 		res.json(pigment);
@@ -158,7 +160,8 @@ app.put('/devTools/:id', function (req, res) {
 		exArtist = body.example.exArtist,
 		exMedium = body.example.exMedium,
 		exDate = body.example.exDate,
-		exDescript = body.example.exDescript;
+		exDescript = body.example.exDescript,
+		colorFamily = body.colorFamily;
 		
 	if (pigment.value()) {
 		pigment = pigment.assign({
@@ -196,7 +199,8 @@ app.put('/devTools/:id', function (req, res) {
 				exMedium: exMedium,
 				exDate: exDate,
 				exDescript: exDescript
-			}
+			},
+			colorFamily: colorFamily
 		}).value();
 		res.json(pigment);
 		return

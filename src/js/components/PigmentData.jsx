@@ -39,7 +39,8 @@ var PigmentData = React.createClass({
             editingExArtistValue: '',
             editingExMediumValue: '',
             editingExDateValue: '',
-            editingExDescriptValue: ''
+            editingExDescriptValue: '',
+            editingColorFamilyValue: ''
         };
     },
 
@@ -293,10 +294,18 @@ var PigmentData = React.createClass({
                             </dd>
                             <dt>ExDescript:</dt>
                             <dd>
-                                <input
-                                    type="text"
+                                <textarea
                                     ref='ExDescript'
                                     value={this.state.editingExDescriptValue}
+                                    onChange={this.handleEditingChange}
+                                    />
+                            </dd>
+                            <dt>ColorFamily:</dt>
+                            <dd>
+                                <input
+                                    type="text"
+                                    ref='ColorFamily'
+                                    value={this.state.editingColorFamilyValue}
                                     onChange={this.handleEditingChange}
                                     />
                             </dd>
@@ -360,6 +369,8 @@ var PigmentData = React.createClass({
                             <dd>{pigment.example.exDate}</dd>
                             <dt>exDescript:</dt>
                             <dd>{pigment.example.exDescript}</dd>
+                            <dt>colorFamily:</dt>
+                            <dd>{pigment.colorFamily}</dd>
                         </dl>
                         <button onClick={this.handleEditClick}>Edit</button>
                         <button onClick={this.handleDeleteClick}>Delete</button>
@@ -403,6 +414,7 @@ var PigmentData = React.createClass({
             editingExMediumValue: pigment ? pigment.example.exMedium : '',
             editingExDateValue: pigment ? pigment.example.exDate : '',
             editingExDescriptValue: pigment ? pigment.example.exDescript : '',
+            editingColorFamilyValue: pigment ? pigment.colorFamily : ''
         });
     },
 
@@ -441,6 +453,7 @@ var PigmentData = React.createClass({
             editingExMediumValue: this.refs.ExMedium.value,
             editingExDateValue: this.refs.ExDate.value,
             editingExDescriptValue: this.refs.ExDescript.value,
+            editingColorFamilyValue: this.refs.ColorFamily.value
         });
     },
 
@@ -476,7 +489,8 @@ var PigmentData = React.createClass({
             this.state.editingExArtistValue,
             this.state.editingExMediumValue,
             this.state.editingExDateValue,
-            this.state.editingExDescriptValue
+            this.state.editingExDescriptValue,
+            this.state.editingColorFamilyValue
         );
     },
 

@@ -77,7 +77,8 @@ pigmentStore.add = function(
 		exArtist,
 		exMedium,
 		exDate,
-		exDescript) 
+		exDescript,
+		colorFamily) 
 {
 	$.ajax({
 		url: resourceRoot,
@@ -117,7 +118,8 @@ pigmentStore.add = function(
 				exMedium: exMedium,
 				exDate: exDate,
 				exDescript: exDescript
-			}
+			},
+			colorFamily: colorFamily
 		},
 		success: function(response) {
 			index.push(response);
@@ -154,7 +156,8 @@ pigmentStore.edit = function (
 		exArtist,
 		exMedium,
 		exDate,
-		exDescript) {
+		exDescript,
+		colorFamily) {
 	var pigment = findById(id);
 	if (pigment) {
 		$.ajax({
@@ -195,7 +198,8 @@ pigmentStore.edit = function (
 					exMedium: exMedium,
 					exDate: exDate,
 					exDescript: exDescript
-				}
+				},
+				colorFamily: colorFamily
 			},
 			success: function(response) {
 				index.splice(index.indexOf(pigment), 1, response);

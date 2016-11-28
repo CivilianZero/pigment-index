@@ -32,10 +32,11 @@ var DataEntry = React.createClass({
 			quarterValue: '',
 			exampleValue: '',
 			exTitleValue: '',
-			exArtist: '',
-			exMedium: '',
-			exDate: '',
-			exDescript: ''
+			exArtistValue: '',
+			exMediumValue: '',
+			exDateValue: '',
+			exDescriptValue: '',
+			colorFamilyValue: ''
 		}
 	},
 
@@ -214,6 +215,12 @@ var DataEntry = React.createClass({
 					value={this.state.exDescriptValue} 
 					placeholder='exDescript' 
 					onChange={this.handleChange} />
+				<input 
+					type='text'
+					ref='colorFamily' 
+					value={this.state.colorFamilyValue} 
+					placeholder='colorFamily' 
+					onChange={this.handleChange} />
 				<button onClick={this.handleClick}>Submit</button>
 				<ul>{links}</ul>
 			</section>
@@ -261,7 +268,8 @@ var DataEntry = React.createClass({
 				this.state.exArtistValue,
 				this.state.exMediumValue,
 				this.state.exDateValue,
-				this.state.exDescriptValue
+				this.state.exDescriptValue,
+				this.state.colorFamilyValue
 			)
 			this.setState({
 				commonValue: '',
@@ -287,10 +295,11 @@ var DataEntry = React.createClass({
 				quarterValue: '',
 				exampleValue: '',
 				exTitleValue: '',
-				exArtist: '',
-				exMedium: '',
-				exDate: '',
-				exDescript: ''
+				exArtistValue: '',
+				exMediumValue: '',
+				exDateValue: '',
+				exDescriptValue: '',
+				colorFamilyValue: ''
 			});
 		} else {
 			alert('You missed something essential');
@@ -325,7 +334,8 @@ var DataEntry = React.createClass({
 			exArtistValue: this.refs.exArtist.value,
 			exMediumValue: this.refs.exMedium.value,
 			exDateValue: this.refs.exDate.value,
-			exDescriptValue: this.refs.exDescript.value
+			exDescriptValue: this.refs.exDescript.value,
+			colorFamilyValue: this.refs.colorFamily.value
 		});
 	},
 
