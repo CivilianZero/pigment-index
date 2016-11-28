@@ -8,8 +8,8 @@ var PigmentListItem = React.createClass({
 			backgroundColor: this.props.color
 		}
 		return(
-			<li style={divColor}>
-				<Link to={'/pigmentIndex/' + this.props.id}>{this.props.name}</Link>
+			<li onClick={this.props.passedClick} id={this.props.id} style={divColor}>
+				{this.props.name}
 			</li>
 		)
 	}

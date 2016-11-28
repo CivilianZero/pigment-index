@@ -6,7 +6,7 @@ var pigmentStore = require('../stores/pigmentStore.js');
 var PigmentSheet = React.createClass({
 
 	getInitialState() {
-		var pigmentId = this.props.params.id
+		var pigmentId = this.props.id
 		return{
 			pigmentId: pigmentId,
 			pigment: pigmentStore.fetch(pigmentId)

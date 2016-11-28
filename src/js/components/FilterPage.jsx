@@ -9,7 +9,8 @@ var FilterPage = React.createClass({
 	
 	getInitialState() {
 		return {
-			pigments: pigmentStore.fetch()
+			pigments: pigmentStore.fetch(),
+			pigmentId: null
 		}
 	},
 
@@ -30,14 +31,21 @@ var FilterPage = React.createClass({
 		var filteredPigments = this.state.pigments;
 		return (
 			<section>
-				<div className='color-filter'></div>
-				<div className='timeline-filter'></div>
+				<div className='color-filter'>color</div>
+				<div className='timeline-filter'>timeline</div>
 				<div className='list-view'>
-					<PigmentIndex pigments={filteredPigments}/>
+					<PigmentIndex passedClick={this.handleSelect} pigments={filteredPigments}/>
 				</div>
 				<div className='map-view'>Here there be dragons</div>
+				<PigmentSheet />
 			</section>
 		)
+	},
+
+	handleSelect(e) {
+		this.setState({
+			pigmentId: e.target.id
+		});
 	}
 });
 
