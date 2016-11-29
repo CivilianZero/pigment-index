@@ -3,7 +3,6 @@ var d3 = require('d3');
 var d3Colors = [];
 
 d3Colors.create = function(dataset, total) {
-	var filter;
 	d3.select('.color-filter').selectAll('div')
 		.data(dataset)
 		.enter()
@@ -19,10 +18,7 @@ d3Colors.create = function(dataset, total) {
 		.style('background', function(d){
 			return d.color
 		})
-		.style('display', 'inline-block')
-		.on('click', function() {
-			filter = this.id;
-		});
+		.style('display', 'inline-block');
 };
 
 module.exports = d3Colors;

@@ -1,4 +1,5 @@
-var React = require('react');
+var React = require('react'),
+	$ = require('jquery');
 
 var pigmentStore = require('../stores/pigmentStore.js'),
 	d3Colors = require('./d3Colors.js'),
@@ -9,17 +10,56 @@ var PigmentIndex = require('./PigmentIndex.jsx');
 var FilterPage = React.createClass({
 	
 	getInitialState() {
+		var pigments = pigmentStore.fetch();
 		return {
-			pigments: pigmentStore.fetch(),
-			pigmentId: null
+			pigments: pigments,
+			pigmentId: null,
+			filteredPigments: pigments
 		}
+	},
+
+	componentDidMount() {
+		var filterList = [],
+			_this = this;
+
+		var findByColor = function (p1, p2, p3, p4, p5, p6, p7, p8) {
+			return _this.state.pigments.filter(function (p) {
+				return p.colorFamily === p1 ||
+					p.colorFamily === p2 ||
+					p.colorFamily === p3 ||
+					p.colorFamily === p4 ||
+					p.colorFamily === p5 ||
+					p.colorFamily === p6 ||
+					p.colorFamily === p7 ||
+					p.colorFamily === p8;
+			});
+		}
+
+		$('.color-filter').on('click', '.bar', function(e) {
+			if(filterList.indexOf(e.target.id) === -1){
+				filterList.push(e.target.id);
+			} else {
+				filterList.splice(filterList.indexOf(e.target.id), 1)
+			}
+
+			if (filterList.length === 0) {
+				_this.setState({
+					filteredPigments: _this.state.pigments
+				});
+			} else {
+				_this.setState({
+					filteredPigments: findByColor(...filterList)
+				});
+			}
+		});
 	},
 
 	componentWillMount() {
 		var _this = this;
 		pigmentStore.on('update', function() {
 			_this.setState({
-				pigments: pigmentStore.get()
+				pigments: pigmentStore.get(),
+				filteredPigments: pigmentStore.get()
 			});
 		});
 	},
@@ -51,12 +91,14 @@ var FilterPage = React.createClass({
 			}
 			numberOfPigs++;
 		};
+
 		this.state.pigments.forEach(filterColor);
 		d3Bars = d3Colors.create(colorFamilies, numberOfPigs);
 
 		if(this.state.pigmentId) {
 			pigmentResult = <PigmentSheet key={this.state.pigmentId} id={this.state.pigmentId} />;
 		}
+
 		return (
 			<section>
 				<section className='filters'>
@@ -65,7 +107,7 @@ var FilterPage = React.createClass({
 				</section>
 				<section className='search-results'>
 					<div className='list-view'>
-						<PigmentIndex passedClick={this.handleSelect} pigments={this.state.pigments}/>
+						<PigmentIndex passedClick={this.handleSelect} pigments={this.state.filteredPigments}/>
 					</div>
 					<div className='map-view'>Here there be dragons</div>
 					{pigmentResult}
