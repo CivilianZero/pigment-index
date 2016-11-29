@@ -2,21 +2,27 @@ var d3 = require('d3');
 
 var d3Colors = [];
 
-d3Colors.create = function(dataset) {
-	var barPadding = 1;
-	d3.select('body').selectAll('div')
-        .data(dataset)
-        .enter()
-        .append('div')
-        .attr({
-            'class': 'bar',
-            'id': function(d) {
-                return d.color
-            }
-        })
-        .style('width', function(d) {
-            return (d.number / numberOfPigs) * 100 - barPadding + '%';
-        });
+d3Colors.create = function(dataset, total) {
+	var filter;
+	d3.select('.color-filter').selectAll('div')
+		.data(dataset)
+		.enter()
+		.append('div')
+		.attr('class', 'bar')
+		.attr('id', function(d) {
+			return d.color;
+		})
+		.style('width', function(d) {
+			return (d.number / total) * 100 + '%';
+		})
+		.style('height', '100px')
+		.style('background', function(d){
+			return d.color
+		})
+		.style('display', 'inline-block')
+		.on('click', function() {
+			filter = this.id;
+		});
 };
 
 module.exports = d3Colors;

@@ -31,23 +31,19 @@ var FilterPage = React.createClass({
 	render() {
 		var colorFamilies = [],
 			numberOfPigs = 0,
-			filteredPigments = this.state.pigments,
 			pigmentResult,
 			d3Bars;
 
 		var filterColor = function(value) {
 			var color = value.colorFamily,
 				colorObj = {"color":'', "number":0};
-			if(colorFamilies[0]) {
-				colorFamilies.forEach(function(value) {
-					if (value.color === color) {
-						value.number++;
-					} else {
-						colorObj.color = color;
-						colorObj.number++;
-						colorFamilies.push(colorObj)
-					}
-				});
+			if (colorFamilies.find(function(value) {
+				return value.color === color;
+			})) {
+				colorObj = colorFamilies.find(function(value) {
+					return value.color === color;
+				})
+				colorObj.number++;
 			} else {
 				colorObj.color = color;
 				colorObj.number++;
@@ -56,22 +52,24 @@ var FilterPage = React.createClass({
 			numberOfPigs++;
 		};
 		this.state.pigments.forEach(filterColor);
-		if (colorFamilies) {
-			d3Bars = d3Colors.create(colorFamilies);
-		}
+		d3Bars = d3Colors.create(colorFamilies, numberOfPigs);
 
 		if(this.state.pigmentId) {
 			pigmentResult = <PigmentSheet key={this.state.pigmentId} id={this.state.pigmentId} />;
 		}
 		return (
 			<section>
-				<div className='color-filter'>{d3Bars}</div>
-				<div className='timeline-filter'>timeline</div>
-				<div className='list-view'>
-					<PigmentIndex passedClick={this.handleSelect} pigments={filteredPigments}/>
-				</div>
-				<div className='map-view'>Here there be dragons</div>
-				{pigmentResult}
+				<section className='filters'>
+					<div className='color-filter'>{d3Bars}</div>
+					<div className='timeline-filter'>timeline</div>
+				</section>
+				<section className='search-results'>
+					<div className='list-view'>
+						<PigmentIndex passedClick={this.handleSelect} pigments={this.state.pigments}/>
+					</div>
+					<div className='map-view'>Here there be dragons</div>
+					{pigmentResult}
+				</section>
 			</section>
 		)
 	},

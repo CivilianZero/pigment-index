@@ -13,6 +13,12 @@ function findById (id) {
 	});
 }
 
+function findByColor (colorFamily) {
+	return index.find(function (p) {
+		return p.colorFamily === colorFamily;
+	});
+}
+
 pigmentStore.get = function(id) {
 	if(id) {
 		return findById(id);
@@ -48,6 +54,22 @@ pigmentStore.fetch = function (id) {
 		});
 		return index;
 	}
+}
+
+pigmentStore.filterColor = function(colorFamily) {
+	$.ajax({
+			url: resourceRoot,
+			success: function (response) {
+				var existing = findByColor(response.colorFamily);
+				if (!existing) {
+					index.push(response);
+				} else {
+					index.splice(index.indexOf(existing), 1, response);
+				}
+				pigmentStore.emit('update');
+			}
+		});
+		return findByColor(colorFamily);
 }
 
 pigmentStore.add = function(
