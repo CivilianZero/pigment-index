@@ -31,7 +31,7 @@
         "toxic": "Not considered toxic."
       },
       "images": {
-        "iconImg": "#",
+        "iconImg": "assets/icons/ultramarine.svg",
         "sourceImg": "http://geology.com/gemstones/lapis-lazuli/banded-lapis.jpg",
         "pigImg": "https://upload.wikimedia.org/wikipedia/commons/6/67/Ultramarinepigment.jpg",
         "prodImg": "",
@@ -110,7 +110,7 @@
       },
       "anecdote": "",
       "images": {
-        "iconImg": "",
+        "iconImg": "/assets/icons/lead-white.svg",
         "sourceImg": "/assets/sources/lead-white.jpg",
         "pigImg": "/assets/sources/lead-white",
         "prodImg": "",
@@ -149,7 +149,7 @@
       },
       "anecdote": "",
       "images": {
-        "iconImg": "",
+        "iconImg": "/assets/icons/orpiment.svg",
         "sourceImg": "/assets/sources/orpiment.jpg",
         "pigImg": "/assets/pigments/orpiment.jpg",
         "prodImg": "",
@@ -188,7 +188,7 @@
       },
       "anecdote": "",
       "images": {
-        "iconImg": "",
+        "iconImg": "/assets/icons/indian-yellow.svg",
         "sourceImg": "/assets/sources/indian-yellow.jpg",
         "pigImg": "/assets/pigments/indian-yellow.jpg",
         "prodImg": "",
@@ -227,7 +227,7 @@
       },
       "anecdote": "",
       "images": {
-        "iconImg": "",
+        "iconImg": "/assets/icons/realgar.svg",
         "sourceImg": "/assets/sources/realgar.jpg",
         "pigImg": "/assets/pigments/realgar.jpg",
         "prodImg": "",
@@ -383,7 +383,7 @@
       },
       "anecdote": "\"It lies, therefore, coiled up and concealed in the rivers, in wait for the elephants, when they come to drink; upon which it darts out, fastens itself around the trunk, and then fixes its teeth behind the ear, that being the only place which the elephant cannot protect with the trunk. The dragons, it is said, are of such vast size, that they can swallow the whole of the blood; consequently, the elephant, being thus drained of its blood, falls to the earth exhausted; while the dragon, intoxicated with the draught, is crushed beneath it, and so shares its fate.\" -Pliny the Elder",
       "images": {
-        "iconImg": "",
+        "iconImg": "/assets/icons/dragons-blood.svg",
         "sourceImg": "/assets/sources/dragons-blood.jpg",
         "pigImg": "/assets/pigments/dragons-blood.jpg",
         "prodImg": "",
