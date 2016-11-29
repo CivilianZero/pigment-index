@@ -136,7 +136,7 @@ var PigmentData = React.createClass({
                                 <input
                                     type="text"
                                     ref='SourceDescript'
-                                    value={this.state.editingShortDescriptValue}
+                                    value={this.state.editingSourceDescriptValue}
                                     onChange={this.handleEditingChange}
                                     />
                             </dd>
