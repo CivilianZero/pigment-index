@@ -12,6 +12,7 @@
       "origins": {
         "source": "Lapis lazuli, a semi-precious stone",
         "location": "Sar-e-sang, Afghanistan",
+        "sourceDescript": "",
         "production": "After being pulverized, the powder is mixed with molten wax, resin, and oil. This combination is wrapped in muslin and immersed in a lye bath and kneaded under the surface. The blue particles will settle to the bottom and once removed from the bath, allowed to dry. ",
         "useStart": "13th century",
         "useEnd": "1828"
@@ -33,9 +34,22 @@
         "iconImg": "#",
         "sourceImg": "http://geology.com/gemstones/lapis-lazuli/banded-lapis.jpg",
         "pigImg": "https://upload.wikimedia.org/wikipedia/commons/6/67/Ultramarinepigment.jpg",
-        "colorCode": "#3F00FF"
+        "prodImg": "",
+        "primary": "",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
       },
-      "example": "https://upload.wikimedia.org/wikipedia/commons/4/48/Sassoferrato_-_Jungfrun_i_b%C3%B6n.jpg"
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "shortDescript": "",
+      "colorFamily": "blue"
     },
     {
       "id": "H1u_kGsfl",
