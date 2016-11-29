@@ -231,6 +231,279 @@
         "exDescript": ""
       },
       "colorFamily": "orange"
+    },
+    {
+      "id": "ByY7hGofe",
+      "name": {
+        "common": "Cadmium red",
+        "pronunc": "",
+        "etym": "",
+        "altNames": ""
+      },
+      "shortDescript": "An artificial red pigment",
+      "descript": "Cadmium red is an artificial pigment introduced in the early 20th century. Cadmium is toxic and can cause cancer and organ damage.",
+      "origins": {
+        "source": "Cadmium sulfide and selenium",
+        "location": "Synthetic",
+        "sourceDescript": "Cadmium red is created by heating cadmium sulfide with selenium. It was first introduced in Germany in 1907.",
+        "production": "",
+        "useStart": "Contemporary",
+        "useEnd": ""
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "/assets/sources/cadmium-red.jpg",
+        "pigImg": "/assets/sources/cadmium-red.jpg",
+        "prodImg": "",
+        "primary": "#E30022",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "red"
+    },
+    {
+      "id": "S17OaGjfx",
+      "name": {
+        "common": "Vermilion",
+        "pronunc": "",
+        "etym": "",
+        "altNames": "Cinnabar"
+      },
+      "shortDescript": "Red from mercuric sulfide",
+      "descript": "Vermilion is a red pigment derived from cinnabar, and has been found on ancient Assyrian relics. It has fallen out of use due to toxicity from mercury.",
+      "origins": {
+        "source": "Mercuric sulfide (Cinnabar)",
+        "location": "Various locations, historically mined in Almaden, Spain",
+        "sourceDescript": "Cinnabar (mercuric sulfide) has been used in painting in the West since antiquity and in China since before recorded history.",
+        "production": "",
+        "useStart": "Prehistoric",
+        "useEnd": ""
+      },
+      "anecdote": "\"The native [cinnabar], which is found in Spain, is hard and stony, as is also that brought from Colchis, which they say is produced in the rocks and on precipices, from which they get it down with darts and arrows\" -Theophrastus",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "/assets/sources/vermilion.jpg",
+        "pigImg": "/assets/sources/vermilion.jpg",
+        "prodImg": "",
+        "primary": "#E34234",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "red"
+    },
+    {
+      "id": "BJHxxXiMl",
+      "name": {
+        "common": "Madder lake",
+        "pronunc": "",
+        "etym": "",
+        "altNames": "Rose madder"
+      },
+      "shortDescript": "Red from plant roots",
+      "descript": "Madder has been used as a pigment since the time of the Ancient Egyptians. The production of dyes from the madder plant was an important industry in Europe, where it was used to color color military uniforms, up until the mid-nineteenth century when it was replaced by alizarin crimson.",
+      "origins": {
+        "source": "Madder plant",
+        "location": "Various locations",
+        "sourceDescript": "Madder lake is made from the root of the madder plant (rubia tinctorium). It is said to have been introduced to Europe by Crusaders.",
+        "production": "Dried madder root and potash are simmered until a deep red liquid is created. Alum is added to the resulting liquid, the excess is poured off and the sediment is allowed to dry. The powder is soaked in water and dried multiple times until the water remains clear. The powder is dried and ground after each washing.",
+        "useStart": "Ancient",
+        "useEnd": ""
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "/assets/sources/madder-lake.jpg",
+        "pigImg": "/assets/sources/madder-lake.jpg",
+        "prodImg": "/assets/production/madder-lake.jpg",
+        "primary": "#E32636",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "red"
+    },
+    {
+      "id": "SkypfXofl",
+      "name": {
+        "common": "Dragon's blood",
+        "pronunc": "",
+        "etym": "",
+        "altNames": ""
+      },
+      "shortDescript": "A deep red from tree resin",
+      "descript": "Dragon's blood is a transparent tree resin. It has been used throughout history as a dye, in painting (as a glaze or varnish), and has been reputed to have medicinal properties.",
+      "origins": {
+        "source": "Resin from a number of different plant genera",
+        "location": "Socotra, various other locations",
+        "sourceDescript": "Though dragon's blood can be sourced from a number of different trees, one of the earlier known sources is Dracaena cinnabari, a tree found on the island of Socotra.",
+        "production": "",
+        "useStart": "Ancient",
+        "useEnd": ""
+      },
+      "anecdote": "\"It lies, therefore, coiled up and concealed in the rivers, in wait for the elephants, when they come to drink; upon which it darts out, fastens itself around the trunk, and then fixes its teeth behind the ear, that being the only place which the elephant cannot protect with the trunk. The dragons, it is said, are of such vast size, that they can swallow the whole of the blood; consequently, the elephant, being thus drained of its blood, falls to the earth exhausted; while the dragon, intoxicated with the draught, is crushed beneath it, and so shares its fate.\" -Pliny the Elder",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "/assets/sources/dragons-blood.jpg",
+        "pigImg": "/assets/pigments/dragons-blood.jpg",
+        "prodImg": "",
+        "primary": "#57110a",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "red"
+    },
+    {
+      "id": "B1exL7ofx",
+      "name": {
+        "common": "Raw umber",
+        "pronunc": "",
+        "etym": "Italian: terra d'ombra (earth of umbria)",
+        "altNames": "Turkey umber"
+      },
+      "shortDescript": "Natural brown earth pigment",
+      "descript": "Raw umber has been widely used as a pigment since prehistory.",
+      "origins": {
+        "source": "Iron oxide ore",
+        "location": "The Umbria region of Italy, Cyprus, and various other locations",
+        "sourceDescript": "Raw umber comes from iron oxide ore containing manganese and aluminum silicate. The highest grade is said to come from Cyprus, an island nation south of Turkey (hence the alternate name, Turkey umber).",
+        "production": "",
+        "useStart": "Prehistoric",
+        "useEnd": ""
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "/assets/sources/raw-umber.jpg",
+        "pigImg": "/assets/pigments/raw-umber.jpg",
+        "prodImg": "",
+        "primary": "#826644",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "brown"
+    },
+    {
+      "id": "ByEUqmoze",
+      "name": {
+        "common": "Raw sienna",
+        "pronunc": "",
+        "etym": "Italian: terra di siena (earth of Siena)",
+        "altNames": ""
+      },
+      "shortDescript": "A natural brown earth pigment",
+      "descript": "A widely used earth pigment since prehistory.",
+      "origins": {
+        "source": "Iron oxide ore",
+        "location": "Siena, Italy and various other locations",
+        "sourceDescript": "Raw sienna is produced from iron oxide ore. It gets its name from the Renaissance era city-state of Siena, a historical source of the pigment.",
+        "production": "",
+        "useStart": "Prehistoric",
+        "useEnd": ""
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "/assets/sources/raw-sienna.jpg",
+        "pigImg": "/assets/sources/raw-sienna.jpg",
+        "prodImg": "",
+        "primary": "#882D17",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "brown"
+    },
+    {
+      "id": "rycRj7oMg",
+      "name": {
+        "common": "Yellow ochre",
+        "pronunc": "",
+        "etym": "Greek: okhros (pale)",
+        "altNames": ""
+      },
+      "shortDescript": "A natural yellow earth pigment",
+      "descript": "A widely used earth pigment since prehistory, Yellow ochre comes from clay colored by iron oxide. The shade varies according to its source.",
+      "origins": {
+        "source": "Clay colored by iron oxide and water",
+        "location": "Various locations",
+        "sourceDescript": "Ochres have been mined and used as pigment around the world since prehistoric times. The mines in Roussillon, France are known historically for producing yellow ochre.",
+        "production": "",
+        "useStart": "Prehistoric",
+        "useEnd": ""
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "/assets/sources/yellow-ochre.jpg",
+        "pigImg": "/assets/pigments/yellow-ochre.jpg",
+        "prodImg": "",
+        "primary": "#CC7722",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "yellow"
     }
   ]
 }
