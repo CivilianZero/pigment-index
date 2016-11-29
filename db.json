@@ -50,7 +50,7 @@
       "origins": {
         "source": "Cochineal (New World), Kermes (Old World)",
         "location": "Central America (Cochineal), Southern Europe (Kermes)",
-        "sourceDescript": "A red lake made from insects",
+        "sourceDescript": "The pigment comes from the bodies of cochineal insects that have been fed exclusively on the Nopal cactus, or alternatively from the kermes insect.",
         "production": "The pigment is created by boiling the insects with potash and precipitating the extraction on an alum base",
         "useStart": "Ancient",
         "useEnd": ""
@@ -75,6 +75,162 @@
         "exDescript": ""
       },
       "colorFamily": "red"
+    },
+    {
+      "id": "B1dXBziGg",
+      "name": {
+        "common": "Lead white",
+        "pronunc": "",
+        "etym": "",
+        "altNames": "Kremnitz white, flake white"
+      },
+      "shortDescript": "White from lead carbonate",
+      "descript": "Lead white is one of the earliest artificially manufactured pigments. Precautions must be taken when handling the pigment, as lead can be absorbed through the skin or inhaled.",
+      "origins": {
+        "source": "Lead carbonate",
+        "location": "Various locations",
+        "sourceDescript": "Lead white is derived from lead carbonate. Its alternate name, Kremnitz white, comes from Krems, Austria, a town known for its production.",
+        "production": "",
+        "useStart": "Ancient",
+        "useEnd": ""
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "/assets/sources/lead-white.jpg",
+        "pigImg": "/assets/sources/lead-white",
+        "prodImg": "",
+        "primary": "#ffffff",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "white"
+    },
+    {
+      "id": "By_pLzszg",
+      "name": {
+        "common": "Orpiment",
+        "pronunc": "",
+        "etym": "Latin: auripigmentum (gold pigment)",
+        "altNames": "King's yellow"
+      },
+      "shortDescript": "Yellow from arsenic sulfide",
+      "descript": "An extremely toxic yellow pigment, orpiment has been mostly abandoned in modern times, aside from the finest grade, King's yellow.",
+      "origins": {
+        "source": "Arsenic sulfide",
+        "location": "Various locations",
+        "sourceDescript": "Arsenic sulfide is formed as a deposit in hot-springs or in hydrothermal vents.",
+        "production": "",
+        "useStart": "Ancient",
+        "useEnd": ""
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "/assets/sources/orpiment.jpg",
+        "pigImg": "/assets/pigments/orpiment.jpg",
+        "prodImg": "",
+        "primary": "#EEBD34",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "yellow"
+    },
+    {
+      "id": "SyTZYGozl",
+      "name": {
+        "common": "Indian yellow",
+        "pronunc": "",
+        "etym": "",
+        "altNames": ""
+      },
+      "shortDescript": "Yellow from cow urine",
+      "descript": "Indian yellow is a pigment produced from the urine of cows fed on mango leaves. It has been banned in modern times on the grounds of animal cruelty.",
+      "origins": {
+        "source": "Magnesium salt of euxanthic acid",
+        "location": "India",
+        "sourceDescript": "Indian yellow, named due to its production origin in India, is said to be derived from the urine of cows fed on mango leaves.",
+        "production": "The cow's urine is mixed with a clay base, which is then dried out and ground into a powder.",
+        "useStart": "Industrial",
+        "useEnd": "Contemporary"
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "/assets/sources/indian-yellow.jpg",
+        "pigImg": "/assets/pigments/indian-yellow.jpg",
+        "prodImg": "",
+        "primary": "#E3A857",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "yellow"
+    },
+    {
+      "id": "HJwcqGoze",
+      "name": {
+        "common": "Realgar",
+        "pronunc": "",
+        "etym": "Arabic: rahj al ghar (powder of the mine)",
+        "altNames": ""
+      },
+      "shortDescript": "Orange from arsenic sulfide",
+      "descript": "An extremely toxic orange pigment that has fallen out of usage in modern times due to its poisonous nature.",
+      "origins": {
+        "source": "Arsenic sulfide",
+        "location": "Various locations",
+        "sourceDescript": "Arsenic sulfide is formed as a deposit in hot-springs or in hydrothermal vents.",
+        "production": "",
+        "useStart": "Ancient",
+        "useEnd": ""
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "/assets/sources/realgar.jpg",
+        "pigImg": "/assets/pigments/realgar.jpg",
+        "prodImg": "",
+        "primary": "#ec6722",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "orange"
     }
   ]
 }
