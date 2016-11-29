@@ -36,6 +36,45 @@
         "colorCode": "#3F00FF"
       },
       "example": "https://upload.wikimedia.org/wikipedia/commons/4/48/Sassoferrato_-_Jungfrun_i_b%C3%B6n.jpg"
+    },
+    {
+      "id": "H1u_kGsfl",
+      "name": {
+        "common": "Carmine",
+        "pronunc": "",
+        "etym": "",
+        "altNames": "Carmine lake, kermes red lake"
+      },
+      "shortDescript": "A red lake made from insects",
+      "descript": "Carmine is a red lake pigment made from the cochineal insect. Prior to the discovery of the cochineal in the New World, carmine was derived from the kermes insect.",
+      "origins": {
+        "source": "Cochineal (New World), Kermes (Old World)",
+        "location": "Central America (Cochineal), Southern Europe (Kermes)",
+        "sourceDescript": "A red lake made from insects",
+        "production": "The pigment is created by boiling the insects with potash and precipitating the extraction on an alum base",
+        "useStart": "Ancient",
+        "useEnd": ""
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "assets/sources/carmine.jpg",
+        "pigImg": "assets/pigments/carmine.jpg",
+        "prodImg": "assets/production/carmine.jpg",
+        "primary": "#960018",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "assets/examples/carmine.jpg",
+        "exTitle": "Samson and Delilah",
+        "exArtist": "Peter Paul Rubens",
+        "exMedium": "Oil on Panel",
+        "exDate": "1609",
+        "exDescript": ""
+      },
+      "colorFamily": "red"
     }
   ]
 }
