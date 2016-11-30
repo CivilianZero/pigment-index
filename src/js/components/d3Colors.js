@@ -1,6 +1,6 @@
 var d3 = require('d3');
 
-var d3Colors = [];
+var d3Colors = {};
 
 d3Colors.create = function(dataset, total) {
 	d3.select('.color-filter').selectAll('div')

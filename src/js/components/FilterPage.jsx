@@ -3,9 +3,9 @@ var React = require('react'),
 
 var pigmentStore = require('../stores/pigmentStore.js'),
 	d3Colors = require('./d3Colors.js'),
-	PigmentSheet = require('./PigmentSheet.jsx');
-
-var PigmentIndex = require('./PigmentIndex.jsx');
+	d3Timeline = require('./d3Timeline.js'),
+	PigmentSheet = require('./PigmentSheet.jsx'),
+	PigmentIndex = require('./PigmentIndex.jsx');
 
 var FilterPage = React.createClass({
 	
@@ -71,8 +71,7 @@ var FilterPage = React.createClass({
 	render() {
 		var colorFamilies = [],
 			numberOfPigs = 0,
-			pigmentResult,
-			d3Bars;
+			pigmentResult;
 
 		var filterColor = function(value) {
 			var color = value.colorFamily,
@@ -91,9 +90,11 @@ var FilterPage = React.createClass({
 			}
 			numberOfPigs++;
 		};
-
+		
+		d3Timeline.create(this.state.filteredPigments);
+		
 		this.state.pigments.forEach(filterColor);
-		d3Bars = d3Colors.create(colorFamilies, numberOfPigs);
+		d3Colors.create(colorFamilies, numberOfPigs);
 
 		if(this.state.pigmentId) {
 			pigmentResult = <PigmentSheet key={this.state.pigmentId} id={this.state.pigmentId} />;
@@ -102,8 +103,8 @@ var FilterPage = React.createClass({
 		return (
 			<section>
 				<section className='filters'>
-					<div className='color-filter'>{d3Bars}</div>
-					<div className='timeline-filter'>timeline</div>
+					<div className='color-filter'></div>
+					<div className='timeline-filter'></div>
 				</section>
 				<section className='search-results'>
 					<div className='list-view'>
