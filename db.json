@@ -14,7 +14,7 @@
         "location": "Sar-e-sang, Afghanistan",
         "sourceDescript": "Lapis lazuli was historically mined in only one location in Sar-e-sang, Afghanistan, which translates to \"place of stones\".",
         "production": "After the lapis lazuli is pulverized, the powder is mixed with wax, resin, and oil and wrapped in muslin. The mass is immersed in a lye bath and kneaded under the water. This washes out the blue mineral, which settles to the bottom. The sediment is then collected and allowed to dry.",
-        "useStart": "Ancient. Used as a pigment since the 12th century.",
+        "useStart": "Ancient",
         "useEnd": ""
       },
       "anecdote": "\"Ultramarine blue is a color illustrious, beautiful, and most perfect, beyond all other colors; one could not say anything about it, or do anything with it, that its quality would not still surpass. And, because of its excellence, I want to discuss it at length, and to show you in detail how it is made. And pay close attention to this, for you will gain great honor and service from it. And let some of that color, combined with gold, which adorns all the works of our profession, whether on wall or on panel, shine forth in every object.\" -Cennini",
@@ -573,7 +573,7 @@
         "location": "Saxony, Germany",
         "sourceDescript": "Smalt was first made in Saxony, hence its alternate name, Saxon blue.",
         "production": "Cobalt salts are heated to a high temperature, resulting in a deep blue glass, which is quenched and pulverized into a fine powder.",
-        "useStart": "17th century",
+        "useStart": "Early Modern",
         "useEnd": ""
       },
       "anecdote": "",
@@ -846,8 +846,8 @@
         "location": "Egypt",
         "sourceDescript": "Mummy brown's production was made possible by the asphaltum (bitumen) used in Egyptian mummification practices.",
         "production": "The pigment was created by grinding up the embalmed bodies of humans and animals into a fine powder.",
-        "useStart": "19th century",
-        "useEnd": "20th century"
+        "useStart": "Industrial",
+        "useEnd": "Contemporary"
       },
       "anecdote": "",
       "images": {

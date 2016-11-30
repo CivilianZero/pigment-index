@@ -50,16 +50,6 @@ pigmentStore.fetch = function (id) {
 	}
 }
 
-// pigmentStore.filterColor = function(colorFamily) {
-// 	$.ajax({
-// 			url: resourceRoot,
-// 			success: function (response) {
-// 				var results = response[colorFamily]
-// 				return findByColor(results);
-// 			}
-// 		});
-// }
-
 pigmentStore.add = function(
 		common,
 		pronunc,
