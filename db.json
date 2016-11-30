@@ -4,20 +4,20 @@
       "id": "rk8t6lbMe",
       "name": {
         "common": "Ultramarine",
-        "pronunc": "''",
-        "etym": "Latin: ultramarinus, \"beyond the sea\"",
-        "altNames": "Fra Angelico blue"
+        "pronunc": "",
+        "etym": "Latin: ultramarinus (beyond the sea)",
+        "altNames": ""
       },
-      "descript": "Ultramarine is a brilliant blue pigment derived from lapis lazuli, a semi-precious stoned, historically mined in Afghanistan. While still available in its natural form today, it's intensive production process makes it quite expensive. It has been replaced in the modern day with its artificial counterpart.",
+      "descript": "Ultramarine is a brilliant blue pigment derived from lapis lazuli, a semi-precious stone. While still available in its natural form today, it's intensive production process makes it quite expensive. It has been replaced in the modern day with its artificial counterpart.",
       "origins": {
-        "source": "Lapis lazuli, a semi-precious stone",
+        "source": "Lapis lazuli",
         "location": "Sar-e-sang, Afghanistan",
-        "sourceDescript": "",
-        "production": "After being pulverized, the powder is mixed with molten wax, resin, and oil. This combination is wrapped in muslin and immersed in a lye bath and kneaded under the surface. The blue particles will settle to the bottom and once removed from the bath, allowed to dry. ",
-        "useStart": "13th century",
-        "useEnd": "1828"
+        "sourceDescript": "Lapis lazuli was historically mined in only one location in Sar-e-sang, Afghanistan, which translates to \"place of stones\".",
+        "production": "After the lapis lazuli is pulverized, the powder is mixed with wax, resin, and oil and wrapped in muslin. The mass is immersed in a lye bath and kneaded under the water. This washes out the blue mineral, which settles to the bottom. The sediment is then collected and allowed to dry.",
+        "useStart": "Ancient. Used as a pigment since the 12th century.",
+        "useEnd": ""
       },
-      "anecdote": "Ultramarine blue is a color illustrious, beautiful, and most perfect, beyond all other colors; one could not say anything about it, or do anything with it, that its quality would not still surpass. And, because of its excellence, I want to discuss it at length, and to show you in detail how it is made. And pay close attention to this, for you will gain great honor and service from it. And let some of that color, combined with gold, which adorns all the works of our profession, whether on wall or on panel, shine forth in every object.",
+      "anecdote": "\"Ultramarine blue is a color illustrious, beautiful, and most perfect, beyond all other colors; one could not say anything about it, or do anything with it, that its quality would not still surpass. And, because of its excellence, I want to discuss it at length, and to show you in detail how it is made. And pay close attention to this, for you will gain great honor and service from it. And let some of that color, combined with gold, which adorns all the works of our profession, whether on wall or on panel, shine forth in every object.\" -Cennini",
       "practical": {
         "suitable": "Oil, acrylic, watercolor, gouache, tempera",
         "ratio": "''",
@@ -31,11 +31,11 @@
         "toxic": "Not considered toxic."
       },
       "images": {
-        "iconImg": "assets/icons/ultramarine.svg",
-        "sourceImg": "http://geology.com/gemstones/lapis-lazuli/banded-lapis.jpg",
-        "pigImg": "https://upload.wikimedia.org/wikipedia/commons/6/67/Ultramarinepigment.jpg",
+        "iconImg": "/assets/icons/ultramarine.svg",
+        "sourceImg": "/assets/sources/ultramarine.jpg",
+        "pigImg": "/assets/pigments/ultramarine.jpg",
         "prodImg": "",
-        "primary": "",
+        "primary": "#120a8f",
         "secondary": "",
         "tertiary": "",
         "quarter": ""
@@ -48,7 +48,7 @@
         "exDate": "",
         "exDescript": ""
       },
-      "shortDescript": "",
+      "shortDescript": "Blue pigment from lapis lazuli",
       "colorFamily": "blue"
     },
     {
@@ -518,6 +518,279 @@
         "exDescript": ""
       },
       "colorFamily": "yellow"
+    },
+    {
+      "id": "ryjfH9jfe",
+      "name": {
+        "common": "Egyptian blue",
+        "pronunc": "",
+        "etym": "",
+        "altNames": "Pozzuoli blue"
+      },
+      "shortDescript": "Blue pigment from quartz",
+      "descript": "Egyptian blue is one of the earliest artificially made pigments. Its shade is dependant on how finely it is ground. Smaller particles are paler and get more saturated the coarser the grind.",
+      "origins": {
+        "source": "Quartz, copper and calcium",
+        "location": "Egypt",
+        "sourceDescript": "The pigment was used by the Egyptians as early as 3000 BC. It later came to be known to the Romans, earning its alternate name, Pozzuoli blue, from the port it was brought through into Italy.",
+        "production": "Egyptian blue is created by boiling quartz, along with copper and calcium, at a very high temperature (up to 1000°C).",
+        "useStart": "Ancient",
+        "useEnd": ""
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "/assets/icons/egyptian-blue.svg",
+        "sourceImg": "/assets/source/egyptian-blue.jpg",
+        "pigImg": "/assets/pigments/egyptian-blue.jpg",
+        "prodImg": "",
+        "primary": "#1034A6",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "blue"
+    },
+    {
+      "id": "H1Ejw5ifx",
+      "name": {
+        "common": "Smalt",
+        "pronunc": "",
+        "etym": "",
+        "altNames": "Saxon blue, royal blue"
+      },
+      "shortDescript": "Blue from cobalt",
+      "descript": "Smalt is a blue pigment derived from cobalt ore. It was used by artisans to color glass, and is associated with the glass-making on the Venetian island of Murano.",
+      "origins": {
+        "source": "Cobalt oxide",
+        "location": "Saxony, Germany",
+        "sourceDescript": "Smalt was first made in Saxony, hence its alternate name, Saxon blue.",
+        "production": "Cobalt salts are heated to a high temperature, resulting in a deep blue glass, which is quenched and pulverized into a fine powder.",
+        "useStart": "17th century",
+        "useEnd": ""
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "/assets/sources/smalt.jpg",
+        "pigImg": "/assets/sources/smalt.png",
+        "prodImg": "",
+        "primary": "#46567b",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "blue"
+    },
+    {
+      "id": "ryLb6qsMg",
+      "name": {
+        "common": "Indigo",
+        "pronunc": "",
+        "etym": "",
+        "altNames": ""
+      },
+      "shortDescript": "Blue from plant leaves",
+      "descript": "Indigo is a natural blue pigment derived from the leaves of an Indian plant. It's primary use, historically, has been as a dye, though it can be used in oil or watercolor.",
+      "origins": {
+        "source": "Indigofera tinctoria",
+        "location": "India, various other locations",
+        "sourceDescript": "Indigo comes from Indigofera tinctoria, a plant native to India. Prior to imports to Europe from India in the 17th century, woad(Isatis tinctoria) was used to create a similar color.",
+        "production": "The leaves are left to ferment in water and then allowed to dry. The residue is washed, boiled, and air dried before it is formed into cakes.",
+        "useStart": "Prehistoric",
+        "useEnd": ""
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "/assets/sources/indigo.jpg",
+        "pigImg": "/assets/sources/indigo.jpg",
+        "prodImg": "",
+        "primary": "#083a79",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "blue"
+    },
+    {
+      "id": "HJUbesjfe",
+      "name": {
+        "common": "Verdigris",
+        "pronunc": "",
+        "etym": "Old French: vert-gres (green of Greece)",
+        "altNames": ""
+      },
+      "shortDescript": "Green from copper",
+      "descript": "Verdigris is one of the earliest artificially made pigments, dating back to Ancient Rome.",
+      "origins": {
+        "source": "Hydrated copper acetate",
+        "location": "Various locations",
+        "sourceDescript": "Verdigris was traditionally prepared from copper plates or shavings that were exposed to vinegar.",
+        "production": "Originally, grape skins were left to decompose on a copper sheet. After a few weeks, a greenish-blue deposit forms which is pulverized into a fine powder.",
+        "useStart": "Ancient",
+        "useEnd": ""
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "/assets/sources/verdigris.jpg",
+        "pigImg": "/assets/pigments/verdigris.jpg",
+        "prodImg": "",
+        "primary": "#43b3ae",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "green"
+    },
+    {
+      "id": "SyGcVsofx",
+      "name": {
+        "common": "Malachite",
+        "pronunc": "",
+        "etym": "",
+        "altNames": "Mountain green"
+      },
+      "shortDescript": "Green from copper carbonate",
+      "descript": "Malachite is a green mineral pigment that has been used as a pigment since the earliest civilizations. The strength of the color weakens the finer it is ground.",
+      "origins": {
+        "source": "Copper carbonate",
+        "location": "Various locations",
+        "sourceDescript": "Malachite is produced from copper carbonate, which is often found in conjunction with azurite. It can also be made artificially.",
+        "production": "Malachite is prepared by crushing copper carbonate, sieving it, and grinding the result with liquid into a paste.",
+        "useStart": "Ancient",
+        "useEnd": ""
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "/assets/sources/malachite.jpg",
+        "pigImg": "/assets/pigments/malachite.jpg",
+        "prodImg": "",
+        "primary": "#7fc1a6",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "green"
+    },
+    {
+      "id": "SJIOviifg",
+      "name": {
+        "common": "Lamp black",
+        "pronunc": "",
+        "etym": "",
+        "altNames": "Carbon black"
+      },
+      "shortDescript": "Black from soot",
+      "descript": "Lamp black is one of the oldest pigments known to man.",
+      "origins": {
+        "source": "Soot",
+        "location": "Various locations",
+        "sourceDescript": "Lamp black is made of nearly pure, amorphous carbon derived from the soot of burning oil lamps or other petroleum residues.",
+        "production": "",
+        "useStart": "Prehistoric",
+        "useEnd": ""
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "/assets/sources/lamp-black.jpg",
+        "pigImg": "/assets/pigments/lamp-black.jpg",
+        "prodImg": "",
+        "primary": "#1b181e",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "black"
+    },
+    {
+      "id": "SkO7Fojze",
+      "name": {
+        "common": "Ivory black",
+        "pronunc": "",
+        "etym": "",
+        "altNames": "Bone black"
+      },
+      "shortDescript": "Black from ivory or bone",
+      "descript": "Ivory black is a pigment derived from ivory or bone. Genuine ivory black contains more carbon than bone black.",
+      "origins": {
+        "source": "Ivory or bone",
+        "location": "Various locations",
+        "sourceDescript": "Ivory black's name is derived from its production from charred ivory. In modern times it is produced from burned animal bones.",
+        "production": "",
+        "useStart": "Prehistoric",
+        "useEnd": ""
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "/assets/sources/ivory-black.jpg",
+        "pigImg": "/assets/pigments/ivory-black.jpg",
+        "prodImg": "",
+        "primary": "#323141",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "black"
     }
   ]
 }
