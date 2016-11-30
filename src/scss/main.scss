@@ -15,7 +15,7 @@
 }
 
 @font-face {
-	font-family: Lato;
+	font-family: LatoItalic;
 	src: url(/assets/fonts/Lato/Lato-Italic.ttf);
 }
 /*FONTS*/
@@ -46,12 +46,24 @@ button {
 .Landing {
 	display: flex;
 	flex-direction: column;
+	vertical-align: middle;
 	height: 70vh;
 	margin: 12vh 2rem 12vh 2rem;
-}
+	padding: 2rem;
+	border: 1px solid #777;
+	
+	h1 {
+		font-family: CrimsonBold;
+	}
 
-.Landing h1 {
-	font-family: CrimsonBold;
+	p {
+		font-family: Lato;
+		line-height: 1.5rem;
+	}
+
+	button {
+		
+	}
 }
 /*LANDING*/
 
