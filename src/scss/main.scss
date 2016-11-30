@@ -1,0 +1,62 @@
+/*FONTS*/
+@font-face {
+	font-family: CrimsonBold;
+	src: url(/assets/fonts/Crimson_Text/CrimsonText-Bold.ttf);
+}
+
+@font-face {
+	font-family: CrimsonBoldItalic;
+	src: url(/assets/fonts/Crimson_Text/CrimsonText-BoldItalic.ttf);
+}
+
+@font-face {
+	font-family: Lato;
+	src: url(/assets/fonts/Lato/Lato-Regular.ttf);
+}
+
+@font-face {
+	font-family: Lato;
+	src: url(/assets/fonts/Lato/Lato-Italic.ttf);
+}
+/*FONTS*/
+
+/*BASIC SETUP*/
+*, *:before, *:after {
+	box-sizing: border-box
+}
+
+.cf:after {
+	clear: both;
+	content: '';
+	display: table;
+}
+/*BASIC SETUP*/
+
+/*INPUT PAGE*/
+input,
+textarea,
+button {
+	display: block;
+	margin: 10px 40px;
+	padding: 10px;
+}
+/*INPUT PAGE*/
+
+/*LANDING*/
+.Landing {
+	display: flex;
+	flex-direction: column;
+	height: 70vh;
+	margin: 12vh 2rem 12vh 2rem;
+}
+
+.Landing h1 {
+	font-family: CrimsonBold;
+}
+/*LANDING*/
+
+
+
+
+
+
