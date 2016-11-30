@@ -695,7 +695,7 @@
       },
       "anecdote": "",
       "images": {
-        "iconImg": "",
+        "iconImg": "/assets/icons/malachite.svg",
         "sourceImg": "/assets/sources/malachite.jpg",
         "pigImg": "/assets/pigments/malachite.jpg",
         "prodImg": "",
@@ -773,7 +773,7 @@
       },
       "anecdote": "",
       "images": {
-        "iconImg": "",
+        "iconImg": "/assets/icons/ivory-black.svg",
         "sourceImg": "/assets/sources/ivory-black.jpg",
         "pigImg": "/assets/pigments/ivory-black.jpg",
         "prodImg": "",
@@ -791,6 +791,123 @@
         "exDescript": ""
       },
       "colorFamily": "black"
+    },
+    {
+      "id": "rkjPW2sfx",
+      "name": {
+        "common": "Sepia",
+        "pronunc": "",
+        "etym": "Greek: sepia (cuttlefish)",
+        "altNames": ""
+      },
+      "shortDescript": "Brown from ink sacs",
+      "descript": "Sepia is produced from the ink sacs of various cephalopods. It is used primarily as an ink wash in works on paper or in watercolor.",
+      "origins": {
+        "source": "Ink sacs",
+        "location": "Various locations",
+        "sourceDescript": "Sepia is derived from the ink sacs of cephalopods, primarily cuttlefish.",
+        "production": "The ink sac is rinsed free of salt water, dried, and pulverized. The powder is then boiled with lye to produce a colored liquid. The result is treated with hydrochloric acid, washed, and allowed to dry.",
+        "useStart": "Ancient",
+        "useEnd": ""
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "/assets/sources/sepia.jpg",
+        "pigImg": "/assets/pigments/sepia.jpg",
+        "prodImg": "",
+        "primary": "#704214",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "brown"
+    },
+    {
+      "id": "B1XYH3jfe",
+      "name": {
+        "common": "Mummy brown",
+        "pronunc": "",
+        "etym": "",
+        "altNames": "Caput mortuum"
+      },
+      "shortDescript": "Brown from mummies",
+      "descript": "Mummy brown was a short lived pigment whose use is said to have been discontinued after artists became widely aware of its source. Its alternate name, caput mortuum, translates to \"dead head\".",
+      "origins": {
+        "source": "Egyptian mummies",
+        "location": "Egypt",
+        "sourceDescript": "Mummy brown's production was made possible by the asphaltum (bitumen) used in Egyptian mummification practices.",
+        "production": "The pigment was created by grinding up the embalmed bodies of humans and animals into a fine powder.",
+        "useStart": "19th century",
+        "useEnd": "20th century"
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "/assets/icons/mummy-brown.svg",
+        "sourceImg": "/assets/sources/mummy-brown.jpg",
+        "pigImg": "/assets/pigments/mummy-brown.jpg",
+        "prodImg": "",
+        "primary": "#473126",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "brown"
+    },
+    {
+      "id": "HkxGO2jGe",
+      "name": {
+        "common": "Tyrian purple",
+        "pronunc": "",
+        "etym": "",
+        "altNames": "Imperial purple, Byzantium purple"
+      },
+      "shortDescript": "Purple from molluscs",
+      "descript": "Tyrian purple is derived from certain species of molluscs. Its alternate name, Imperial purple, comes from the fact that it was used to dye the robes of Roman emperors.",
+      "origins": {
+        "source": "Molluscs from the genus Murex",
+        "location": "Mediterranean, Tyre",
+        "sourceDescript": "Tyrian purple comes from the Mediterranean molluscs Murex trunculis or Murex brandaris.",
+        "production": "",
+        "useStart": "Ancient",
+        "useEnd": ""
+      },
+      "anecdote": "\"The most favourable season for taking these [shellfish] is after the rising of the Dog-star, or else before spring; for when they have once discharged their waxy secretion, their juices have no consistency: this, however, is a fact unknown in the dyers' workshops, although it is a point of primary importance.\" -Pliny the Elder",
+      "images": {
+        "iconImg": "/assets/icons/tyrian-purple.svg",
+        "sourceImg": "/assets/sources/tyrian-purple.jpg",
+        "pigImg": "/assets/pigments/tyrian-purple.png",
+        "prodImg": "",
+        "primary": "#66023C",
+        "secondary": "",
+        "tertiary": "",
+        "quarter": ""
+      },
+      "example": {
+        "example": "",
+        "exTitle": "",
+        "exArtist": "",
+        "exMedium": "",
+        "exDate": "",
+        "exDescript": ""
+      },
+      "colorFamily": "purple"
     }
   ]
 }
