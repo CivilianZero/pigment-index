@@ -15,16 +15,17 @@ var FilterPage = React.createClass({
 			pigments: pigments,
 			selectPigment: null,
 			filteredPigments: pigments,
-			timeFilters: null,
+			timeFilters: [],
+			colorFilters: []
 		}
 	},
 
 	componentDidMount() {
-		var colorFilterList = [],
+		var colorFilterList = this.state.colorFilters,
 			_this = this;
 
-		var findByColor = function (p1, p2, p3, p4, p5, p6, p7, p8) {
-			return _this.state.pigments.filter(function (p) {
+		var findByColor = function (statePass, p1, p2, p3, p4, p5, p6, p7, p8) {
+			return statePass.filter(function (p) {
 				return p.colorFamily === p1 ||
 					p.colorFamily === p2 ||
 					p.colorFamily === p3 ||
@@ -44,13 +45,17 @@ var FilterPage = React.createClass({
 				colorFilterList.splice(colorFilterList.indexOf(e.target.id), 1)
 			}
 
-			if (colorFilterList.length === 0) {
+			if (colorFilterList.length === 0 && _this.state.timeFilters.length === 0) {
 				_this.setState({
 					filteredPigments: _this.state.pigments
 				});
+			} else if (_this.state.timeFilters.length > 0) {
+				_this.setState({
+					filteredPigments: findByColor(_this.state.filteredPigments, ...colorFilterList)
+				});
 			} else {
 				_this.setState({
-					filteredPigments: findByColor(...colorFilterList)
+					filteredPigments: findByColor(_this.state.pigments, ...colorFilterList)
 				});
 			}
 		});
@@ -130,8 +135,8 @@ var FilterPage = React.createClass({
 	},
 
 	handleTimelineFilter(e) {
-		var time = e.target.id,
-			_this = this,
+		var _this = this,
+			timeFilters = this.state.timeFilters,
 			timePeriods = [
 			{'period': 'Prehistoric', 'time': 0},
 			{'period': 'Ancient', 'time': 5},
@@ -142,35 +147,57 @@ var FilterPage = React.createClass({
 			{'period': '', 'time': 30}
 		];
 
-		var convertTime = function(use) {
+		var convertTime = function(period) {
 			let convertedTime;
 			timePeriods.forEach(function(value) {
-				if(use === value.period) {
+				if(period === value.period) {
 					convertedTime = value.time
 				}
 			});
 			return convertedTime
 		};
 
-		console.log('Time: ' + convertTime(time));
+		var cTime = convertTime(e.target.id);
+		console.log(cTime)
 
-		var findByTime = function(time) {
-			let newTime = convertTime(time);
+		var findByTime = function() {
+			var timeArray = Array.prototype.slice.call(arguments);
 			return _this.state.filteredPigments.filter(function(p) {
 				let start = convertTime(p.origins.useStart),
 					end = convertTime(p.origins.useEnd);
-					console.log('start: ' + start + ' end: ' + end);
-				if (start <= newTime && newTime <= end) {
-					console.log('pigment: ' + p);
+				if (start <= timeArray[0] && timeArray[0] <= end ||
+					start <= timeArray[1] && timeArray[1] <= end ||
+					start <= timeArray[2] && timeArray[2] <= end ||
+					start <= timeArray[3] && timeArray[5] <= end ||
+					start <= timeArray[4] && timeArray[4] <= end ||
+					start <= timeArray[5] && timeArray[5] <= end ) {
 					return p
 				}
 			})
 		};
 
-		this.setState({
-			filteredPigments: findByTime(time)
-		});
-		console.log('click ran, filteredPigments: ' + this.state.filteredPigments);
+		$(e.target).toggleClass('selected');
+		if(timeFilters.indexOf(cTime) === -1){
+			timeFilters.push(cTime);
+		} else {
+			timeFilters.splice(timeFilters.indexOf(cTime), 1)
+		}
+
+		console.log('time: ' + timeFilters + ' color: ' + this.state.colorFilters);
+
+		if (this.state.colorFilters.length === 0 && this.state.timeFilters.length === 0) {
+			_this.setState({
+				filteredPigments: _this.state.pigments
+			});
+		} else if (this.state.timeFilters.length === 0) {
+			this.setState({
+				filteredPigments: _this.state.pigments
+			});
+		} else {
+			_this.setState({
+				filteredPigments: findByTime(...timeFilters)
+			});
+		}
 	}
 });
 
