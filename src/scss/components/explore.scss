@@ -21,14 +21,28 @@ $serif: Crimson, serif;
 		margin: 0;
 		padding: 1rem;
 		li {
-			// flex-grow: 1;
+			display: flex;
 			flex-basis: 100%;
+			justify-content: space-between;
 			border: 1px solid #ccc;
 			padding: .25rem;
 			margin: .25rem 0;
 			font-family: $serif;
 			font-size: .75rem;
 			text-transform: uppercase;
+			height: 4rem;
+			div {
+				flex-basis: 60%;
+				padding: 0 1rem;
+				align-self: center;
+				text-align: center;
+			}
+			img {
+				align-self: center;
+				padding: 0 1rem;
+				// flex-basis: 25%;
+				height: 90%;
+			}
 		}
 	}
 }
@@ -42,6 +56,9 @@ $serif: Crimson, serif;
 	.search-results ul > li {
 		flex-basis: 45%;
 		margin: .25rem 2.5%;
+		div {
+			font-size: 1.5vw;
+		}
 	}
 
 

@@ -10,7 +10,7 @@ var PigmentListItem = React.createClass({
 		return(
 			<li onClick={this.props.passedClick} id={this.props.id} style={divColor}>
 				<img src={this.props.icon}/>
-				{this.props.name}
+				<div>{this.props.name}</div>
 			</li>
 		)
 	}
