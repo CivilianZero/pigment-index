@@ -3,6 +3,11 @@ $background: #fff;
 $sans-light: LatoLight;
 $serif: Crimson;
 
+// body {
+// 	background-image: url('/assets/background.svg');
+// 	background-repeat: repeat;
+// }
+
 @mixin flex-column {
 	display: flex;
 	flex-direction: column;
