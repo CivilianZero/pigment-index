@@ -11,6 +11,7 @@ var PigmentIndex = React.createClass({
 				return <PigmentListItem 
 					key={p.id}
 					id={p.id}
+					icon={p.images.iconImg}
 					name={p.name.common}
 					color={p.images.colorCode}
 					passedClick={passedClick}
