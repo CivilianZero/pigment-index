@@ -16,7 +16,9 @@ var FilterPage = React.createClass({
 			selectPigment: null,
 			filteredPigments: pigments,
 			timeFilters: [],
-			colorFilters: []
+			colorFilters: [],
+			colorBackup: pigments,
+			timelineBackup: pigments
 		}
 	},
 
@@ -44,18 +46,24 @@ var FilterPage = React.createClass({
 			} else {
 				colorFilterList.splice(colorFilterList.indexOf(e.target.id), 1)
 			}
-
-			if (colorFilterList.length === 0 && _this.state.timeFilters.length === 0) {
+			
+			if (colorFilterList.length === 0 && _this.state.timeFilters.legnth === 0) {
 				_this.setState({
 					filteredPigments: _this.state.pigments
 				});
+			} else if (colorFilterList.length === 0) {
+				_this.setState({
+					filteredPigments: _this.state.timelineBackup
+				});
 			} else if (_this.state.timeFilters.length > 0) {
 				_this.setState({
-					filteredPigments: findByColor(_this.state.filteredPigments, ...colorFilterList)
+					filteredPigments: findByColor(_this.state.filteredPigments, ...colorFilterList),
+					colorBackup: findByColor(_this.state.pigments, ...colorFilterList)
 				});
 			} else {
 				_this.setState({
-					filteredPigments: findByColor(_this.state.pigments, ...colorFilterList)
+					filteredPigments: findByColor(_this.state.pigments, ...colorFilterList),
+					colorBackup: findByColor(_this.state.pigments, ...colorFilterList)
 				});
 			}
 		});
@@ -66,7 +74,9 @@ var FilterPage = React.createClass({
 		pigmentStore.on('update', function() {
 			_this.setState({
 				pigments: pigmentStore.get(),
-				filteredPigments: pigmentStore.get()
+				filteredPigments: pigmentStore.get(),
+				colorBackup: pigmentStore.get(),
+				timelineBackup: pigmentStore.get()
 			});
 		});
 	},
@@ -158,23 +168,27 @@ var FilterPage = React.createClass({
 		};
 
 		var cTime = convertTime(e.target.id);
-		console.log(cTime)
 
-		var findByTime = function() {
-			var timeArray = Array.prototype.slice.call(arguments);
-			return _this.state.filteredPigments.filter(function(p) {
+		var findByTime = function(stateChosen) {
+			var timeArray = Array.prototype.slice.call(arguments),
+				isBetween = false;
+			return stateChosen.filter(function(p) {
 				let start = convertTime(p.origins.useStart),
 					end = convertTime(p.origins.useEnd);
-				if (start <= timeArray[0] && timeArray[0] <= end ||
-					start <= timeArray[1] && timeArray[1] <= end ||
-					start <= timeArray[2] && timeArray[2] <= end ||
-					start <= timeArray[3] && timeArray[5] <= end ||
-					start <= timeArray[4] && timeArray[4] <= end ||
-					start <= timeArray[5] && timeArray[5] <= end ) {
-					return p
+				for (var i = 0; i < timeArray.length; i++) {
+					if (start <= timeArray[i] && timeArray[i] <= end) {
+						isBetween = true;
+					} else {
+						isBetween = false;
+					}
 				}
-			})
+				if (isBetween) {
+					return p;
+				}	
+			});
 		};
+
+		console.log(this.state.colorFilters + ' ' + this.state.timeFilters);
 
 		$(e.target).toggleClass('selected');
 		if(timeFilters.indexOf(cTime) === -1){
@@ -183,19 +197,18 @@ var FilterPage = React.createClass({
 			timeFilters.splice(timeFilters.indexOf(cTime), 1)
 		}
 
-		console.log('time: ' + timeFilters + ' color: ' + this.state.colorFilters);
-
-		if (this.state.colorFilters.length === 0 && this.state.timeFilters.length === 0) {
-			_this.setState({
-				filteredPigments: _this.state.pigments
+		if (this.state.timeFilters.length === 0 && this.state.colorFilters.length === 0) {
+			this.setState({
+				filteredPigments: this.state.pigments
 			});
 		} else if (this.state.timeFilters.length === 0) {
 			this.setState({
-				filteredPigments: _this.state.pigments
+				filteredPigments: this.state.colorBackup
 			});
 		} else {
-			_this.setState({
-				filteredPigments: findByTime(...timeFilters)
+			this.setState({
+				filteredPigments: findByTime(this.state.filteredPigments, ...timeFilters),
+				timelineBackup: findByTime(this.state.pigments, ...timeFilters)
 			});
 		}
 	}
