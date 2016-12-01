@@ -1,7 +1,7 @@
 $grey: #ccc;
 $background: #fff;
-$sans-light: LatoLight;
-$serif: Crimson;
+$sans-light: LatoLight, sans-serif;
+$serif: Crimson, serif;
 
 // body {
 // 	background-image: url('/assets/background.svg');
@@ -26,17 +26,17 @@ $serif: Crimson;
 	padding: 2rem;
 	
 	h1 {
-		font-family: Crimson;
+		font-family: $serif
 	}
 
 	p {
-		font-family: LatoLight;
+		font-family: $sans-light;
 		line-height: 1.5rem;
 	}
 
 	button {
 		@include box;
-		font-family: LatoLight;
+		font-family: $sans-light;
 		max-width: 6rem;
 		margin: 0;
 		text-transform: uppercase;
