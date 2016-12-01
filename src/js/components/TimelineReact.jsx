@@ -14,10 +14,6 @@ var TimelineReact = React.createClass({
 		d3Timeline.create(this.state.filteredPigments);
 	},
 
-	// componentWillUnmount() {
-	//     d3Timeline.destroy();
-	// }
-
 	render() {
 		return <div className='timeline-filter'></div>
 	}
