@@ -3,9 +3,9 @@ var React = require('react'),
 
 var pigmentStore = require('../stores/pigmentStore.js'),
 	d3Colors = require('./d3Colors.js'),
-	d3Timeline = require('./d3Timeline.js'),
 	PigmentSheet = require('./PigmentSheet.jsx'),
-	PigmentIndex = require('./PigmentIndex.jsx');
+	PigmentIndex = require('./PigmentIndex.jsx'),
+	TimelineReact = require('./TimelineReact.jsx');
 
 var FilterPage = React.createClass({
 	
@@ -13,7 +13,7 @@ var FilterPage = React.createClass({
 		var pigments = pigmentStore.fetch();
 		return {
 			pigments: pigments,
-			pigmentId: null,
+			selectPigment: null,
 			filteredPigments: pigments
 		}
 	},
@@ -21,8 +21,6 @@ var FilterPage = React.createClass({
 	componentDidMount() {
 		var filterList = [],
 			_this = this;
-
-		d3Timeline.create(this.state.filteredPigments);
 
 		var findByColor = function (p1, p2, p3, p4, p5, p6, p7, p8) {
 			return _this.state.pigments.filter(function (p) {
@@ -38,6 +36,7 @@ var FilterPage = React.createClass({
 		}
 
 		$('.color-filter').on('click', '.bar', function(e) {
+			$(e.target).toggleClass('selected');
 			if(filterList.indexOf(e.target.id) === -1){
 				filterList.push(e.target.id);
 			} else {
@@ -96,15 +95,20 @@ var FilterPage = React.createClass({
 		this.state.pigments.forEach(filterColor);
 		d3Colors.create(colorFamilies, numberOfPigs);
 
-		if(this.state.pigmentId) {
-			pigmentResult = <PigmentSheet key={this.state.pigmentId} id={this.state.pigmentId} />;
+		if(this.state.selectPigment) {
+			pigmentResult = <PigmentSheet 
+				key={this.state.selectPigment.id}
+				pigment={this.state.selectPigment} 
+				id={this.state.selectPigment.id} />;
 		}
 
 		return (
 			<section className='explore'>
 				<section className='filters'>
 					<div className='color-filter'></div>
-					<div className='timeline-filter'></div>
+					<TimelineReact 
+						key={this.state.filteredPigments.length} 
+						pigments={this.state.filteredPigments} />
 				</section>
 				<section className='search-results'>
 					<div className='list-view'>
@@ -119,7 +123,7 @@ var FilterPage = React.createClass({
 
 	handleSelect(e) {
 		this.setState({
-			pigmentId: e.target.id
+			selectPigment: pigmentStore.get(e.target.id)
 		});
 	}
 });

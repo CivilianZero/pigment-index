@@ -3,7 +3,7 @@ var d3 = require('d3');
 var d3Timeline = {};
 
 d3Timeline.create = function(dataset) {
-	var w = 750,
+	var w = 600,
 		start,
 		end,
 		maxX = 0,
