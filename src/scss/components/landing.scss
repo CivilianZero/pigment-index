@@ -1,0 +1,44 @@
+$grey: #ccc;
+$background: #fff;
+$sans-light: LatoLight;
+$serif: Crimson;
+
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin box {
+	background-color: $background;
+	border: 1px solid $grey;
+}
+
+.Landing {
+	@include flex-column;
+	@include box;
+	vertical-align: middle;
+	margin: 6rem 2rem 6rem 2rem;
+	padding: 2rem;
+	
+	h1 {
+		font-family: Crimson;
+	}
+
+	p {
+		font-family: LatoLight;
+		line-height: 1.5rem;
+	}
+
+	button {
+		@include box;
+		max-width: 6rem;
+		align-self: center;
+	}
+
+	a {
+		text-decoration: none;
+		font-family: LatoLight;
+		color: #777;
+		text-transform: uppercase;
+	}
+}

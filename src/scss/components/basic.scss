@@ -1,0 +1,13 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+.cf:after {
+	clear: both;
+	content: '';
+	display: table;
+}
+
+* {
+	color: #777;
+}
