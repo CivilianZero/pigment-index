@@ -31,14 +31,15 @@ $serif: Crimson;
 
 	button {
 		@include box;
+		font-family: LatoLight;
 		max-width: 6rem;
-		align-self: center;
+		margin: 0;
+		text-transform: uppercase;
 	}
 
 	a {
+		align-self: center;
 		text-decoration: none;
-		font-family: LatoLight;
 		color: #777;
-		text-transform: uppercase;
 	}
 }
