@@ -15,7 +15,19 @@ var TimelineReact = React.createClass({
 	},
 
 	render() {
-		return <div className='timeline-filter'></div>
+		return (
+			<section>
+				<div onClick={this.props.handleTimelineFilter} className='timeline-buttons'>
+					<button id={'Prehistoric'}>Prehistoric</button>
+					<button id={'Ancient'}>Ancient</button>
+					<button id={'Middle Ages'}>Middle Ages</button>
+					<button id={'Early Modern'}>Early Modern</button>
+					<button id={'Industrial'}>Industrial</button>
+					<button id={'Contemporary'}>Contemporary</button>
+				</div>
+				<div className='timeline-filter'></div>
+			</section>
+		)
 	}
 });
 

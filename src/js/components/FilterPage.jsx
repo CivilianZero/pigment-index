@@ -14,12 +14,13 @@ var FilterPage = React.createClass({
 		return {
 			pigments: pigments,
 			selectPigment: null,
-			filteredPigments: pigments
+			filteredPigments: pigments,
+			timeFilters: null,
 		}
 	},
 
 	componentDidMount() {
-		var filterList = [],
+		var colorFilterList = [],
 			_this = this;
 
 		var findByColor = function (p1, p2, p3, p4, p5, p6, p7, p8) {
@@ -37,19 +38,19 @@ var FilterPage = React.createClass({
 
 		$('.color-filter').on('click', '.bar', function(e) {
 			$(e.target).toggleClass('selected');
-			if(filterList.indexOf(e.target.id) === -1){
-				filterList.push(e.target.id);
+			if(colorFilterList.indexOf(e.target.id) === -1){
+				colorFilterList.push(e.target.id);
 			} else {
-				filterList.splice(filterList.indexOf(e.target.id), 1)
+				colorFilterList.splice(colorFilterList.indexOf(e.target.id), 1)
 			}
 
-			if (filterList.length === 0) {
+			if (colorFilterList.length === 0) {
 				_this.setState({
 					filteredPigments: _this.state.pigments
 				});
 			} else {
 				_this.setState({
-					filteredPigments: findByColor(...filterList)
+					filteredPigments: findByColor(...colorFilterList)
 				});
 			}
 		});
@@ -107,6 +108,7 @@ var FilterPage = React.createClass({
 				<section className='filters'>
 					<div className='color-filter'></div>
 					<TimelineReact 
+						handleTimelineFilter={this.handleTimelineFilter}
 						key={this.state.filteredPigments.length} 
 						pigments={this.state.filteredPigments} />
 				</section>
@@ -125,6 +127,50 @@ var FilterPage = React.createClass({
 		this.setState({
 			selectPigment: pigmentStore.get(e.target.id)
 		});
+	},
+
+	handleTimelineFilter(e) {
+		var time = e.target.id,
+			_this = this,
+			timePeriods = [
+			{'period': 'Prehistoric', 'time': 0},
+			{'period': 'Ancient', 'time': 5},
+			{'period': 'Middle Ages', 'time': 10},
+			{'period': 'Early Modern', 'time': 15},
+			{'period': 'Industrial', 'time': 20},
+			{'period': 'Contemporary', 'time': 25},
+			{'period': '', 'time': 30}
+		];
+
+		var convertTime = function(use) {
+			let convertedTime;
+			timePeriods.forEach(function(value) {
+				if(use === value.period) {
+					convertedTime = value.time
+				}
+			});
+			return convertedTime
+		};
+
+		console.log('Time: ' + convertTime(time));
+
+		var findByTime = function(time) {
+			let newTime = convertTime(time);
+			return _this.state.filteredPigments.filter(function(p) {
+				let start = convertTime(p.origins.useStart),
+					end = convertTime(p.origins.useEnd);
+					console.log('start: ' + start + ' end: ' + end);
+				if (start <= newTime && newTime <= end) {
+					console.log('pigment: ' + p);
+					return p
+				}
+			})
+		};
+
+		this.setState({
+			filteredPigments: findByTime(time)
+		});
+		console.log('click ran, filteredPigments: ' + this.state.filteredPigments);
 	}
 });
 
