@@ -3,19 +3,6 @@
 	display: none;
 }
 
-.color-filter {
-	display: flex;
-}
-
-.bar {
-	opacity: .3;
-	margin: 0 .25rem;
-}
-
-#white {
-	border: 1px solid black;
-}
-
 .explore {
 	margin: 0 1.5rem;
 }
@@ -31,11 +18,11 @@
 		margin: 0;
 		padding: 1rem;
 		li {
-			flex-grow: 1;
+			// flex-grow: 1;
 			flex-basis: 100%;
 			border: 1px solid #ccc;
 			padding: .25rem;
-			margin: .25rem;
+			margin: .25rem 0;
 			font-family: Crimson;
 			font-size: .75rem;
 			text-transform: uppercase;
@@ -43,9 +30,16 @@
 	}
 }
 
-@media (min-width: 350px) {
+@media (min-width: 450px) {
 	.timeline-filter,
 	.map-view {
 		display: block;
 	}
+
+	.search-results ul > li {
+		flex-basis: 45%;
+		margin: .25rem 2.5%;
+	}
+
+
 }
