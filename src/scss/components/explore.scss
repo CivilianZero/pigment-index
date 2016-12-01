@@ -18,13 +18,14 @@
 	ul {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-around;
 		list-style-type: none;
 		padding: 1rem;
 		li {
 			flex-grow: 1;
-			flex-basis: 50%;
+			flex-basis: 100%;
+			border: 1px solid #ccc;
 			padding: .25rem;
+			margin: 2.5%;
 		}
 	}
 }
