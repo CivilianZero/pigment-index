@@ -1,3 +1,8 @@
+.timeline-filter,
+.map-view {
+	display: none;
+}
+
 #white {
 	border: 1px solid black;
 }
@@ -7,8 +12,9 @@
 }
 
 .search-results {
-	@include box;
-	font-family: $sans-light;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	font-family: LatoLight;
 	ul {
 		display: flex;
 		flex-wrap: wrap;
@@ -23,4 +29,9 @@
 	}
 }
 
-
+@media (min-width: 350px) {
+	.timeline-filter,
+	.map-view {
+		display: block;
+	}
+}
