@@ -1,0 +1,20 @@
+nav {
+	padding: 1rem;
+	text-align: center;
+	a {
+		padding: 1rem;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-family: $sans-light;
+	}
+}
+
+header {
+	border-bottom: 1px solid #eee;
+	margin-bottom: 3rem;
+}
+
+footer {
+	border-top: 1px solid #eee;
+	margin-top: 3rem
+}

@@ -1,0 +1,38 @@
+.timeline-filter,
+.map-view {
+	display: none;
+}
+
+#white {
+	border: 1px solid black;
+}
+
+.explore {
+	margin: 0 1.5rem;
+}
+
+.search-results {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	font-family: LatoLight;
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		list-style-type: none;
+		padding: 1rem;
+		li {
+			flex-grow: 1;
+			flex-basis: 100%;
+			border: 1px solid #ccc;
+			padding: .25rem;
+			margin: 2.5%;
+		}
+	}
+}
+
+@media (min-width: 350px) {
+	.timeline-filter,
+	.map-view {
+		display: block;
+	}
+}

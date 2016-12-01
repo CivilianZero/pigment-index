@@ -101,7 +101,7 @@ var FilterPage = React.createClass({
 		}
 
 		return (
-			<section>
+			<section className='explore'>
 				<section className='filters'>
 					<div className='color-filter'></div>
 					<div className='timeline-filter'></div>

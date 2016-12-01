@@ -1,72 +1,9 @@
-/*FONTS*/
-@font-face {
-	font-family: CrimsonBold;
-	src: url(/assets/fonts/Crimson_Text/CrimsonText-Bold.ttf);
-}
-
-@font-face {
-	font-family: CrimsonBoldItalic;
-	src: url(/assets/fonts/Crimson_Text/CrimsonText-BoldItalic.ttf);
-}
-
-@font-face {
-	font-family: Lato;
-	src: url(/assets/fonts/Lato/Lato-Regular.ttf);
-}
-
-@font-face {
-	font-family: LatoItalic;
-	src: url(/assets/fonts/Lato/Lato-Italic.ttf);
-}
-/*FONTS*/
-
-/*BASIC SETUP*/
-*, *:before, *:after {
-	box-sizing: border-box
-}
-
-.cf:after {
-	clear: both;
-	content: '';
-	display: table;
-}
-/*BASIC SETUP*/
-
-/*INPUT PAGE*/
-input,
-textarea,
-button {
-	display: block;
-	margin: 10px 40px;
-	padding: 10px;
-}
-/*INPUT PAGE*/
-
-/*LANDING*/
-.Landing {
-	display: flex;
-	flex-direction: column;
-	vertical-align: middle;
-	height: 70vh;
-	margin: 12vh 2rem 12vh 2rem;
-	padding: 2rem;
-	border: 1px solid #777;
-	
-	h1 {
-		font-family: CrimsonBold;
-	}
-
-	p {
-		font-family: Lato;
-		line-height: 1.5rem;
-	}
-
-	button {
-		
-	}
-}
-/*LANDING*/
-
+@import 'components/fonts';
+@import 'components/basic';
+@import 'components/data-input';
+@import 'components/landing';
+@import 'components/nav';
+@import 'components/explore';
 
 
 
