@@ -15,7 +15,7 @@ var Landing = React.createClass({
 					and a brief history. A description of the site and an overview
 					of the information the user can find within.</p>
 				</div>
-				<button><Link to='/filter'>Explore</Link></button>
+				<Link to='/filter'><button>Explore</button></Link>
 			</section>
 		)
 	}

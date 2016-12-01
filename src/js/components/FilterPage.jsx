@@ -22,6 +22,8 @@ var FilterPage = React.createClass({
 		var filterList = [],
 			_this = this;
 
+		d3Timeline.create(this.state.filteredPigments);
+
 		var findByColor = function (p1, p2, p3, p4, p5, p6, p7, p8) {
 			return _this.state.pigments.filter(function (p) {
 				return p.colorFamily === p1 ||
@@ -90,9 +92,7 @@ var FilterPage = React.createClass({
 			}
 			numberOfPigs++;
 		};
-		
-		d3Timeline.create(this.state.filteredPigments);
-		
+				
 		this.state.pigments.forEach(filterColor);
 		d3Colors.create(colorFamilies, numberOfPigs);
 
