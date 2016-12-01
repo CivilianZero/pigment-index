@@ -3,8 +3,13 @@
 	display: none;
 }
 
+.color-filter {
+	display: flex;
+}
+
 .bar {
 	opacity: .3;
+	margin: 0 .25rem;
 }
 
 #white {
@@ -30,8 +35,9 @@
 			flex-basis: 100%;
 			border: 1px solid #ccc;
 			padding: .25rem;
-			margin: 2.5%;
+			margin: .25rem;
 			font-family: Crimson;
+			font-size: .75rem;
 			text-transform: uppercase;
 		}
 	}
