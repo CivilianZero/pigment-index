@@ -51,9 +51,11 @@ $serif: Crimson, serif;
 }
 
 .search-results {
+	position: relative;
 	background-color: #fff;
 	border: 1px solid #ccc;
 	font-family: $sans-light;
+	min-height: 70vh;
 	ul {
 		display: flex;
 		flex-wrap: wrap;
@@ -87,13 +89,13 @@ $serif: Crimson, serif;
 	}
 }
 
-@media (min-width: 520px) {
+@media (min-width: 600px) {
 	.map-view {
-		display: flex;
+		display: none;
 	}
 
 	.timeline-filter {
-		display: none;
+		display: flex;
 	}
 	
 	.explore {

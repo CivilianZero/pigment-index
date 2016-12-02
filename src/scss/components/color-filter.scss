@@ -1,8 +1,14 @@
 .color-filter {
 	display: flex;
+	width: 100%;
 	justify-content: space-around;
-	// display: none;
+	background-color: #fff;
 	padding: .5rem 1rem;
+}
+
+.color-filter.hidden {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
 }
 
 .bar {
@@ -15,7 +21,7 @@
 	border: 1px solid black;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 600px) {
 	.bar {
 		width: 30px !important;
 		height: 30px !important;
