@@ -19,7 +19,9 @@ var FilterPage = React.createClass({
 			selectPigment: null,
 			filteredPigments: pigments,
 			timeFilters: [],
-			colorFilters: []
+			colorFilters: [],
+			hideTime: true,
+			hideColor: true
 		}
 	},
 
@@ -50,6 +52,7 @@ var FilterPage = React.createClass({
 	},
 
 	render() {
+
 		var colorFamilies = [],
 			numberOfPigs = 0,
 			pigmentResult;
@@ -82,6 +85,22 @@ var FilterPage = React.createClass({
 				id={this.state.selectPigment.id} />;
 		}
 
+
+
+		if (this.state.hideTime && this.state.hideColor) {
+			$('div.bar').addClass('hidden');
+			$('.color-filter').addClass('hidden');
+			$('.time-filter').addClass('hidden');
+		} else if (this.state.hideColor) {
+			$('div.bar').addClass('hidden');
+			$('.color-filter').addClass('hidden');
+			$('.time-filter').removeClass('hidden');
+		} else if (this.state.hideTime) {
+			$('.time-filter').addClass('hidden');
+			$('div.bar').removeClass('hidden');
+			$('.color-filter').removeClass('hidden');
+		}
+
 		return (
 			<section className='explore'>
 				<Sidebar 
@@ -108,6 +127,7 @@ var FilterPage = React.createClass({
 						<section className='filters'>
 							<div className='filterShow color-filter'></div>
 							<TimelineReact
+								hideThis={this.state.hideTime}
 								handleTimelineFilter={this.handleTimelineFilter}
 								key={this.state.filteredPigments + this.state.timeFilters} 
 								pigments={this.state.filteredPigments} />
@@ -127,13 +147,17 @@ var FilterPage = React.createClass({
 	},
 
 	handleHide(e) {
-		if(e.target.id === 'show-color') {
-			$('.time-filter').addClass('hidden');
-			$('.bar').toggleClass('hidden');
+		if (e.target.id === 'show-color') {
+			this.setState({
+				hideColor: !this.state.hideColor,
+				hideTime: true
+			});
 		} 
-		if(e.target.id === 'show-time') {
-			$('.bar').addClass('hidden');
-			$('.time-filter').toggleClass('hidden');
+		if (e.target.id === 'show-time') {
+				this.setState({
+					hideTime: !this.state.hideTime,
+					hideColor: true
+				});
 		}
 	},
 
@@ -146,8 +170,7 @@ var FilterPage = React.createClass({
 	handleTimelineFilter(e) {
 		var cTime = timeConverter(e.target.id);
 
-		$('#' + e.target.id).toggleClass('selected');
-		filterEverything.call(this, 'time', cTime)
+		filterEverything.call(this, 'time', cTime);
 	},
 
 	handleRemoveFilter(e) {
