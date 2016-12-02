@@ -1,5 +1,7 @@
 var d3 = require('d3');
 
+var timeConverter = require('./timeConverter.js');
+
 var d3Timeline = {};
 
 d3Timeline.create = function(dataset) {
@@ -9,31 +11,11 @@ d3Timeline.create = function(dataset) {
 		maxX = 0,
 		maxY = 0;
 
-	var timePeriods = [
-		{'period': 'Prehistoric', 'time': 0},
-		{'period': 'Ancient', 'time': 5},
-		{'period': 'Middle Ages', 'time': 10},
-		{'period': 'Early Modern', 'time': 15},
-		{'period': 'Industrial', 'time': 20},
-		{'period': 'Contemporary', 'time': 25},
-		{'period': '', 'time': 30}
-	]
-
-	var convertTime = function(use) {
-		var time;
-		timePeriods.forEach(function(value) {
-			if(use === value.period) {
-				time = value.time
-			}
-		});
-		return time
-	}
-
 	var timeBegin = d3.min(dataset, function(d) {
-		return convertTime(d.origins.useStart)
+		return timeConverter(d.origins.useStart)
 	});
 	var timeEnd = d3.max(dataset, function(d) {
-		return convertTime(d.origins.useEnd)
+		return timeConverter(d.origins.useEnd)
 	})
 
 	var xScale = d3.scaleLinear()
@@ -43,8 +25,8 @@ d3Timeline.create = function(dataset) {
 	for (var i = 0; i < dataset.length; i++) {
 		let tempX, 
 			tempY,
-			start = convertTime(dataset[i].origins.useStart),
-			end = convertTime(dataset[i].origins.useEnd),
+			start = timeConverter(dataset[i].origins.useStart),
+			end = timeConverter(dataset[i].origins.useEnd),
 			x = xScale(start),
 			y = i * 15;
 
@@ -73,7 +55,7 @@ d3Timeline.create = function(dataset) {
 			return d.name.common;
 		})
 		.attr('x', function(d) {
-			start = convertTime(d.origins.useStart)
+			start = timeConverter(d.origins.useStart)
 			return xScale(start);
 		})
 		.attr('y', function(d, i) {
@@ -84,8 +66,8 @@ d3Timeline.create = function(dataset) {
 		})
 		.attr('height', 10)
 		.attr('width', function(d) {
-			start = convertTime(d.origins.useStart);
-			end = convertTime(d.origins.useEnd);
+			start = timeConverter(d.origins.useStart);
+			end = timeConverter(d.origins.useEnd);
 			return xScale(end - start);
 		});
 };
