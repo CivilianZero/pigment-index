@@ -12,7 +12,7 @@
       "origins": {
         "source": "Lapis lazuli",
         "location": "Sar-e-sang, Afghanistan",
-        "sourceDescript": "Lapis lazuli was historically mined in only one location in Sar-e-sang, Afghanistan, which translates to \"place of stones\".",
+        "sourceDescript": "Lapis lazuli was historically mined in only one location in Sar-e-sang, Afghanistan, whose name translates to \"place of stones\".",
         "production": "After the lapis lazuli is pulverized, the powder is mixed with wax, resin, and oil and wrapped in muslin. The mass is immersed in a lye bath and kneaded under the water. This washes out the blue mineral, which settles to the bottom. The sediment is then collected and allowed to dry.",
         "useStart": "Ancient",
         "useEnd": ""

@@ -22,6 +22,31 @@ $serif: Crimson, serif;
 	}
 	ul {
 		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		list-style-type: none;
+		li {
+			display: flex;
+			font-family: $sans-light;
+			padding-right: 1rem;
+			line-height: 1.5rem;
+			text-transform: uppercase;
+			cursor: pointer;
+			img {
+				height: 1.5rem;
+				opacity: .3;
+				padding-right: .25rem;
+				&:hover {
+					opacity: 1;
+				}
+			}
+			img#white {
+				border: none;
+			}
+			div {
+				vertical-align: middle;
+			}
+		}
 	}
 }
 
@@ -46,6 +71,7 @@ $serif: Crimson, serif;
 			font-size: .75rem;
 			text-transform: uppercase;
 			height: 4rem;
+			cursor: pointer;
 			div {
 				flex-basis: 60%;
 				padding: 0 1rem;
@@ -62,8 +88,11 @@ $serif: Crimson, serif;
 }
 
 @media (min-width: 520px) {
-	.timeline-filter,
 	.map-view {
+		display: none;
+	}
+
+	.timeline-filter {
 		display: none;
 	}
 	

@@ -25,7 +25,7 @@ var Sidebar = React.createClass({
 					key={value} 
 					className={type}
 					onClick={_this.props.handler} 
-					id={value}>{value}</li>;
+					><img id={value} src='assets/icons/clear_button.svg'/>{value}</li>;
 			})
 		} else {
 			filterListItems = <p>This is a paragraph with some words lorem ipsum is for people who</p>
