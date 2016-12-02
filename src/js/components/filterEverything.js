@@ -1,5 +1,4 @@
-var findByWhat = require('./findByWhat.js'),
-	timeConverter = require('./timeConverter.js');
+var findByWhat = require('./findByWhat.js');
 
 var filterEverything = function(what, target) {
 	var colorFilterList = this.state.colorFilters,

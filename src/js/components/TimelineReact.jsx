@@ -9,12 +9,16 @@ var TimelineReact = React.createClass({
 		var calcWidth = $('.filters').css('width')
 		return {
 			filteredPigments: this.props.pigments,
-			calcWidth: calcWidth
+			calcWidth: calcWidth,
+			hideThis: this.props.hideThis
 		}
 	},
 
 	componentDidMount() {
 		d3Timeline.create(this.state.filteredPigments, this.state.calcWidth);
+		if(this.state.hideThis) {
+			$('.time-filter').addClass('hidden')
+		}
 	},
 
 	componentWillMount() {
@@ -27,14 +31,14 @@ var TimelineReact = React.createClass({
 
 	render() {
 		return (
-			<section id='color-sect' className={'filterShow hidden time-filter'}>
+			<section className={'filterShow time-filter'}>
 				<div onClick={this.props.handleTimelineFilter} className='timeline-buttons'>
-					<button id={'Prehistoric'}>Prehistoric</button>
-					<button id={'Ancient'}>Ancient</button>
-					<button id={'Middle Ages'}>Middle Ages</button>
-					<button id={'Early Modern'}>Early Modern</button>
-					<button id={'Industrial'}>Industrial</button>
-					<button id={'Contemporary'}>Contemporary</button>
+					<button key={'button-PH'} id={'Prehistoric'}>Prehistoric</button>
+					<button key={'button-A'} id={'Ancient'}>Ancient</button>
+					<button key={'button-MA'} id={'Middle Ages'}>Middle Ages</button>
+					<button key={'button-EA'} id={'Early Modern'}>Early Modern</button>
+					<button key={'button-I'} id={'Industrial'}>Industrial</button>
+					<button key={'button-C'} id={'Contemporary'}>Contemporary</button>
 				</div>
 				<div className='timeline-filter'></div>
 			</section>

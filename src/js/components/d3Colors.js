@@ -7,7 +7,7 @@ d3Colors.create = function(dataset, total) {
 		.data(dataset)
 		.enter()
 		.append('div')
-		.attr('class', 'bar hidden')
+		.attr('class', 'bar')
 		.attr('id', function(d) {
 			return d.color;
 		})
