@@ -4,8 +4,8 @@ var timeConverter = require('./timeConverter.js');
 
 var d3Timeline = {};
 
-d3Timeline.create = function(dataset) {
-	var w = 600,
+d3Timeline.create = function(dataset, width) {
+	var w = width,
 		start,
 		end,
 		maxX = 0,
@@ -45,7 +45,7 @@ d3Timeline.create = function(dataset) {
 	var svg = d3.select('.timeline-filter')
 		.append('svg')
 		.attr('height', maxY)
-		.attr('width', maxX);
+		.attr('width', '100%');
 
 	svg.selectAll('rect')
 		.data(dataset)
@@ -71,5 +71,41 @@ d3Timeline.create = function(dataset) {
 			return xScale(end - start);
 		});
 };
+
+d3Timeline.update = function (dataset, width) {
+
+	var timeBegin = d3.min(dataset, function(d) {
+		return timeConverter(d.origins.useStart)
+	});
+	var timeEnd = d3.max(dataset, function(d) {
+		return timeConverter(d.origins.useEnd)
+	})
+
+	var w = width;
+
+	var xScale = d3.scaleLinear()
+		.domain([timeBegin, timeEnd])
+		.range([0, w]);
+
+	var start,
+		end;
+
+	var resize = function () {
+		w = width;
+		d3.selectAll('rect')
+			.data(dataset)
+			.attr('x', function(d) {
+				start = timeConverter(d.origins.useStart)
+				return xScale(start);
+			})
+			.attr('width', function(d) {
+				start = timeConverter(d.origins.useStart);
+				end = timeConverter(d.origins.useEnd);
+				return xScale(end - start);
+			});
+	};
+
+	resize();
+}
 
 module.exports = d3Timeline;

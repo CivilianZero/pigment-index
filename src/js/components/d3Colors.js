@@ -7,7 +7,7 @@ d3Colors.create = function(dataset, total) {
 		.data(dataset)
 		.enter()
 		.append('div')
-		.attr('class', 'bar')
+		.attr('class', 'bar hidden')
 		.attr('id', function(d) {
 			return d.color;
 		})
@@ -17,8 +17,7 @@ d3Colors.create = function(dataset, total) {
 		.style('height', '100px')
 		.style('background', function(d){
 			return d.color
-		})
-		.style('display', 'inline-block');
+		});
 };
 
 module.exports = d3Colors;

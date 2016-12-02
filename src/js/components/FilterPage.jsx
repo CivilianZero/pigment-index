@@ -30,7 +30,7 @@ var FilterPage = React.createClass({
 			$(e.target).toggleClass('selected');
 
 			filterEverything.call(_this, 'color', e.target.id);
-		});			
+		});
 	},
 
 	componentWillMount() {
@@ -71,7 +71,7 @@ var FilterPage = React.createClass({
 			}
 			numberOfPigs++;
 		};
-				
+		
 		this.state.pigments.forEach(makesTheColorBars);
 		d3Colors.create(colorFamilies, numberOfPigs);
 
@@ -91,9 +91,23 @@ var FilterPage = React.createClass({
 					time={this.state.timeFilters}/>
 				<section className='main-content'>
 					<section className='search-results'>
+						<div className='show-hide'>
+							<button
+								className={'desktop-buttons'}
+								onClick={this.handleHide} 
+								id='show-color'>Filter By Color</button>
+							<button
+								className={'desktop-buttons'}
+								onClick={this.handleHide} 
+								id='show-time'>Filter By Period</button>
+							<button
+								className={'hidden'}
+								// onClick={} 
+								id='mobile-filter-button'>Hide Filters</button>
+						</div>
 						<section className='filters'>
-							<div className='color-filter'></div>
-							<TimelineReact 
+							<div className='filterShow color-filter'></div>
+							<TimelineReact
 								handleTimelineFilter={this.handleTimelineFilter}
 								key={this.state.filteredPigments + this.state.timeFilters} 
 								pigments={this.state.filteredPigments} />
@@ -110,6 +124,17 @@ var FilterPage = React.createClass({
 				</section>
 			</section>
 		)
+	},
+
+	handleHide(e) {
+		if(e.target.id === 'show-color') {
+			$('.time-filter').addClass('hidden');
+			$('.bar').toggleClass('hidden');
+		} 
+		if(e.target.id === 'show-time') {
+			$('.bar').addClass('hidden');
+			$('.time-filter').toggleClass('hidden');
+		}
 	},
 
 	handleSelect(e) {

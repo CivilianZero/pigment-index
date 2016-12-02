@@ -64,7 +64,7 @@ $serif: Crimson, serif;
 @media (min-width: 520px) {
 	.timeline-filter,
 	.map-view {
-		display: none;
+		display: flex;
 	}
 	
 	.explore {

@@ -8,7 +8,6 @@ var Router = ReactRouter.Router,
 	hashHistory = ReactRouter.hashHistory; 
 
 var App = require('./components/App.jsx'),
-	Landing = require('./components/Landing.jsx'),
 	DataEntry = require('./components/DataEntry.jsx'),
 	PigmentData = require('./components/PigmentData.jsx'),
 	About = require('./components/About.jsx'),
@@ -17,8 +16,7 @@ var App = require('./components/App.jsx'),
 var jsx = (
 	<Router history={hashHistory}>
 		<Route path='/' component={App}>
-			<IndexRoute component={Landing} />
-			<Route path='/filter' component={FilterPage} />
+			<IndexRoute component={FilterPage} />
 			<Route path='/about' component={About} />
 			<Route path='/devTools' component={DataEntry} />
 			<Route path='/devTools/:id' component={PigmentData} />
