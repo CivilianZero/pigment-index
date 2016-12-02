@@ -27,7 +27,7 @@ var FilterPage = React.createClass({
 		var _this = this;
 
 		$('.color-filter').on('click', '.bar', function(e) {
-			$('#' + e.target.id).toggleClass('selected');
+			$(e.target).toggleClass('selected');
 
 			filterEverything.call(_this, 'color', e.target.id);
 		});			
@@ -90,23 +90,23 @@ var FilterPage = React.createClass({
 					colors={this.state.colorFilters} 
 					time={this.state.timeFilters}/>
 				<section className='main-content'>
-				<section className='filters'>
-					<div className='color-filter'></div>
-					<TimelineReact 
-						handleTimelineFilter={this.handleTimelineFilter}
-						key={this.state.filteredPigments + this.state.timeFilters} 
-						pigments={this.state.filteredPigments} />
-				</section>
-				<section className='search-results'>
-					<div className='list-view'>
-						<PigmentIndex 
-							key={this.state.filteredPigments.length}
-							passedClick={this.handleSelect} 
-							pigments={this.state.filteredPigments}/>
-					</div>
-					<div className='map-view'>Here there be dragons</div>
-					{pigmentResult}
-				</section>
+					<section className='filters'>
+						<div className='color-filter'></div>
+						<TimelineReact 
+							handleTimelineFilter={this.handleTimelineFilter}
+							key={this.state.filteredPigments + this.state.timeFilters} 
+							pigments={this.state.filteredPigments} />
+					</section>
+					<section className='search-results'>
+						<div className='list-view'>
+							<PigmentIndex 
+								key={this.state.filteredPigments.length}
+								passedClick={this.handleSelect} 
+								pigments={this.state.filteredPigments}/>
+						</div>
+						<div className='map-view'>Here there be dragons</div>
+						{pigmentResult}
+					</section>
 				</section>
 			</section>
 		)
@@ -129,7 +129,7 @@ var FilterPage = React.createClass({
 		var colorFilters = this.state.colorFilters,
 			timeFilters = this.state.timeFilters;
 
-		$('#' + e.target.id).toggleClass('selected');
+		$('div#' + e.target.id).removeClass('selected');
 		if (colorFilters.indexOf(e.target.id) > -1){
 			filterEverything.call(this, 'color', e.target.id);
 		}
