@@ -22,11 +22,13 @@ $serif: Crimson, serif;
 	@include flex-column;
 	@include box;
 	vertical-align: middle;
-	margin: 6rem 2rem 6rem 2rem;
+	margin: 6rem auto;
+	max-width: 650px;
 	padding: 2rem;
 	
 	h1 {
-		font-family: $serif
+		font-family: $serif;
+		font-size: 1.5rem;
 	}
 
 	p {
