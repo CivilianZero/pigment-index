@@ -181,7 +181,7 @@
       "origins": {
         "source": "Magnesium salt of euxanthic acid",
         "location": "India",
-        "sourceDescript": "Indian yellow, named due to its production origin in India, is said to be derived from the urine of cows fed on mango leaves.",
+        "sourceDescript": "Indian yellow, named due to its production origin in India, is said to have been derived from the urine of cows fed on mango leaves.",
         "production": "The cow's urine is mixed with a clay base, which is then dried out and ground into a powder.",
         "useStart": "Industrial",
         "useEnd": "Contemporary"
@@ -498,7 +498,7 @@
         "useStart": "Prehistoric",
         "useEnd": ""
       },
-      "anecdote": "",
+      "anecdote": "\"I went in behind with my little knife, prospecting at the scar of this pigment, and in this way, I promise you, I never sampled a more lovely and perfect ochre pigment\" - Cennini",
       "images": {
         "iconImg": "/assets/icons/yellow-ochre.svg",
         "sourceImg": "/assets/sources/yellow-ochre.jpg",
@@ -571,7 +571,7 @@
       "origins": {
         "source": "Cobalt oxide",
         "location": "Saxony, Germany",
-        "sourceDescript": "Smalt was first made in Saxony, hence its alternate name, Saxon blue.",
+        "sourceDescript": "Smalt was first produced in Saxony, hence its alternate name, Saxon blue.",
         "production": "Cobalt salts are heated to a high temperature, resulting in a deep blue glass, which is quenched and pulverized into a fine powder.",
         "useStart": "Early Modern",
         "useEnd": ""
@@ -766,7 +766,7 @@
       "origins": {
         "source": "Ivory or bone",
         "location": "Various locations",
-        "sourceDescript": "Ivory black's name is derived from its production from charred ivory. In modern times it is produced from burned animal bones.",
+        "sourceDescript": "Ivory black's name is derived from its production from charred ivory. Modern ivory black is almost exclusively available as a product of burned animal bones.",
         "production": "",
         "useStart": "Prehistoric",
         "useEnd": ""

@@ -14,30 +14,36 @@ var PigmentSheet = React.createClass({
 
 	render() {
 		var pigment = this.state.pigment;
+
+		if (pigment.origins.sourceDescript) {
+			var pigmentSource = <section>
+									<h1>Source</h1>
+									<p>{pigment.origins.sourceDescript}</p>
+								</section>
+		}
+
+		if (pigment.origins.production) {
+			var pigmentProd = <section>
+									<h1>Manufacture</h1>
+									<p>{pigment.origins.production}</p>
+								</section>
+		}
+
+		if (pigment.anecdote) {
+			var pigmentQuote = <div className='quote'>
+									<p>{pigment.anecdote}</p>
+								</div>
+		}
+
 		return(
 			<div className='pigment-sheet'>
 				<section>
-					<h1>{pigment.name.common}</h1>
+					<h1>Description</h1>
 					<p>{pigment.descript}</p>
 				</section>
-				<section>
-					<h1>Source</h1>
-					<img src={pigment.images.sourceImg} alt='source' />
-					<p></p>
-					<img alt='map' />
-					<p>A paragraph</p>
-				</section>
-				<section>
-					<h1>Manufacture</h1>
-					<img />
-					<img />
-					<p>A paragraph</p>
-				</section>
-				<section>
-					<h1>Example</h1>
-					<p>A paragraph</p>
-					<img />
-				</section>
+				{pigmentQuote}
+				{pigmentSource}
+				{pigmentProd}	
 			</div>
 		)
 	}
