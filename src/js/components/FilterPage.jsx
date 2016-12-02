@@ -124,6 +124,7 @@ var FilterPage = React.createClass({
 				<h1>Explore</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus nec libero ultrices pharetra. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
 				</section>
+				<section className='main-content'>
 				<section className='filters'>
 					<div className='color-filter'></div>
 					<TimelineReact 
@@ -137,6 +138,7 @@ var FilterPage = React.createClass({
 					</div>
 					<div className='map-view'>Here there be dragons</div>
 					{pigmentResult}
+				</section>
 				</section>
 			</section>
 		)

@@ -10,6 +10,17 @@ $serif: Crimson, serif;
 	margin: 0 1.5rem;
 }
 
+.sidebar {
+	h1 {
+		font-family: $serif;
+		font-size: 1.25rem;
+		text-transform: uppercase;
+	}
+	p {
+		font-family: $sans-light;
+	}
+}
+
 .search-results {
 	background-color: #fff;
 	border: 1px solid #ccc;
@@ -60,6 +71,8 @@ $serif: Crimson, serif;
 			font-size: 1.5vw;
 		}
 	}
-
+	.explore {
+		display: flex;
+	}
 
 }
