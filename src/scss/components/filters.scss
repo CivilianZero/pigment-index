@@ -1,0 +1,18 @@
+.show-hide {
+	display: flex;
+	justify-content: space-around;
+	button {
+		background-color: #fff;
+		border: none;
+		font-family: LatoLight;
+		text-transform: uppercase;
+		padding: 1rem;
+		margin: 0;
+		cursor: pointer;
+	}
+}
+
+.filters {
+	width: 100%;
+	position: absolute;
+}
