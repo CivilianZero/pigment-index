@@ -90,14 +90,14 @@ var FilterPage = React.createClass({
 					colors={this.state.colorFilters} 
 					time={this.state.timeFilters}/>
 				<section className='main-content'>
-					<section className='filters'>
-						<div className='color-filter'></div>
-						<TimelineReact 
-							handleTimelineFilter={this.handleTimelineFilter}
-							key={this.state.filteredPigments + this.state.timeFilters} 
-							pigments={this.state.filteredPigments} />
-					</section>
 					<section className='search-results'>
+						<section className='filters'>
+							<div className='color-filter'></div>
+							<TimelineReact 
+								handleTimelineFilter={this.handleTimelineFilter}
+								key={this.state.filteredPigments + this.state.timeFilters} 
+								pigments={this.state.filteredPigments} />
+						</section>
 						<div className='list-view'>
 							<PigmentIndex 
 								key={this.state.filteredPigments.length}
