@@ -120,6 +120,10 @@ var FilterPage = React.createClass({
 
 		return (
 			<section className='explore'>
+				<section className='sidebar'>
+				<h1>Explore</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus nec libero ultrices pharetra. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+				</section>
 				<section className='filters'>
 					<div className='color-filter'></div>
 					<TimelineReact 
