@@ -84,10 +84,11 @@ var FilterPage = React.createClass({
 
 		return (
 			<section className='explore'>
-				<section className='sidebar'>
-				<h1>Explore</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus nec libero ultrices pharetra. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-				</section>
+				<Sidebar 
+					key={this.state.colorFilters + this.state.timeFilters}
+					handler={this.handleRemoveFilter} 
+					colors={this.state.colorFilters} 
+					time={this.state.timeFilters}/>
 				<section className='main-content'>
 				<section className='filters'>
 					<div className='color-filter'></div>
@@ -96,11 +97,6 @@ var FilterPage = React.createClass({
 						key={this.state.filteredPigments + this.state.timeFilters} 
 						pigments={this.state.filteredPigments} />
 				</section>
-				<Sidebar 
-					key={this.state.colorFilters + this.state.timeFilters}
-					handler={this.handleRemoveFilter} 
-					colors={this.state.colorFilters} 
-					time={this.state.timeFilters}/>
 				<section className='search-results'>
 					<div className='list-view'>
 						<PigmentIndex 
