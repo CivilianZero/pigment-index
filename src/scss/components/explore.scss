@@ -10,6 +10,17 @@ $serif: Crimson, serif;
 	margin: 0 1.5rem;
 }
 
+.sidebar {
+	h1 {
+		font-family: $serif;
+		font-size: 1.25rem;
+		text-transform: uppercase;
+	}
+	p {
+		font-family: $sans-light;
+	}
+}
+
 .search-results {
 	background-color: #fff;
 	border: 1px solid #ccc;
@@ -40,7 +51,6 @@ $serif: Crimson, serif;
 			img {
 				align-self: center;
 				padding: 0 1rem;
-				// flex-basis: 25%;
 				height: 90%;
 			}
 		}
@@ -50,16 +60,32 @@ $serif: Crimson, serif;
 @media (min-width: 450px) {
 	.timeline-filter,
 	.map-view {
-		display: block;
+		display: none;
+	}
+	
+	.explore {
+		display: flex;
+		.sidebar {
+			flex-basis: 30%;
+			padding-right: 2rem;
+		}
+		.main-content {
+			flex-basis: 70%;
+			.pigment-index {
+				height: 70vh;
+				overflow: scroll;
+			}
+		}
 	}
 
+}
+
+@media (min-width: 780px) {
 	.search-results ul > li {
 		flex-basis: 45%;
 		margin: .25rem 2.5%;
 		div {
-			font-size: 1.5vw;
+			font-size: .75rem;
 		}
 	}
-
-
 }
