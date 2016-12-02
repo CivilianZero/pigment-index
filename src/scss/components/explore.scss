@@ -18,6 +18,10 @@ $serif: Crimson, serif;
 	}
 	p {
 		font-family: $sans-light;
+		line-height: 1.5rem;
+	}
+	ul {
+		padding: 0;
 	}
 }
 
@@ -57,7 +61,7 @@ $serif: Crimson, serif;
 	}
 }
 
-@media (min-width: 450px) {
+@media (min-width: 520px) {
 	.timeline-filter,
 	.map-view {
 		display: none;
