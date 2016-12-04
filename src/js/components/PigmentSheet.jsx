@@ -1,12 +1,9 @@
 // this is the individual information page for each pigment
 var React = require('react');
 
-var pigmentStore = require('../stores/pigmentStore.js');
-
 var PigmentSheet = React.createClass({
 
 	getInitialState() {
-		// var pigment = this.props.pigment
 		return{
 			pigment: this.props.pigment
 		}

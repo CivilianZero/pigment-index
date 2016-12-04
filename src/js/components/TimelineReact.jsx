@@ -47,7 +47,7 @@ var TimelineReact = React.createClass({
 
 	updateSize() {
 		this.setState({
-			calcWidth: $('#color-sect').css('width')
+			calcWidth: $('.filters').css('width')
 		});
 		d3Timeline.update(this.state.filteredPigments, this.state.calcWidth);
 	}

@@ -88,22 +88,19 @@ var FilterPage = React.createClass({
 
 
 		if (this.state.hideTime && this.state.hideColor) {
-			$('div.bar').addClass('hidden');
-			$('.color-filter').addClass('hidden');
-			$('.time-filter').addClass('hidden');
+			$('div.bar, .color-filter, .time-filter').addClass('hidden');
 		} else if (this.state.hideColor) {
-			$('div.bar').addClass('hidden');
-			$('.color-filter').addClass('hidden');
+			$('div.bar, .color-filter').addClass('hidden');
 			$('.time-filter').removeClass('hidden');
 		} else if (this.state.hideTime) {
 			$('.time-filter').addClass('hidden');
-			$('div.bar').removeClass('hidden');
-			$('.color-filter').removeClass('hidden');
+			$('div.bar, .color-filter').removeClass('hidden');
 		}
 
 		return (
 			<section className='explore'>
-				<Sidebar 
+				<Sidebar
+					showSheet={this.state.selectPigment}
 					key={this.state.colorFilters + this.state.timeFilters}
 					handler={this.handleRemoveFilter} 
 					colors={this.state.colorFilters} 
@@ -159,6 +156,12 @@ var FilterPage = React.createClass({
 					hideColor: true
 				});
 		}
+	},
+
+	handleBack() {
+		this.setState({
+			selectPigment: null,
+		})
 	},
 
 	handleSelect(e) {

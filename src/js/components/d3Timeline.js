@@ -5,7 +5,7 @@ var timeConverter = require('./timeConverter.js');
 var d3Timeline = {};
 
 d3Timeline.create = function(dataset, width) {
-	var w = width,
+	var w = parseInt(width),
 		start,
 		end,
 		maxX = 0,
@@ -20,7 +20,7 @@ d3Timeline.create = function(dataset, width) {
 
 	var xScale = d3.scaleLinear()
 		.domain([timeBegin, timeEnd])
-		.range([0, w]);
+		.range([0, w - 32]);
 
 	for (var i = 0; i < dataset.length; i++) {
 		let tempX, 
@@ -69,6 +69,11 @@ d3Timeline.create = function(dataset, width) {
 			start = timeConverter(d.origins.useStart);
 			end = timeConverter(d.origins.useEnd);
 			return xScale(end - start);
+		})
+		.attr('stroke', function(d) {
+			if(d.name.common === 'Lead white') {
+				return 'black';
+			}
 		});
 };
 
@@ -81,11 +86,11 @@ d3Timeline.update = function (dataset, width) {
 		return timeConverter(d.origins.useEnd)
 	})
 
-	var w = width;
+	var w = parseInt(width);
 
 	var xScale = d3.scaleLinear()
 		.domain([timeBegin, timeEnd])
-		.range([0, w]);
+		.range([0, (w - 31)]);
 
 	var start,
 		end;
@@ -104,7 +109,6 @@ d3Timeline.update = function (dataset, width) {
 				return xScale(end - start);
 			});
 	};
-
 	resize();
 }
 
