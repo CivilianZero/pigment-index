@@ -9,10 +9,15 @@
 		padding: 1rem;
 		margin: 0;
 		cursor: pointer;
+		opacity: .7;
+		&:hover {
+			opacity: 1;
+		}
 	}
 }
 
 .filters {
 	width: 100%;
 	position: absolute;
+	z-index: 99;
 }

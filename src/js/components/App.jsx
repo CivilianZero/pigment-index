@@ -41,13 +41,6 @@ var App = React.createClass({
 				<main>
 					{this.props.children}
 				</main>
-				<footer>
-					<nav>
-						<Link to='/' className={getActiveClass('/')}>Home</Link>
-						{devTools}
-						<Link to='/about' className={getActiveClass('/about')}>About</Link>
-					</nav>
-				</footer>
 			</div>
 		)
 	}

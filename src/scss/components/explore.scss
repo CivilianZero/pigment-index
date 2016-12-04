@@ -50,6 +50,13 @@ $serif: Crimson, serif;
 	}
 }
 
+li {
+	opacity: .7;
+	&:hover {
+		opacity: 1;
+	}
+}
+
 .search-results {
 	position: relative;
 	background-color: #fff;
@@ -115,7 +122,7 @@ $serif: Crimson, serif;
 
 }
 
-@media (min-width: 780px) {
+@media (min-width: 781px) {
 	.search-results ul > li {
 		flex-basis: 45%;
 		margin: .25rem 2.5%;

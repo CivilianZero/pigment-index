@@ -57,7 +57,7 @@ var DataEntry = React.createClass({
             );
         });
 		return (
-			<section>
+			<section className='data-entry'>
 				<input 
 					type='text'
 					ref='common' 

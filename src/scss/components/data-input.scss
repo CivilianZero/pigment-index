@@ -4,3 +4,53 @@ button {
   display: block;
   margin: 10px 40px;
   padding: 10px; }
+
+.data-entry {
+	display: flex;
+	flex-direction: column;
+	max-width: 650px;
+	padding: 0 2rem;
+	margin: auto;
+	input,
+	textarea {
+		font-family: LatoLightItalic;
+		text-transform: uppercase;
+	}
+	ul {
+		list-style-type: none;
+	}
+	a {
+		font-family: LatoLight;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	button {
+		background-color: #fff;
+		text-transform: uppercase;
+		font-family: Lato;
+		border: 1px solid #ccc;
+		max-width: 200px;
+		margin: auto;
+	}
+}
+
+.Pigment {
+	text-transform: uppercase;
+	max-width: 650px;
+	padding: 0 2rem;
+	margin: auto;
+	button {
+		margin: 1rem auto;
+		border: 1px solid #ccc;
+		text-transform: uppercase;
+		font-family: Lato;
+		background-color: #fff;
+	}
+	dt {
+		font-family: Lato;
+	}
+	dd {
+		font-family: LatoLightItalic;
+		margin: .5rem 0 1.5rem 0;
+	}
+}
