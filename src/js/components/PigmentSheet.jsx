@@ -23,6 +23,9 @@ var PigmentSheet = React.createClass({
 		}
 
 		if (pigment.origins.production) {
+			if (pigment.images.prodImg) {
+				var prodImg = <img src={pigment.images.prodImg}/>
+			}
 			var pigmentProd = <section>
 									<h1>Manufacture</h1>
 									<p>{pigment.origins.production}</p>
