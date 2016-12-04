@@ -10,7 +10,7 @@ var SidebarPigmentSheet = React.createClass({
 	render() {
 		var p = this.state.pigment,
 			etymology = p.name.etym !== '' ? <li>{p.name.etym}</li> : null,
-			altName = p.name.altName !== '' ? <li>{p.name.altName}</li> : null,
+			altName = p.name.altNames !== '' ? <li>{p.name.altNames}</li> : null,
 			source = p.origins.source !== '' ? <li>{p.origins.source}</li> : null,
 			useStart = p.origins.useStart !== '' ? <li>{p.origins.useStart}</li> : null,
 			useEnd = p.origins.useEnd !== '' ? <li>{p.origins.useEnd}</li> : null,
@@ -37,6 +37,7 @@ var SidebarPigmentSheet = React.createClass({
 					{useStart}
 					{useEnd}
 				</ul>
+				<button onClick={this.props.handleBack}>Go Back</button>
 			</section>
 		);
 	}

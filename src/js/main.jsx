@@ -11,12 +11,14 @@ var App = require('./components/App.jsx'),
 	DataEntry = require('./components/DataEntry.jsx'),
 	PigmentData = require('./components/PigmentData.jsx'),
 	About = require('./components/About.jsx'),
-	FilterPage = require('./components/FilterPage.jsx');
+	FilterPage = require('./components/FilterPage.jsx'),
+	PigmentSheet = require('./components/PigmentSheet.jsx');
 
 var jsx = (
 	<Router history={hashHistory}>
 		<Route path='/' component={App}>
 			<IndexRoute component={FilterPage} />
+			<Route path='/pigmentSheet/:id' component={PigmentSheet} />
 			<Route path='/about' component={About} />
 			<Route path='/devTools' component={DataEntry} />
 			<Route path='/devTools/:id' component={PigmentData} />

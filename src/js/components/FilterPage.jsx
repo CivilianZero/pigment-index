@@ -88,7 +88,8 @@ var FilterPage = React.createClass({
 				id={this.state.selectPigment.id} />;
 			sidebar = <SidebarPigmentSheet
 				key={this.state.selectPigment.id}
-				pigment={this.state.selectPigment}/>;
+				pigment={this.state.selectPigment}
+				handleBack={this.handleBack}/>;
 		} else {
 			pigmentResult = (
 				<section className='search-results'>
