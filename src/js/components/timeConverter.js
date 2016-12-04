@@ -6,7 +6,7 @@ var timeConverter = function(period, reverse) {
 				{'period': 'Early Modern', 'time': 15},
 				{'period': 'Industrial', 'time': 20},
 				{'period': 'Contemporary', 'time': 25},
-				{'period': '', 'time': 30}
+				{'period': '', 'time': 28}
 			],
 		convertedTime;
 

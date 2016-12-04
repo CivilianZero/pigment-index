@@ -8,7 +8,8 @@ var pigmentStore = require('../stores/pigmentStore.js'),
 	TimelineReact = require('./TimelineReact.jsx'),
 	Sidebar = require('./Sidebar.jsx'),
 	timeConverter = require('./timeConverter.js'),
-	filterEverything = require('./filterEverything.js');
+	filterEverything = require('./filterEverything.js'),
+	SidebarPigmentSheet = require('./SidebarPigmentSheet.jsx');
 
 var FilterPage = React.createClass({
 	
@@ -42,7 +43,8 @@ var FilterPage = React.createClass({
 				pigments: pigmentStore.get(),
 				filteredPigments: pigmentStore.get(),
 				colorBackup: pigmentStore.get(),
-				timelineBackup: pigmentStore.get()
+				timelineBackup: pigmentStore.get(),
+				selectPigment: null
 			});
 		});
 	},
@@ -55,6 +57,7 @@ var FilterPage = React.createClass({
 
 		var colorFamilies = [],
 			numberOfPigs = 0,
+			sidebar,
 			pigmentResult;
 
 		var makesTheColorBars = function(value) {
@@ -83,6 +86,48 @@ var FilterPage = React.createClass({
 				key={this.state.selectPigment.id}
 				pigment={this.state.selectPigment} 
 				id={this.state.selectPigment.id} />;
+			sidebar = <SidebarPigmentSheet
+				key={this.state.selectPigment.id}
+				pigment={this.state.selectPigment}/>;
+		} else {
+			pigmentResult = (
+				<section className='search-results'>
+					<div className='show-hide'>
+						<button
+							className={'desktop-buttons'}
+							onClick={this.handleHide} 
+							id='show-color'>Filter By Color</button>
+						<button
+							className={'desktop-buttons'}
+							onClick={this.handleHide} 
+							id='show-time'>Filter By Period</button>
+						<button
+							className={'hidden'}
+							// onClick={} 
+							id='mobile-filter-button'>Hide Filters</button>
+					</div>
+					<section className='filters'>
+						<div className='filterShow color-filter'></div>
+						<TimelineReact
+							hideThis={this.state.hideTime}
+							handleTimelineFilter={this.handleTimelineFilter}
+							key={this.state.filteredPigments + this.state.timeFilters} 
+							pigments={this.state.filteredPigments} />
+					</section>
+					<div className='list-view'>
+						<PigmentIndex 
+							key={this.state.filteredPigments.length}
+							passedClick={this.handleSelect} 
+							pigments={this.state.filteredPigments}/>
+					</div>
+				</section>
+			);
+			sidebar = <Sidebar
+				showSheet={this.state.selectPigment}
+				key={this.state.colorFilters + this.state.timeFilters}
+				handler={this.handleRemoveFilter} 
+				colors={this.state.colorFilters} 
+				time={this.state.timeFilters}/>
 		}
 
 
@@ -99,45 +144,9 @@ var FilterPage = React.createClass({
 
 		return (
 			<section className='explore'>
-				<Sidebar
-					showSheet={this.state.selectPigment}
-					key={this.state.colorFilters + this.state.timeFilters}
-					handler={this.handleRemoveFilter} 
-					colors={this.state.colorFilters} 
-					time={this.state.timeFilters}/>
+				{sidebar}
 				<section className='main-content'>
-					<section className='search-results'>
-						<div className='show-hide'>
-							<button
-								className={'desktop-buttons'}
-								onClick={this.handleHide} 
-								id='show-color'>Filter By Color</button>
-							<button
-								className={'desktop-buttons'}
-								onClick={this.handleHide} 
-								id='show-time'>Filter By Period</button>
-							<button
-								className={'hidden'}
-								// onClick={} 
-								id='mobile-filter-button'>Hide Filters</button>
-						</div>
-						<section className='filters'>
-							<div className='filterShow color-filter'></div>
-							<TimelineReact
-								hideThis={this.state.hideTime}
-								handleTimelineFilter={this.handleTimelineFilter}
-								key={this.state.filteredPigments + this.state.timeFilters} 
-								pigments={this.state.filteredPigments} />
-						</section>
-						<div className='list-view'>
-							<PigmentIndex 
-								key={this.state.filteredPigments.length}
-								passedClick={this.handleSelect} 
-								pigments={this.state.filteredPigments}/>
-						</div>
-						<div className='map-view'>Here there be dragons</div>
-						{pigmentResult}
-					</section>
+					{pigmentResult}
 				</section>
 			</section>
 		)

@@ -1,7 +1,6 @@
 var React = require('react');
 
-var timeConverter = require('./timeConverter.js'),
-	SidebarPigmentSheet = require('./SidebarPigmentSheet.jsx');
+var timeConverter = require('./timeConverter.js');
 
 var Sidebar = React.createClass({
 
@@ -17,11 +16,7 @@ var Sidebar = React.createClass({
 			_this = this,
 			type = 'color-item';
 
-		if (this.props.showSheet) {
-			sidebarContent = <SidebarPigmentSheet
-				key={this.props.showSheet.id}
-				pigment={this.props.showSheet}/>;
-		} else if (this.state.filterList.length > 0) {
+		if (this.state.filterList.length > 0) {
 			sidebarContent = this.state.filterList.map(function(value) {
 				if (typeof value === 'number') {
 					value = timeConverter(value, 'reverse');
