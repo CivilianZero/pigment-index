@@ -1,26 +1,40 @@
 .sidebar-sheet {
 	display: flex;
-	div {
-		width: 2rem;
+	flex-direction: column;
+	padding-bottom: 1rem;
+	// height: 30vh;
+	div.sidebar-color {
+		height: 1rem;
 	}
 	.basic-info {
-		display: flex;
-		flex-direction: column;
-		flex-grow: 3;
-		padding-left: .5rem;
+		padding-right: 1rem;
 		h1 {
-			margin-top: 0;
+			font-family: Crimson;
+			text-transform: uppercase;
+			font-size: 1.25rem;
 		}
 		ul {
-			flex-direction: column;
+			list-style-type: none;
+			padding: 0;
 		}
 		li {
-			display: inline-block;
-			font-size: .75rem;
+			opacity: 1;
 			font-family: LatoLightItalic;
+			line-height: 1.5rem;
+			span {
+				font-family: Lato;
+				text-transform: uppercase;
+			}
 		}
-		span {
-			font-family: Lato;
+		button {
+			background-color: #fff;
+			border: 1px solid #ccc;
+			font-family: LatoLight;
+			text-transform: uppercase;
+			opacity: .7;
+			&:hover {
+				opacity: 1;
+			}
 		}
 	}
 }
@@ -58,5 +72,16 @@
 		font-family: LatoLightItalic;
 		text-align: center;
 		padding: .5rem;
+	}
+}
+
+@media (min-width: 600px) {
+	.sidebar-sheet {
+		flex-basis: 30%;
+	}
+
+	.list-view {
+		max-height: 70vh;
+		overflow: scroll;
 	}
 }
