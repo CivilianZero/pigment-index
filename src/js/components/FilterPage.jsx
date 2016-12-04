@@ -92,36 +92,10 @@ var FilterPage = React.createClass({
 				handleBack={this.handleBack}/>;
 		} else {
 			pigmentResult = (
-				<section className='search-results'>
-					<div className='show-hide'>
-						<button
-							className={'desktop-buttons'}
-							onClick={this.handleHide} 
-							id='show-color'>Filter By Color</button>
-						<button
-							className={'desktop-buttons'}
-							onClick={this.handleHide} 
-							id='show-time'>Filter By Period</button>
-						<button
-							className={'hidden'}
-							// onClick={} 
-							id='mobile-filter-button'>Hide Filters</button>
-					</div>
-					<section className='filters'>
-						<div className='filterShow color-filter'></div>
-						<TimelineReact
-							hideThis={this.state.hideTime}
-							handleTimelineFilter={this.handleTimelineFilter}
-							key={this.state.filteredPigments + this.state.timeFilters} 
-							pigments={this.state.filteredPigments} />
-					</section>
-					<div className='list-view'>
-						<PigmentIndex 
-							key={this.state.filteredPigments.length}
-							passedClick={this.handleSelect} 
-							pigments={this.state.filteredPigments}/>
-					</div>
-				</section>
+					<PigmentIndex 
+						key={this.state.filteredPigments.length}
+						passedClick={this.handleSelect} 
+						pigments={this.state.filteredPigments}/>
 			);
 			sidebar = <Sidebar
 				showSheet={this.state.selectPigment}
@@ -147,7 +121,33 @@ var FilterPage = React.createClass({
 			<section className='explore'>
 				{sidebar}
 				<section className='main-content'>
-					{pigmentResult}
+					<section className='search-results'>
+						<div className='show-hide'>
+							<button
+								className={'desktop-buttons'}
+								onClick={this.handleHide} 
+								id='show-color'>Filter By Color</button>
+							<button
+								className={'desktop-buttons'}
+								onClick={this.handleHide} 
+								id='show-time'>Filter By Period</button>
+							<button
+								className={'hidden'}
+								// onClick={} 
+								id='mobile-filter-button'>Hide Filters</button>
+						</div>
+						<section className='filters'>
+							<div className='filterShow color-filter'></div>
+							<TimelineReact
+								hideThis={this.state.hideTime}
+								handleTimelineFilter={this.handleTimelineFilter}
+								key={this.state.filteredPigments + this.state.timeFilters} 
+								pigments={this.state.filteredPigments} />
+						</section>
+						<div className='list-view'>
+							{pigmentResult}
+						</div>
+					</section>
 				</section>
 			</section>
 		)
