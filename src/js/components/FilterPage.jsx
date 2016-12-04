@@ -137,8 +137,15 @@ var FilterPage = React.createClass({
 								id='mobile-filter-button'>Hide Filters</button>
 						</div>
 						<section className='filters'>
-							<div className='filterShow color-filter'></div>
+							<div className='filterShow color-filter'>
+								<button 
+									className = 'hidden'
+									id ='show-color'
+									onClick={this.handleHide}>collapse
+								</button>
+							</div>
 							<TimelineReact
+								collapse={this.handleHide}
 								hideThis={this.state.hideTime}
 								handleTimelineFilter={this.handleTimelineFilter}
 								key={this.state.filteredPigments + this.state.timeFilters} 

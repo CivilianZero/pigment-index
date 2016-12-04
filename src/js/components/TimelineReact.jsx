@@ -32,15 +32,34 @@ var TimelineReact = React.createClass({
 	render() {
 		return (
 			<section className={'filterShow time-filter'}>
-				<div onClick={this.props.handleTimelineFilter} className='timeline-buttons'>
-					<button key={'button-PH'} id={'Prehistoric'}>Prehistoric</button>
-					<button key={'button-A'} id={'Ancient'}>Ancient</button>
-					<button key={'button-MA'} id={'Middle Ages'}>Middle Ages</button>
-					<button key={'button-EA'} id={'Early Modern'}>Early Modern</button>
-					<button key={'button-I'} id={'Industrial'}>Industrial</button>
-					<button key={'button-C'} id={'Contemporary'}>Contemporary</button>
+				<div className='timeline-buttons'>
+					<button 
+						onClick={this.props.handleTimelineFilter} 
+						key={'button-PH'} 
+						id={'Prehistoric'}>Prehistoric</button>
+					<button 
+						onClick={this.props.handleTimelineFilter} 
+						key={'button-A'} 
+						id={'Ancient'}>Ancient</button>
+					<button 
+						onClick={this.props.handleTimelineFilter} 
+						key={'button-MA'} 
+						id={'Middle Ages'}>Middle Ages</button>
+					<button 
+						onClick={this.props.handleTimelineFilter} 
+						key={'button-EA'} 
+						id={'Early Modern'}>Early Modern</button>
+					<button 
+						onClick={this.props.handleTimelineFilter} 
+						key={'button-I'} 
+						id={'Industrial'}>Industrial</button>
+					<button 
+						onClick={this.props.handleTimelineFilter} 
+						key={'button-C'} 
+						id={'Contemporary'}>Contemporary</button>
 				</div>
 				<div className='timeline-filter'></div>
+				<button id='show-time' onClick={this.props.collapse}>collapse</button>
 			</section>
 		)
 	},

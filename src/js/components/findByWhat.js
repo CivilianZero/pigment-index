@@ -2,8 +2,7 @@ var timeConverter = require('./timeConverter.js');
 
 var findByWhat = function(what, stateChose) {
 
-	var args = Array.prototype.slice.call(arguments),
-		isBetween = false;
+	var args = Array.prototype.slice.call(arguments);
 
 	if (what === 'color') {
 		return stateChose.filter(function (p) {
@@ -21,13 +20,15 @@ var findByWhat = function(what, stateChose) {
 
 	if (what === 'time') {
 		return stateChose.filter(function(p) {
-			let start = timeConverter(p.origins.useStart),
+			let isBetween = false,
+				start = timeConverter(p.origins.useStart),
 				end = timeConverter(p.origins.useEnd);
 			for (var i = 2; i < args.length; i++) {
 				if (start <= args[i] && args[i] <= end) {
 					isBetween = true;
 				} else {
 					isBetween = false;
+					break;
 				}
 			}
 			if (isBetween) {

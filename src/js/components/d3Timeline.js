@@ -20,7 +20,7 @@ d3Timeline.create = function(dataset, width) {
 
 	var xScale = d3.scaleLinear()
 		.domain([timeBegin, timeEnd])
-		.range([0, w - 32]);
+		.range([0, w - 33]);
 
 	for (var i = 0; i < dataset.length; i++) {
 		let tempX, 
@@ -42,10 +42,16 @@ d3Timeline.create = function(dataset, width) {
 
 	}
 
+	var axis= d3.axisTop(xScale)
+			.ticks(5);
+
 	var svg = d3.select('.timeline-filter')
 		.append('svg')
 		.attr('height', maxY)
-		.attr('width', '100%');
+		.attr('width', '100%')
+		.append('g')
+		.attr("transform", "translate(0,30)")
+		.call(axis);
 
 	svg.selectAll('rect')
 		.data(dataset)
@@ -93,7 +99,12 @@ d3Timeline.update = function (dataset, width) {
 		.range([0, (w - 31)]);
 
 	var start,
-		end;
+		end,
+		axis = d3.axisTop(xScale)
+			.ticks(6);
+
+	d3.select('svg')
+		.call(axis);
 
 	var resize = function () {
 		w = width;
