@@ -14,11 +14,11 @@ var PigmentSheet = React.createClass({
 
 		if (pigment.origins.sourceDescript) {
 			var pigmentSource = <section>
-									<img src={pigment.images.sourceImg}/>
 									<div className='info'>
 									<h1>Source</h1>
 									<p>{pigment.origins.sourceDescript}</p>
 									</div>
+									<img src={pigment.images.sourceImg}/>
 								</section>
 		}
 

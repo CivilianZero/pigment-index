@@ -1,7 +1,13 @@
 .timeline-filter {
+	display: flex;
+	flex-direction: column;
 	background-color: #fff;
 	padding: 0 1rem 1rem 1rem;
 	border-bottom: 1px solid #ccc;
+}
+
+#collapse-time {
+	order: 1;
 }
 
 .timeline-buttons {
