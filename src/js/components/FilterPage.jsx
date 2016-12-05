@@ -107,7 +107,6 @@ var FilterPage = React.createClass({
 				colors={this.state.colorFilters} 
 				time={this.state.timeFilters}/>
 			buttonsButtons = <div className='show-hide'>
-				<h1>Pigments</h1>
 				<button
 					className={'desktop-buttons'}
 					onClick={this.handleHide} 
