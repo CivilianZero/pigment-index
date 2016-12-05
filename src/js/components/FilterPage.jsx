@@ -189,7 +189,9 @@ var FilterPage = React.createClass({
 
 	handleSelect(e) {
 		this.setState({
-			selectPigment: pigmentStore.get(e.target.id)
+			selectPigment: pigmentStore.get(e.target.id),
+			hideTime: true,
+			hideColor: true
 		});
 	},
 
