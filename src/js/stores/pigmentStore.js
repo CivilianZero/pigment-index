@@ -64,6 +64,7 @@ pigmentStore.add = function(
 		useStart,
 		useEnd,
 		anecdote,
+		author,
 		iconImg,
 		sourceImg,
 		pigImg,
@@ -92,6 +93,7 @@ pigmentStore.add = function(
 				useEnd: useEnd
 			},
 			anecdote: anecdote,
+			author: author,
 			images: {
 				iconImg: iconImg,
 				sourceImg: sourceImg,
@@ -123,6 +125,7 @@ pigmentStore.edit = function (
 		useStart,
 		useEnd,
 		anecdote,
+		author,
 		iconImg,
 		sourceImg,
 		pigImg,
@@ -152,6 +155,7 @@ pigmentStore.edit = function (
 					useEnd: useEnd
 				},
 				anecdote: anecdote,
+				author: author,
 				images: {
 					iconImg: iconImg,
 					sourceImg: sourceImg,
@@ -169,6 +173,8 @@ pigmentStore.edit = function (
 	}
 }
 
-window.index = index;
+// pigmentStore.delete = function() {
+
+// }
 
 module.exports = pigmentStore;

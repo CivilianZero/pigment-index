@@ -26,20 +26,12 @@ var PigmentData = React.createClass({
             editingUseStartValue: '',
             editingUseEndValue: '',
             editingAnecdoteValue: '',
+            editingAuthorValue: '',
             editingIconImgValue: '',
             editingSourceImgValue: '',
             editingPigImgValue: '',
             editingProdImgValue: '',
             editingPrimaryValue: '',
-            editingSecondaryValue: '',
-            editingTertiaryValue: '',
-            editingQuarterValue: '',
-            editingExampleValue: '',
-            editingExTitleValue: '',
-            editingExArtistValue: '',
-            editingExMediumValue: '',
-            editingExDateValue: '',
-            editingExDescriptValue: '',
             editingColorFamilyValue: ''
         };
     },
@@ -175,6 +167,15 @@ var PigmentData = React.createClass({
                                     onChange={this.handleEditingChange}
                                     />
                             </dd>
+                            <dt>Author:</dt>
+                            <dd>
+                                <input
+                                    type="text"
+                                    ref='Author'
+                                    value={this.state.editingAuthorValue}
+                                    onChange={this.handleEditingChange}
+                                    />
+                            </dd>
                             <dt>IconImg:</dt>
                             <dd>
                                 <input
@@ -217,86 +218,6 @@ var PigmentData = React.createClass({
                                     type="text"
                                     ref='Primary'
                                     value={this.state.editingPrimaryValue}
-                                    onChange={this.handleEditingChange}
-                                    />
-                            </dd>
-                            <dt>Secondary:</dt>
-                            <dd>
-                                <input
-                                    type="text"
-                                    ref='Secondary'
-                                    value={this.state.editingSecondaryValue}
-                                    onChange={this.handleEditingChange}
-                                    />
-                            </dd>
-                            <dt>Tertiary:</dt>
-                            <dd>
-                                <input
-                                    type="text"
-                                    ref='Tertiary'
-                                    value={this.state.editingTertiaryValue}
-                                    onChange={this.handleEditingChange}
-                                    />
-                            </dd>
-                            <dt>Quarter:</dt>
-                            <dd>
-                                <input
-                                    type="text"
-                                    ref='Quarter'
-                                    value={this.state.editingQuarterValue}
-                                    onChange={this.handleEditingChange}
-                                    />
-                            </dd>
-                            <dt>Example:</dt>
-                            <dd>
-                                <input
-                                    type="text"
-                                    ref='Example'
-                                    value={this.state.editingExampleValue}
-                                    onChange={this.handleEditingChange}
-                                    />
-                            </dd>
-                            <dt>ExTitle:</dt>
-                            <dd>
-                                <input
-                                    type="text"
-                                    ref='ExTitle'
-                                    value={this.state.editingExTitleValue}
-                                    onChange={this.handleEditingChange}
-                                    />
-                            </dd>
-                            <dt>ExArtist:</dt>
-                            <dd>
-                                <input
-                                    type="text"
-                                    ref='ExArtist'
-                                    value={this.state.editingExArtistValue}
-                                    onChange={this.handleEditingChange}
-                                    />
-                            </dd>
-                            <dt>ExMedium:</dt>
-                            <dd>
-                                <input
-                                    type="text"
-                                    ref='ExMedium'
-                                    value={this.state.editingExMediumValue}
-                                    onChange={this.handleEditingChange}
-                                    />
-                            </dd>
-                            <dt>ExDate:</dt>
-                            <dd>
-                                <input
-                                    type="text"
-                                    ref='ExDate'
-                                    value={this.state.editingExDateValue}
-                                    onChange={this.handleEditingChange}
-                                    />
-                            </dd>
-                            <dt>ExDescript:</dt>
-                            <dd>
-                                <textarea
-                                    ref='ExDescript'
-                                    value={this.state.editingExDescriptValue}
                                     onChange={this.handleEditingChange}
                                     />
                             </dd>
@@ -343,6 +264,8 @@ var PigmentData = React.createClass({
                             <dd>{pigment.origins.useEnd}</dd>
                             <dt>anecdote:</dt>
                             <dd>{pigment.anecdote}</dd>
+                            <dt>author:</dt>
+                            <dd>{pigment.author}</dd>
                             <dt>iconImg:</dt>
                             <dd>{pigment.images.iconImg}</dd>
                             <dt>sourceImg:</dt>
@@ -352,23 +275,6 @@ var PigmentData = React.createClass({
                             <dt>primary:</dt>
                             <dd>{pigment.images.primary}</dd>
                             <dt>secondary:</dt>
-                            <dd>{pigment.images.secondary}</dd>
-                            <dt>tertiary:</dt>
-                            <dd>{pigment.images.tertiary}</dd>
-                            <dt>quarter:</dt>
-                            <dd>{pigment.images.quarter}</dd>
-                            <dt>example:</dt>
-                            <dd>{pigment.example.example}</dd>
-                            <dt>exTitle:</dt>
-                            <dd>{pigment.example.exTitle}</dd>
-                            <dt>exArtist:</dt>
-                            <dd>{pigment.example.exArtist}</dd>
-                            <dt>exMedium:</dt>
-                            <dd>{pigment.example.exMedium}</dd>
-                            <dt>exDate:</dt>
-                            <dd>{pigment.example.exDate}</dd>
-                            <dt>exDescript:</dt>
-                            <dd>{pigment.example.exDescript}</dd>
                             <dt>colorFamily:</dt>
                             <dd>{pigment.colorFamily}</dd>
                         </dl>
@@ -400,20 +306,12 @@ var PigmentData = React.createClass({
             editingUseStartValue: pigment ? pigment.origins.useStart : '',
             editingUseEndValue: pigment ? pigment.origins.useEnd : '',
             editingAnecdoteValue: pigment ? pigment.anecdote : '',
+            editingAuthorValue: pigment ? pigment.author : '',
             editingIconImgValue: pigment ? pigment.images.iconImg : '',
             editingSourceImgValue: pigment ? pigment.images.sourceImg : '',
             editingPigImgValue: pigment ? pigment.images.pigImg : '',
             editingProdImgValue: pigment ? pigment.images.prodImg : '',
             editingPrimaryValue: pigment ? pigment.images.primary : '',
-            editingSecondaryValue: pigment ? pigment.images.secondary : '',
-            editingTertiaryValue: pigment ? pigment.images.tertiary : '',
-            editingQuarterValue: pigment ? pigment.images.quarter : '',
-            editingExampleValue: pigment ? pigment.example.example : '',
-            editingExTitleValue: pigment ? pigment.example.exTitle : '',
-            editingExArtistValue: pigment ? pigment.example.exArtist : '',
-            editingExMediumValue: pigment ? pigment.example.exMedium : '',
-            editingExDateValue: pigment ? pigment.example.exDate : '',
-            editingExDescriptValue: pigment ? pigment.example.exDescript : '',
             editingColorFamilyValue: pigment ? pigment.colorFamily : ''
         });
     },
@@ -439,20 +337,12 @@ var PigmentData = React.createClass({
             editingUseStartValue: this.refs.UseStart.value,
             editingUseEndValue: this.refs.UseEnd.value,
             editingAnecdoteValue: this.refs.Anecdote.value,
+            editingAuthorValue: this.refs.Author.value,
             editingIconImgValue: this.refs.IconImg.value,
             editingSourceImgValue: this.refs.SourceImg.value,
             editingPigImgValue: this.refs.PigImg.value,
             editingProdImgValue: this.refs.ProdImg.value,
             editingPrimaryValue: this.refs.Primary.value,
-            editingSecondaryValue: this.refs.Secondary.value,
-            editingTertiaryValue: this.refs.Tertiary.value,
-            editingQuarterValue: this.refs.Quarter.value,
-            editingExampleValue: this.refs.Example.value,
-            editingExTitleValue: this.refs.ExTitle.value,
-            editingExArtistValue: this.refs.ExArtist.value,
-            editingExMediumValue: this.refs.ExMedium.value,
-            editingExDateValue: this.refs.ExDate.value,
-            editingExDescriptValue: this.refs.ExDescript.value,
             editingColorFamilyValue: this.refs.ColorFamily.value
         });
     },
@@ -476,20 +366,12 @@ var PigmentData = React.createClass({
             this.state.editingUseStartValue,
             this.state.editingUseEndValue,
             this.state.editingAnecdoteValue,
+            this.state.editingAuthorValue,
             this.state.editingIconImgValue,
             this.state.editingSourceImgValue,
             this.state.editingPigImgValue,
             this.state.editingProdImgValue,
             this.state.editingPrimaryValue,
-            this.state.editingSecondaryValue,
-            this.state.editingTertiaryValue,
-            this.state.editingQuarterValue,
-            this.state.editingExampleValue,
-            this.state.editingExTitleValue,
-            this.state.editingExArtistValue,
-            this.state.editingExMediumValue,
-            this.state.editingExDateValue,
-            this.state.editingExDescriptValue,
             this.state.editingColorFamilyValue
         );
     },

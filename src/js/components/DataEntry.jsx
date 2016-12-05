@@ -22,6 +22,7 @@ var DataEntry = React.createClass({
 			useStartValue: '',
 			useEndValue: '',
 			anecdoteValue: '',
+			authorValue: '',
 			iconImgValue: '',
 			sourceImgValue: '',
 			pigImgValue: '',
@@ -125,6 +126,11 @@ var DataEntry = React.createClass({
 					placeholder='anecdote' 
 					onChange={this.handleChange} />
 				<input 
+					ref='author' 
+					value={this.state.authorValue} 
+					placeholder='author' 
+					onChange={this.handleChange} />
+				<input 
 					ref='iconImg' 
 					value={this.state.iconImgValue} 
 					placeholder='iconImg' 
@@ -180,6 +186,7 @@ var DataEntry = React.createClass({
 			this.state.useStartValue,
 			this.state.useEndValue,
 			this.state.anecdoteValue,
+			this.state.authorValue,
 			this.state.iconImgValue,
 			this.state.sourceImgValue,
 			this.state.pigImgValue,
@@ -201,6 +208,7 @@ var DataEntry = React.createClass({
 			useStartValue: '',
 			useEndValue: '',
 			anecdoteValue: '',
+			authorValue: '',
 			iconImgValue: '',
 			sourceImgValue: '',
 			pigImgValue: '',
@@ -225,6 +233,7 @@ var DataEntry = React.createClass({
 			useStartValue: this.refs.useStart.value,
 			useEndValue: this.refs.useEnd.value,
 			anecdoteValue: this.refs.anecdote.value,
+			authorValue: this.refs.author.value,
 			iconImgValue: this.refs.iconImg.value,
 			sourceImgValue: this.refs.sourceImg.value,
 			pigImgValue: this.refs.pigImg.value,

@@ -908,6 +908,62 @@
         "exDescript": ""
       },
       "colorFamily": "purple"
+    },
+    {
+      "id": "rJFPg7mXl",
+      "name": {
+        "common": "this is not a pigment",
+        "pronunc": "",
+        "etym": "",
+        "altNames": ""
+      },
+      "shortDescript": "",
+      "descript": "",
+      "origins": {
+        "source": "",
+        "location": "",
+        "sourceDescript": "",
+        "production": "",
+        "useStart": "",
+        "useEnd": ""
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "",
+        "pigImg": "",
+        "prodImg": "",
+        "primary": ""
+      },
+      "colorFamily": ""
+    },
+    {
+      "id": "BkPCGmQXg",
+      "name": {
+        "common": "giberish",
+        "pronunc": "",
+        "etym": "",
+        "altNames": ""
+      },
+      "shortDescript": "",
+      "descript": "",
+      "origins": {
+        "source": "",
+        "location": "",
+        "sourceDescript": "",
+        "production": "",
+        "useStart": "",
+        "useEnd": ""
+      },
+      "anecdote": "",
+      "images": {
+        "iconImg": "",
+        "sourceImg": "",
+        "pigImg": "",
+        "prodImg": "",
+        "primary": ""
+      },
+      "colorFamily": ""
     }
   ]
 }

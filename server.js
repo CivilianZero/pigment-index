@@ -33,6 +33,7 @@ app.post('/devTools', function (req, res) {
 		useStart = body.origins.useStart,
 		useEnd = body.origins.useEnd,
 		anecdote = body.anecdote,
+		author = body.author,
 		iconImg = body.images.iconImg,
 		sourceImg = body.images.sourceImg,
 		pigImg = body.images.pigImg,
@@ -59,6 +60,7 @@ app.post('/devTools', function (req, res) {
 			useEnd: useEnd
 		},
 		anecdote: anecdote,
+		author: author,
 		images: {
 			iconImg: iconImg,
 			sourceImg: sourceImg,
@@ -107,6 +109,7 @@ app.put('/devTools/:id', function (req, res) {
 		useStart = body.origins.useStart,
 		useEnd = body.origins.useEnd,
 		anecdote = body.anecdote,
+		author = body.author,
 		iconImg = body.images.iconImg,
 		sourceImg = body.images.sourceImg,
 		pigImg = body.images.pigImg,
@@ -133,6 +136,7 @@ app.put('/devTools/:id', function (req, res) {
 				useEnd: useEnd
 			},
 			anecdote: anecdote,
+			author: author,
 			images: {
 				iconImg: iconImg,
 				sourceImg: sourceImg,
