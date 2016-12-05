@@ -5,7 +5,7 @@ var timeConverter = require('./timeConverter.js');
 var d3Timeline = {};
 
 d3Timeline.create = function(dataset, width) {
-	var w = 900 || parseInt(width),
+	var w = parseInt(width),
 		start,
 		end,
 		maxX = 0,
