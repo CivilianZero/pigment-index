@@ -9,8 +9,7 @@ var pigmentStore = require('../stores/pigmentStore.js'),
 	Sidebar = require('./Sidebar.jsx'),
 	timeConverter = require('./timeConverter.js'),
 	filterEverything = require('./filterEverything.js'),
-	SidebarPigmentSheet = require('./SidebarPigmentSheet.jsx'),
-	d3Timeline = require('./d3Timeline.js');
+	SidebarPigmentSheet = require('./SidebarPigmentSheet.jsx');
 
 var FilterPage = React.createClass({
 	
