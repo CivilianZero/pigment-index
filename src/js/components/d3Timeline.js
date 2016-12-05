@@ -5,7 +5,7 @@ var timeConverter = require('./timeConverter.js');
 var d3Timeline = {};
 
 d3Timeline.create = function(dataset, width) {
-	var w = parseInt(width),
+	var w = 900 || parseInt(width),
 		start,
 		end,
 		maxX = 0,
@@ -53,9 +53,11 @@ d3Timeline.create = function(dataset, width) {
 	var svg = d3.select('.timeline-filter')
 		.append('svg')
 		.attr('height', maxY)
-		.attr('width', '100%')
+		.attr('width', '100%');
+
+	d3.select('svg')
 		.append('g')
-		.attr("transform", "translate(0,30)")
+		.attr('class', 'axis')
 		.call(axis);
 
 	svg.selectAll('rect')

@@ -140,7 +140,8 @@ var FilterPage = React.createClass({
 					<section className='search-results'>
 						{buttonsButtons}
 						<section className='filters'>
-							<div className='filterShow color-filter'>
+							<div className='filterShow'>
+								<div className='color-filter'></div>
 								<button 
 									id = 'collapse-color'
 									onClick={this.handleHide}>collapse
