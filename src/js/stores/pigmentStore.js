@@ -69,15 +69,6 @@ pigmentStore.add = function(
 		pigImg,
 		prodImg,
 		primary,
-		secondary,
-		tertiary,
-		quarter,
-		example,
-		exTitle,
-		exArtist,
-		exMedium,
-		exDate,
-		exDescript,
 		colorFamily) 
 {
 	$.ajax({
@@ -107,17 +98,6 @@ pigmentStore.add = function(
 				pigImg: pigImg,
 				prodImg: prodImg,
 				primary: primary,
-				secondary: secondary,
-				tertiary: tertiary,
-				quarter: quarter,
-			},
-			example: {
-				example: example,
-				exTitle: exTitle,
-				exArtist: exArtist,
-				exMedium: exMedium,
-				exDate: exDate,
-				exDescript: exDescript
 			},
 			colorFamily: colorFamily
 		},
@@ -148,15 +128,6 @@ pigmentStore.edit = function (
 		pigImg,
 		prodImg,
 		primary,
-		secondary,
-		tertiary,
-		quarter,
-		example,
-		exTitle,
-		exArtist,
-		exMedium,
-		exDate,
-		exDescript,
 		colorFamily) {
 	var pigment = findById(id);
 	if (pigment) {
@@ -187,17 +158,6 @@ pigmentStore.edit = function (
 					pigImg: pigImg,
 					prodImg: prodImg,
 					primary: primary,
-					secondary: secondary,
-					tertiary: tertiary,
-					quarter: quarter,
-				},
-				example: {
-					example: example,
-					exTitle: exTitle,
-					exArtist: exArtist,
-					exMedium: exMedium,
-					exDate: exDate,
-					exDescript: exDescript
 				},
 				colorFamily: colorFamily
 			},

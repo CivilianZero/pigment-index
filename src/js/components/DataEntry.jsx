@@ -27,15 +27,6 @@ var DataEntry = React.createClass({
 			pigImgValue: '',
 			prodImgValue: '',
 			primaryValue: '',
-			secondaryValue: '',
-			tertiaryValue: '',
-			quarterValue: '',
-			exampleValue: '',
-			exTitleValue: '',
-			exArtistValue: '',
-			exMediumValue: '',
-			exDateValue: '',
-			exDescriptValue: '',
 			colorFamilyValue: ''
 		}
 	},
@@ -164,59 +155,6 @@ var DataEntry = React.createClass({
 					onChange={this.handleChange} />
 				<input 
 					type='text'
-					ref='secondary' 
-					value={this.state.secondaryValue} 
-					placeholder='secondary' 
-					onChange={this.handleChange} />
-				<input 
-					type='text'
-					ref='tertiary' 
-					value={this.state.tertiaryValue} 
-					placeholder='tertiary' 
-					onChange={this.handleChange} />
-				<input 
-					type='text'
-					ref='quarter' 
-					value={this.state.quarterValue} 
-					placeholder='quarter' 
-					onChange={this.handleChange} />
-				<input 
-					type='text'
-					ref='example' 
-					value={this.state.exampleValue} 
-					placeholder='example' 
-					onChange={this.handleChange} />
-				<input 
-					type='text'
-					ref='exTitle' 
-					value={this.state.exTitleValue} 
-					placeholder='exTitle' 
-					onChange={this.handleChange} />
-				<input 
-					type='text'
-					ref='exArtist' 
-					value={this.state.exArtistValue} 
-					placeholder='exArtist' 
-					onChange={this.handleChange} />
-				<input 
-					type='text'
-					ref='exMedium' 
-					value={this.state.exMediumValue} 
-					placeholder='exMedium' 
-					onChange={this.handleChange} />
-				<input 
-					type='text'
-					ref='exDate' 
-					value={this.state.exDateValue} 
-					placeholder='exDate' 
-					onChange={this.handleChange} />
-				<textarea 
-					ref='exDescript' 
-					value={this.state.exDescriptValue} 
-					placeholder='exDescript' 
-					onChange={this.handleChange} />
-				<input 
-					type='text'
 					ref='colorFamily' 
 					value={this.state.colorFamilyValue} 
 					placeholder='colorFamily' 
@@ -247,15 +185,6 @@ var DataEntry = React.createClass({
 			this.state.pigImgValue,
 			this.state.prodImgValue,
 			this.state.primaryValue,
-			this.state.secondaryValue,
-			this.state.tertiaryValue,
-			this.state.quarterValue,
-			this.state.exampleValue,
-			this.state.exTitleValue,
-			this.state.exArtistValue,
-			this.state.exMediumValue,
-			this.state.exDateValue,
-			this.state.exDescriptValue,
 			this.state.colorFamilyValue
 		)
 		this.setState({
@@ -277,15 +206,6 @@ var DataEntry = React.createClass({
 			pigImgValue: '',
 			prodImgValue: '',
 			primaryValue: '',
-			secondaryValue: '',
-			tertiaryValue: '',
-			quarterValue: '',
-			exampleValue: '',
-			exTitleValue: '',
-			exArtistValue: '',
-			exMediumValue: '',
-			exDateValue: '',
-			exDescriptValue: '',
 			colorFamilyValue: ''
 		});
 	},
@@ -310,15 +230,6 @@ var DataEntry = React.createClass({
 			pigImgValue: this.refs.pigImg.value,
 			prodImgValue: this.refs.prodImg.value,
 			primaryValue: this.refs.primary.value,
-			secondaryValue: this.refs.secondary.value,
-			tertiaryValue: this.refs.tertiary.value,
-			quarterValue: this.refs.quarter.value,
-			exampleValue: this.refs.example.value,
-			exTitleValue: this.refs.exTitle.value,
-			exArtistValue: this.refs.exArtist.value,
-			exMediumValue: this.refs.exMedium.value,
-			exDateValue: this.refs.exDate.value,
-			exDescriptValue: this.refs.exDescript.value,
 			colorFamilyValue: this.refs.colorFamily.value
 		});
 	},

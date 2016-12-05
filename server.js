@@ -38,15 +38,6 @@ app.post('/devTools', function (req, res) {
 		pigImg = body.images.pigImg,
 		prodImg = body.images.prodImg,
 		primary = body.images.primary,
-		secondary = body.images.secondary,
-		tertiary = body.images.tertiary,
-		quarter = body.images.quarter,
-		example = body.example.example,
-		exTitle = body.example.exTitle,
-		exArtist = body.example.exArtist,
-		exMedium = body.example.exMedium,
-		exDate = body.example.exDate,
-		exDescript = body.example.exDescript,
 		colorFamily = body.colorFamily;
 
 	let pigment = {
@@ -74,17 +65,6 @@ app.post('/devTools', function (req, res) {
 			pigImg: pigImg,
 			prodImg: prodImg,
 			primary: primary,
-			secondary: secondary,
-			tertiary: tertiary,
-			quarter: quarter,
-		},
-		example: {
-			example: example,
-			exTitle: exTitle,
-			exArtist: exArtist,
-			exMedium: exMedium,
-			exDate: exDate,
-			exDescript: exDescript
 		},
 		colorFamily: colorFamily
 	};
@@ -132,15 +112,6 @@ app.put('/devTools/:id', function (req, res) {
 		pigImg = body.images.pigImg,
 		prodImg = body.images.prodImg,
 		primary = body.images.primary,
-		secondary = body.images.secondary,
-		tertiary = body.images.tertiary,
-		quarter = body.images.quarter,
-		example = body.example.example,
-		exTitle = body.example.exTitle,
-		exArtist = body.example.exArtist,
-		exMedium = body.example.exMedium,
-		exDate = body.example.exDate,
-		exDescript = body.example.exDescript,
 		colorFamily = body.colorFamily;
 		
 	if (pigment.value()) {
@@ -168,17 +139,6 @@ app.put('/devTools/:id', function (req, res) {
 				pigImg: pigImg,
 				prodImg: prodImg,
 				primary: primary,
-				secondary: secondary,
-				tertiary: tertiary,
-				quarter: quarter,
-			},
-			example: {
-				example: example,
-				exTitle: exTitle,
-				exArtist: exArtist,
-				exMedium: exMedium,
-				exDate: exDate,
-				exDescript: exDescript
 			},
 			colorFamily: colorFamily
 		}).value();
