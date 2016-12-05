@@ -1,6 +1,9 @@
 nav {
 	padding: 1rem;
 	text-align: center;
+	.active {
+		font-family: Lato;
+	}
 	a {
 		padding: 1rem;
 		text-decoration: none;
