@@ -34,6 +34,7 @@ var SidebarPigmentSheet = React.createClass({
 						{useStart}
 						{useEnd}
 					</ul>
+					<img src={p.images.iconImg}/>
 					<button onClick={this.props.handleBack}>Go Back</button>
 				</section>
 			</section>

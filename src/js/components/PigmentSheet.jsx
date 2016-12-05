@@ -14,8 +14,11 @@ var PigmentSheet = React.createClass({
 
 		if (pigment.origins.sourceDescript) {
 			var pigmentSource = <section>
+									<img src={pigment.images.sourceImg}/>
+									<div className='info'>
 									<h1>Source</h1>
 									<p>{pigment.origins.sourceDescript}</p>
+									</div>
 								</section>
 		}
 
@@ -24,8 +27,11 @@ var PigmentSheet = React.createClass({
 				var prodImg = <img src={pigment.images.prodImg}/>
 			}
 			var pigmentProd = <section>
+									{prodImg}
+									<div className='info'>
 									<h1>Manufacture</h1>
 									<p>{pigment.origins.production}</p>
+									</div>
 								</section>
 		}
 
@@ -38,8 +44,11 @@ var PigmentSheet = React.createClass({
 		return(
 			<div className='pigment-sheet'>
 				<section>
+					<img src={pigment.images.pigImg}/>
+					<div className='info'>
 					<h1>Description</h1>
 					<p>{pigment.descript}</p>
+					</div>
 				</section>
 				{pigmentQuote}
 				{pigmentSource}
