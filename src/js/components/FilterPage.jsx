@@ -58,7 +58,8 @@ var FilterPage = React.createClass({
 		var colorFamilies = [],
 			numberOfPigs = 0,
 			sidebar,
-			pigmentResult;
+			pigmentResult,
+			buttonsButtons;
 
 		var makesTheColorBars = function(value) {
 			var color = value.colorFamily,
@@ -88,8 +89,10 @@ var FilterPage = React.createClass({
 				id={this.state.selectPigment.id} />;
 			sidebar = <SidebarPigmentSheet
 				key={this.state.selectPigment.id}
-				pigment={this.state.selectPigment}
-				handleBack={this.handleBack}/>;
+				pigment={this.state.selectPigment}/>;
+			buttonsButtons = <div className='show-hide'>
+					<button onClick={this.handleBack}>Back To Pigments</button>
+			</div>
 		} else {
 			pigmentResult = (
 					<PigmentIndex 
@@ -103,18 +106,31 @@ var FilterPage = React.createClass({
 				handler={this.handleRemoveFilter} 
 				colors={this.state.colorFilters} 
 				time={this.state.timeFilters}/>
+			buttonsButtons = <div className='show-hide'>
+				<button
+					className={'desktop-buttons'}
+					onClick={this.handleHide} 
+					id='show-color'>Filter By Color</button>
+				<button
+					className={'desktop-buttons'}
+					onClick={this.handleHide} 
+					id='show-time'>Filter By Period</button>
+			</div>
 		}
 
 
 
 		if (this.state.hideTime && this.state.hideColor) {
 			$('div.bar, .color-filter, .time-filter').addClass('hidden');
+			$('#collapse-color').addClass('hidden');
 		} else if (this.state.hideColor) {
 			$('div.bar, .color-filter').addClass('hidden');
+			$('#collapse-color').addClass('hidden');
 			$('.time-filter').removeClass('hidden');
 		} else if (this.state.hideTime) {
 			$('.time-filter').addClass('hidden');
 			$('div.bar, .color-filter').removeClass('hidden');
+			$('#collapse-color').removeClass('hidden');
 		}
 
 		return (
@@ -122,25 +138,11 @@ var FilterPage = React.createClass({
 				{sidebar}
 				<section className='main-content'>
 					<section className='search-results'>
-						<div className='show-hide'>
-							<button
-								className={'desktop-buttons'}
-								onClick={this.handleHide} 
-								id='show-color'>Filter By Color</button>
-							<button
-								className={'desktop-buttons'}
-								onClick={this.handleHide} 
-								id='show-time'>Filter By Period</button>
-							<button
-								className={'hidden'}
-								// onClick={} 
-								id='mobile-filter-button'>Hide Filters</button>
-						</div>
+						{buttonsButtons}
 						<section className='filters'>
 							<div className='filterShow color-filter'>
 								<button 
-									className = 'hidden'
-									id ='show-color'
+									id = 'collapse-color'
 									onClick={this.handleHide}>collapse
 								</button>
 							</div>
@@ -161,13 +163,16 @@ var FilterPage = React.createClass({
 	},
 
 	handleHide(e) {
-		if (e.target.id === 'show-color') {
-			this.setState({
-				hideColor: !this.state.hideColor,
-				hideTime: true
-			});
+		if (e.target.id === 'show-color' || 
+			e.target.id === 'collapse-color') {
+				this.setState({
+					hideColor: !this.state.hideColor,
+					hideTime: true
+				});
 		} 
-		if (e.target.id === 'show-time') {
+		if (e.target.id === 'show-time' || 
+			e.target.id === 'collapse-time' || 
+			e.target.id === 'collapse-time-mobile') {
 				this.setState({
 					hideTime: !this.state.hideTime,
 					hideColor: true

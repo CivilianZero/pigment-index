@@ -22,6 +22,10 @@ d3Timeline.create = function(dataset, width) {
 		.domain([timeBegin, timeEnd])
 		.range([0, w - 33]);
 
+	var axisScale= d3.scaleLinear()
+		.domain([timeBegin, timeEnd])
+		.range([-5, w-60]);
+
 	for (var i = 0; i < dataset.length; i++) {
 		let tempX, 
 			tempY,
@@ -42,8 +46,9 @@ d3Timeline.create = function(dataset, width) {
 
 	}
 
-	var axis= d3.axisTop(xScale)
-			.ticks(5);
+	var axis= d3.axisBottom(axisScale)
+			.ticks(5)
+			.tickSizeInner(350);
 
 	var svg = d3.select('.timeline-filter')
 		.append('svg')
@@ -98,10 +103,15 @@ d3Timeline.update = function (dataset, width) {
 		.domain([timeBegin, timeEnd])
 		.range([0, (w - 31)]);
 
+	var axisScale= d3.scaleLinear()
+		.domain([timeBegin, timeEnd])
+		.range([-5, w-60]);
+
 	var start,
 		end,
-		axis = d3.axisTop(xScale)
-			.ticks(6);
+		axis= d3.axisBottom(axisScale)
+			.ticks(5)
+			.tickSizeInner(350);
 
 	d3.select('svg')
 		.call(axis);

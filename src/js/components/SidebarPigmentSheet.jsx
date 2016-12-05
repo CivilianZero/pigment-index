@@ -34,7 +34,6 @@ var SidebarPigmentSheet = React.createClass({
 						{useStart}
 						{useEnd}
 					</ul>
-					<button onClick={this.props.handleBack}>Go Back</button>
 				</section>
 			</section>
 		);

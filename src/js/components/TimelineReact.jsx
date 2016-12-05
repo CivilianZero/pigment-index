@@ -57,9 +57,11 @@ var TimelineReact = React.createClass({
 						onClick={this.props.handleTimelineFilter} 
 						key={'button-C'} 
 						id={'Contemporary'}>Contemporary</button>
+					<button id='collapse-time-mobile' onClick={this.props.collapse}>collapse</button>
 				</div>
-				<div className='timeline-filter'></div>
-				<button id='show-time' onClick={this.props.collapse}>collapse</button>
+				<div className='timeline-filter'>
+					<button id='collapse-time' onClick={this.props.collapse}>collapse</button>
+				</div>
 			</section>
 		)
 	},
