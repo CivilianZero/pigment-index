@@ -3,7 +3,8 @@ textarea,
 button {
   display: block;
   margin: 10px 40px;
-  padding: 10px; }
+  padding: 10px; 
+}
 
 .data-entry {
 	display: flex;
@@ -35,7 +36,6 @@ button {
 }
 
 .Pigment {
-	text-transform: uppercase;
 	max-width: 650px;
 	padding: 0 2rem;
 	margin: auto;
@@ -48,6 +48,7 @@ button {
 	}
 	dt {
 		font-family: Lato;
+		text-transform: uppercase;
 	}
 	dd {
 		font-family: LatoLightItalic;

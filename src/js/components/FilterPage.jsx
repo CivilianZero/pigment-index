@@ -91,7 +91,7 @@ var FilterPage = React.createClass({
 				key={this.state.selectPigment.id}
 				pigment={this.state.selectPigment}/>;
 			buttonsButtons = <div className='show-hide'>
-					<button onClick={this.handleBack}>Back To Pigments</button>
+					<button className='back-button' onClick={this.handleBack}>&lt; Back To Pigments</button>
 			</div>
 		} else {
 			pigmentResult = (
