@@ -4,6 +4,9 @@
 	background-color: #fff;
 	padding: 0 1rem 1rem 1rem;
 	border-bottom: 1px solid #ccc;
+	svg {
+		display: none;
+	}
 }
 
 #collapse-time {
@@ -33,7 +36,10 @@
 		}
 }
 
-@media (min-width: 600px) {
+@media (min-width: 780px) {
+	.timeline-filter svg {
+		display: block;
+	}
 	.timeline-buttons {
 		flex-wrap: nowrap;
 		border-bottom: none;

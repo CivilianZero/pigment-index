@@ -1,7 +1,7 @@
 .show-hide {
 	display: flex;
 	justify-content: space-around;
-	border-bottom: 1px solid #ccc;
+	// border-bottom: 1px solid #ccc;
 	button {
 		background-color: #fff;
 		border: none;
@@ -15,6 +15,11 @@
 			opacity: 1;
 		}
 	}
+}
+
+.filterShow {
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
 }
 
 .filters {
