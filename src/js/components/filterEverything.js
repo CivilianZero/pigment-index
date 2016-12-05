@@ -21,7 +21,7 @@ var filterEverything = function(what, target) {
 			timeFilterList.splice(timeFilterList.indexOf(target), 1)
 		}
 	}
-
+	
 	if (timeFilterList.length > 0 && colorFilterList.length > 0) {
 		tempList = findByWhat('time', this.state.pigments, ...timeFilterList);
 		filteredList = findByWhat('color', tempList, ...colorFilterList);

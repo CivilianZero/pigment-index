@@ -24,7 +24,7 @@ d3Timeline.create = function(dataset, width) {
 
 	var axisScale= d3.scaleLinear()
 		.domain([timeBegin, timeEnd])
-		.range([-5, w-60]);
+		.range([-15, w - 75]);
 
 	for (var i = 0; i < dataset.length; i++) {
 		let tempX, 
@@ -103,11 +103,11 @@ d3Timeline.update = function (dataset, width) {
 
 	var xScale = d3.scaleLinear()
 		.domain([timeBegin, timeEnd])
-		.range([0, (w - 31)]);
+		.range([0, w]);
 
 	var axisScale= d3.scaleLinear()
 		.domain([timeBegin, timeEnd])
-		.range([-5, w-60]);
+		.range([0, w-60]);
 
 	var start,
 		end,

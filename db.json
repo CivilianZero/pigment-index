@@ -66,18 +66,7 @@
         "sourceImg": "assets/sources/carmine.jpg",
         "pigImg": "assets/pigments/carmine.jpg",
         "prodImg": "assets/production/carmine.jpg",
-        "primary": "#960018",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "assets/examples/carmine.jpg",
-        "exTitle": "Samson and Delilah",
-        "exArtist": "Peter Paul Rubens",
-        "exMedium": "Oil on Panel",
-        "exDate": "1609",
-        "exDescript": ""
+        "primary": "#960018"
       },
       "colorFamily": "red"
     },

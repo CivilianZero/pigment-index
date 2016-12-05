@@ -9,7 +9,8 @@ var pigmentStore = require('../stores/pigmentStore.js'),
 	Sidebar = require('./Sidebar.jsx'),
 	timeConverter = require('./timeConverter.js'),
 	filterEverything = require('./filterEverything.js'),
-	SidebarPigmentSheet = require('./SidebarPigmentSheet.jsx');
+	SidebarPigmentSheet = require('./SidebarPigmentSheet.jsx'),
+	d3Timeline = require('./d3Timeline.js');
 
 var FilterPage = React.createClass({
 	
@@ -113,12 +114,10 @@ var FilterPage = React.createClass({
 					id='show-color'>Filter By Color</button>
 				<button
 					className={'desktop-buttons'}
-					onClick={this.handleHide} 
+					onClick={this.handleHide}
 					id='show-time'>Filter By Period</button>
 			</div>
 		}
-
-
 
 		if (this.state.hideTime && this.state.hideColor) {
 			$('div.bar, .color-filter, .time-filter').addClass('hidden');
