@@ -22,3 +22,9 @@
 	position: absolute;
 	z-index: 99;
 }
+
+@media (min-width: 600px) {
+	#collapse-time-mobile {
+		display: none;
+	}
+}
