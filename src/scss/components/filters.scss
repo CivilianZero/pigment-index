@@ -17,6 +17,24 @@
 	}
 }
 
+#collapse-time,
+#collapse-color {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	font-family: LatoLight;
+	text-transform: uppercase;
+	max-width: 125px;
+}
+
+#collapse-time {
+	margin-bottom: 0;
+	align-self: center;
+}
+
+#collapse-color {
+	margin: 0 auto 1rem auto;
+}
+
 .filterShow {
 	background-color: #fff;
 	border-bottom: 1px solid #ccc;
