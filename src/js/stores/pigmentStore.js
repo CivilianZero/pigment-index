@@ -173,8 +173,18 @@ pigmentStore.edit = function (
 	}
 }
 
-// pigmentStore.delete = function() {
-
-// }
+pigmentStore.delete = function (id) {
+    var pigment = findById(id);
+    if (pigment) {
+        $.ajax({
+            url: resourceRoot + id,
+            method: 'DELETE',
+            success: function() {
+                index.splice(index.indexOf(pigment), 1);
+                pigmentStore.emit('update');
+            }
+        });
+    }
+}
 
 module.exports = pigmentStore;

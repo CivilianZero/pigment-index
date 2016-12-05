@@ -18,6 +18,7 @@
         "useEnd": ""
       },
       "anecdote": "\"Ultramarine blue is a color illustrious, beautiful, and most perfect, beyond all other colors; one could not say anything about it, or do anything with it, that its quality would not still surpass. And, because of its excellence, I want to discuss it at length, and to show you in detail how it is made. And pay close attention to this, for you will gain great honor and service from it. And let some of that color, combined with gold, which adorns all the works of our profession, whether on wall or on panel, shine forth in every object.\" -Cennini",
+      "author": "",
       "practical": {
         "suitable": "Oil, acrylic, watercolor, gouache, tempera",
         "ratio": "''",
@@ -35,18 +36,7 @@
         "sourceImg": "/assets/sources/ultramarine.jpg",
         "pigImg": "/assets/pigments/ultramarine.jpg",
         "prodImg": "",
-        "primary": "#120a8f",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#120a8f"
       },
       "shortDescript": "Blue pigment from lapis lazuli",
       "colorFamily": "blue"
@@ -70,6 +60,7 @@
         "useEnd": ""
       },
       "anecdote": "",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/carmine.svg",
         "sourceImg": "assets/sources/carmine.jpg",
@@ -109,23 +100,13 @@
         "useEnd": ""
       },
       "anecdote": "",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/lead-white.svg",
         "sourceImg": "/assets/sources/lead-white.jpg",
         "pigImg": "/assets/pigments/lead-white.jpg",
         "prodImg": "",
-        "primary": "#ffffff",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#ffffff"
       },
       "colorFamily": "white"
     },
@@ -148,23 +129,13 @@
         "useEnd": ""
       },
       "anecdote": "",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/orpiment.svg",
         "sourceImg": "/assets/sources/orpiment.jpg",
         "pigImg": "/assets/pigments/orpiment.jpg",
         "prodImg": "",
-        "primary": "#EEBD34",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#EEBD34"
       },
       "colorFamily": "yellow"
     },
@@ -187,23 +158,13 @@
         "useEnd": "Contemporary"
       },
       "anecdote": "",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/indian-yellow.svg",
         "sourceImg": "/assets/sources/indian-yellow.jpg",
         "pigImg": "/assets/pigments/indian-yellow.jpg",
         "prodImg": "",
-        "primary": "#E3A857",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#E3A857"
       },
       "colorFamily": "yellow"
     },
@@ -226,23 +187,13 @@
         "useEnd": ""
       },
       "anecdote": "",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/realgar.svg",
         "sourceImg": "/assets/sources/realgar.jpg",
         "pigImg": "/assets/pigments/realgar.jpg",
         "prodImg": "",
-        "primary": "#ec6722",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#ec6722"
       },
       "colorFamily": "orange"
     },
@@ -265,23 +216,13 @@
         "useEnd": ""
       },
       "anecdote": "",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/cadmium-red.svg",
         "sourceImg": "/assets/sources/cadmium-red.jpg",
         "pigImg": "/assets/pigments/cadmium-red.jpg",
         "prodImg": "",
-        "primary": "#E30022",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#E30022"
       },
       "colorFamily": "red"
     },
@@ -304,23 +245,13 @@
         "useEnd": ""
       },
       "anecdote": "\"The native [cinnabar], which is found in Spain, is hard and stony, as is also that brought from Colchis, which they say is produced in the rocks and on precipices, from which they get it down with darts and arrows\" -Theophrastus",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/vermilion.svg",
         "sourceImg": "/assets/sources/vermilion.jpg",
         "pigImg": "/assets/pigments/vermilion.jpg",
         "prodImg": "",
-        "primary": "#E34234",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#E34234"
       },
       "colorFamily": "red"
     },
@@ -343,23 +274,13 @@
         "useEnd": ""
       },
       "anecdote": "",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/madder-lake.svg",
         "sourceImg": "/assets/sources/madder-lake.jpg",
         "pigImg": "/assets/pigments/madder-lake.jpg",
         "prodImg": "/assets/production/madder-lake.jpg",
-        "primary": "#E32636",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#E32636"
       },
       "colorFamily": "red"
     },
@@ -382,23 +303,13 @@
         "useEnd": ""
       },
       "anecdote": "\"It lies, therefore, coiled up and concealed in the rivers, in wait for the elephants, when they come to drink; upon which it darts out, fastens itself around the trunk, and then fixes its teeth behind the ear, that being the only place which the elephant cannot protect with the trunk. The dragons, it is said, are of such vast size, that they can swallow the whole of the blood; consequently, the elephant, being thus drained of its blood, falls to the earth exhausted; while the dragon, intoxicated with the draught, is crushed beneath it, and so shares its fate.\" -Pliny the Elder",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/dragons-blood.svg",
         "sourceImg": "/assets/sources/dragons-blood.jpg",
         "pigImg": "/assets/pigments/dragons-blood.png",
         "prodImg": "",
-        "primary": "#57110a",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#57110a"
       },
       "colorFamily": "red"
     },
@@ -421,23 +332,13 @@
         "useEnd": ""
       },
       "anecdote": "",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/raw-umber.svg",
         "sourceImg": "/assets/sources/raw-umber.jpg",
         "pigImg": "/assets/pigments/raw-umber.jpg",
         "prodImg": "",
-        "primary": "#826644",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#826644"
       },
       "colorFamily": "brown"
     },
@@ -460,23 +361,13 @@
         "useEnd": ""
       },
       "anecdote": "",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/raw-sienna.svg",
         "sourceImg": "/assets/sources/raw-sienna.jpg",
         "pigImg": "/assets/pigments/raw-sienna.jpg",
         "prodImg": "",
-        "primary": "#882D17",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#882D17"
       },
       "colorFamily": "brown"
     },
@@ -499,23 +390,13 @@
         "useEnd": ""
       },
       "anecdote": "\"I went in behind with my little knife, prospecting at the scar of this pigment, and in this way, I promise you, I never sampled a more lovely and perfect ochre pigment\" - Cennini",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/yellow-ochre.svg",
         "sourceImg": "/assets/sources/yellow-ochre.jpg",
         "pigImg": "/assets/pigments/yellow-ochre.jpg",
         "prodImg": "",
-        "primary": "#CC7722",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#CC7722"
       },
       "colorFamily": "yellow"
     },
@@ -538,23 +419,13 @@
         "useEnd": ""
       },
       "anecdote": "",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/egyptian-blue.svg",
         "sourceImg": "/assets/sources/egyptian-blue.jpg",
         "pigImg": "/assets/pigments/egyptian-blue.jpg",
         "prodImg": "",
-        "primary": "#1034A6",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#1034A6"
       },
       "colorFamily": "blue"
     },
@@ -577,23 +448,13 @@
         "useEnd": ""
       },
       "anecdote": "",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/smalt.svg",
         "sourceImg": "/assets/sources/smalt.jpg",
         "pigImg": "/assets/pigments/smalt.png",
         "prodImg": "",
-        "primary": "#46567b",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#46567b"
       },
       "colorFamily": "blue"
     },
@@ -616,23 +477,13 @@
         "useEnd": ""
       },
       "anecdote": "",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/indigo.svg",
         "sourceImg": "/assets/sources/indigo.jpg",
         "pigImg": "/assets/pigments/indigo.jpg",
         "prodImg": "",
-        "primary": "#083a79",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#083a79"
       },
       "colorFamily": "blue"
     },
@@ -655,23 +506,13 @@
         "useEnd": ""
       },
       "anecdote": "",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/verdigris.svg",
         "sourceImg": "/assets/sources/verdigris.jpg",
         "pigImg": "/assets/pigments/verdigris.jpg",
         "prodImg": "",
-        "primary": "#43b3ae",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#43b3ae"
       },
       "colorFamily": "green"
     },
@@ -694,23 +535,13 @@
         "useEnd": ""
       },
       "anecdote": "",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/malachite.svg",
         "sourceImg": "/assets/sources/malachite.jpg",
         "pigImg": "/assets/pigments/malachite.jpg",
         "prodImg": "",
-        "primary": "#7fc1a6",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#7fc1a6"
       },
       "colorFamily": "green"
     },
@@ -733,23 +564,13 @@
         "useEnd": ""
       },
       "anecdote": "",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/lamp-black.svg",
         "sourceImg": "/assets/sources/lamp-black.jpg",
         "pigImg": "/assets/pigments/lamp-black.jpg",
         "prodImg": "",
-        "primary": "#1b181e",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#1b181e"
       },
       "colorFamily": "black"
     },
@@ -772,23 +593,13 @@
         "useEnd": ""
       },
       "anecdote": "",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/ivory-black.svg",
         "sourceImg": "/assets/sources/ivory-black.jpg",
         "pigImg": "/assets/pigments/ivory-black.jpg",
         "prodImg": "",
-        "primary": "#323141",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#323141"
       },
       "colorFamily": "black"
     },
@@ -811,23 +622,13 @@
         "useEnd": ""
       },
       "anecdote": "",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/sepia.svg",
         "sourceImg": "/assets/sources/sepia.jpg",
         "pigImg": "/assets/pigments/sepia.jpg",
         "prodImg": "",
-        "primary": "#704214",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#704214"
       },
       "colorFamily": "brown"
     },
@@ -850,23 +651,13 @@
         "useEnd": "Contemporary"
       },
       "anecdote": "",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/mummy-brown.svg",
         "sourceImg": "/assets/sources/mummy-brown.jpg",
         "pigImg": "/assets/pigments/mummy-brown.jpg",
         "prodImg": "",
-        "primary": "#473126",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#473126"
       },
       "colorFamily": "brown"
     },
@@ -889,81 +680,15 @@
         "useEnd": ""
       },
       "anecdote": "\"The most favourable season for taking these [shellfish] is after the rising of the Dog-star, or else before spring; for when they have once discharged their waxy secretion, their juices have no consistency: this, however, is a fact unknown in the dyers' workshops, although it is a point of primary importance.\" -Pliny the Elder",
+      "author": "",
       "images": {
         "iconImg": "/assets/icons/tyrian-purple.svg",
         "sourceImg": "/assets/sources/tyrian-purple.jpg",
         "pigImg": "/assets/pigments/tyrian-purple.png",
         "prodImg": "",
-        "primary": "#66023C",
-        "secondary": "",
-        "tertiary": "",
-        "quarter": ""
-      },
-      "example": {
-        "example": "",
-        "exTitle": "",
-        "exArtist": "",
-        "exMedium": "",
-        "exDate": "",
-        "exDescript": ""
+        "primary": "#66023C"
       },
       "colorFamily": "purple"
-    },
-    {
-      "id": "rJFPg7mXl",
-      "name": {
-        "common": "this is not a pigment",
-        "pronunc": "",
-        "etym": "",
-        "altNames": ""
-      },
-      "shortDescript": "",
-      "descript": "",
-      "origins": {
-        "source": "",
-        "location": "",
-        "sourceDescript": "",
-        "production": "",
-        "useStart": "",
-        "useEnd": ""
-      },
-      "anecdote": "",
-      "images": {
-        "iconImg": "",
-        "sourceImg": "",
-        "pigImg": "",
-        "prodImg": "",
-        "primary": ""
-      },
-      "colorFamily": ""
-    },
-    {
-      "id": "BkPCGmQXg",
-      "name": {
-        "common": "giberish",
-        "pronunc": "",
-        "etym": "",
-        "altNames": ""
-      },
-      "shortDescript": "",
-      "descript": "",
-      "origins": {
-        "source": "",
-        "location": "",
-        "sourceDescript": "",
-        "production": "",
-        "useStart": "",
-        "useEnd": ""
-      },
-      "anecdote": "",
-      "images": {
-        "iconImg": "",
-        "sourceImg": "",
-        "pigImg": "",
-        "prodImg": "",
-        "primary": ""
-      },
-      "colorFamily": ""
     }
   ]
 }
