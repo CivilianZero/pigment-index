@@ -34,6 +34,7 @@ var SidebarPigmentSheet = React.createClass({
 						{useStart}
 						{useEnd}
 					</ul>
+					<img src={p.images.iconImg}/>
 				</section>
 			</section>
 		);
