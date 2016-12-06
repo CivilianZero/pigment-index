@@ -24,15 +24,16 @@
 		border: none;
 		font-family: LatoItalic, sans-serif;
 		text-transform: uppercase;
+		text-decoration: underline;
 		font-size: .75rem;
 		margin: 0;
 		cursor: pointer;
-	}
-	button.selected {
+		&:hover {
 			font-family: Lato;
 			font-weight: bold;
 			color: #000;
 		}
+	}
 }
 
 @media (min-width: 780px) {
