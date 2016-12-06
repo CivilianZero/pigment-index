@@ -51,9 +51,8 @@ var Sidebar = React.createClass({
 									artists and scientists have continued to develop pigments 
 									and dyes from an increasing number of sources, 
 									and through ever evolving methods.</p>
-								<p className='directions'>Use Filter By Color to narrow 
-									your search by color and Filter By Period to narrow 
-									your search by period of discovery</p>
+								<p className='directions'>Use the filters to narrow 
+									your search by color and by period of discovery</p>
 							</div>
 		}
 		return (
