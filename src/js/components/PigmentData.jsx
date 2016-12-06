@@ -1,4 +1,5 @@
-var React = require('react');
+var React = require('react'),
+    Link = require('react-router').Link;
 
 var hashHistory = require('react-router').hashHistory;
 
@@ -53,7 +54,7 @@ var PigmentData = React.createClass({
                 content = (
                     <div className="pigment-details">
                         <dl>
-                            <dt>Common:</dt>
+                            <dt>Common Name:</dt>
                             <dd>
                                 <input
                                     type="text"
@@ -62,7 +63,7 @@ var PigmentData = React.createClass({
                                     onChange={this.handleEditingChange}
                                     />
                             </dd>
-                            <dt>Pronunc:</dt>
+                            <dt>Pronunciation:</dt>
                             <dd>
                                 <input
                                     type="text"
@@ -71,7 +72,7 @@ var PigmentData = React.createClass({
                                     onChange={this.handleEditingChange}
                                     />
                             </dd>
-                            <dt>Etym:</dt>
+                            <dt>Etymology:</dt>
                             <dd>
                                 <input
                                     type="text"
@@ -80,7 +81,7 @@ var PigmentData = React.createClass({
                                     onChange={this.handleEditingChange}
                                     />
                             </dd>
-                            <dt>AltNames:</dt>
+                            <dt>Alternate Names:</dt>
                             <dd>
                                 <input
                                     type="text"
@@ -89,7 +90,7 @@ var PigmentData = React.createClass({
                                     onChange={this.handleEditingChange}
                                     />
                             </dd>
-                            <dt>shortDescript:</dt>
+                            <dt>Short Description:</dt>
                             <dd>
                                 <textarea
                                     ref='ShortDescript'
@@ -97,7 +98,7 @@ var PigmentData = React.createClass({
                                     onChange={this.handleEditingChange}
                                     />
                             </dd>
-                            <dt>Descript:</dt>
+                            <dt>Description:</dt>
                             <dd>
                                 <textarea
                                     ref='Descript'
@@ -123,7 +124,7 @@ var PigmentData = React.createClass({
                                     onChange={this.handleEditingChange}
                                     />
                             </dd>
-                            <dt>SourceDescript:</dt>
+                            <dt>Source Description:</dt>
                             <dd>
                                 <input
                                     type="text"
@@ -141,7 +142,7 @@ var PigmentData = React.createClass({
                                     onChange={this.handleEditingChange}
                                     />
                             </dd>
-                            <dt>UseStart:</dt>
+                            <dt>Use Start:</dt>
                             <dd>
                                 <input
                                     type="text"
@@ -150,7 +151,7 @@ var PigmentData = React.createClass({
                                     onChange={this.handleEditingChange}
                                     />
                             </dd>
-                            <dt>UseEnd:</dt>
+                            <dt>Use End:</dt>
                             <dd>
                                 <input
                                     type="text"
@@ -167,7 +168,7 @@ var PigmentData = React.createClass({
                                     onChange={this.handleEditingChange}
                                     />
                             </dd>
-                            <dt>Author:</dt>
+                            <dt>Anecdote Author:</dt>
                             <dd>
                                 <input
                                     type="text"
@@ -176,7 +177,7 @@ var PigmentData = React.createClass({
                                     onChange={this.handleEditingChange}
                                     />
                             </dd>
-                            <dt>IconImg:</dt>
+                            <dt>Icon Image:</dt>
                             <dd>
                                 <input
                                     type="text"
@@ -185,7 +186,7 @@ var PigmentData = React.createClass({
                                     onChange={this.handleEditingChange}
                                     />
                             </dd>
-                            <dt>SourceImg:</dt>
+                            <dt>Source Image:</dt>
                             <dd>
                                 <input
                                     type="text"
@@ -194,7 +195,7 @@ var PigmentData = React.createClass({
                                     onChange={this.handleEditingChange}
                                     />
                             </dd>
-                            <dt>PigImg:</dt>
+                            <dt>Pigment Image:</dt>
                             <dd>
                                 <input
                                     type="text"
@@ -203,7 +204,7 @@ var PigmentData = React.createClass({
                                     onChange={this.handleEditingChange}
                                     />
                             </dd>
-                            <dt>ProdImg:</dt>
+                            <dt>Production Image:</dt>
                             <dd>
                                 <input
                                     type="text"
@@ -212,7 +213,7 @@ var PigmentData = React.createClass({
                                     onChange={this.handleEditingChange}
                                     />
                             </dd>
-                            <dt>Primary:</dt>
+                            <dt>Primary Hex Color:</dt>
                             <dd>
                                 <input
                                     type="text"
@@ -221,7 +222,7 @@ var PigmentData = React.createClass({
                                     onChange={this.handleEditingChange}
                                     />
                             </dd>
-                            <dt>ColorFamily:</dt>
+                            <dt>Color Family:</dt>
                             <dd>
                                 <input
                                     type="text"
@@ -238,46 +239,46 @@ var PigmentData = React.createClass({
                 content = (
                     <div className="Animal-details">
                         <dl>
-                            <dt>common:</dt>
+                            <dt>Common Name:</dt>
                             <dd>{pigment.name.common}</dd>
-                            <dt>pronunc:</dt>
+                            <dt>Pronunciation:</dt>
                             <dd>{pigment.name.pronunc}</dd>
-                            <dt>etym:</dt>
+                            <dt>Etymology:</dt>
                             <dd>{pigment.name.etym}</dd>
-                            <dt>altNames:</dt>
+                            <dt>Alternate Names:</dt>
                             <dd>{pigment.name.altNames}</dd>
-                            <dt>shortDescript:</dt>
+                            <dt>Short Description:</dt>
                             <dd>{pigment.shortDescript}</dd>
-                            <dt>descript:</dt>
+                            <dt>Description:</dt>
                             <dd>{pigment.descript}</dd>
-                            <dt>source:</dt>
+                            <dt>Source:</dt>
                             <dd>{pigment.origins.source}</dd>
-                            <dt>location:</dt>
+                            <dt>Location:</dt>
                             <dd>{pigment.origins.location}</dd>
-                            <dt>sourceDescript:</dt>
+                            <dt>Source Description:</dt>
                             <dd>{pigment.origins.sourceDescript}</dd>
-                            <dt>production:</dt>
+                            <dt>Production:</dt>
                             <dd>{pigment.origins.production}</dd>
-                            <dt>useStart:</dt>
+                            <dt>Use Start:</dt>
                             <dd>{pigment.origins.useStart}</dd>
-                            <dt>useEnd:</dt>
+                            <dt>Use End:</dt>
                             <dd>{pigment.origins.useEnd}</dd>
-                            <dt>anecdote:</dt>
+                            <dt>Anecdote:</dt>
                             <dd>{pigment.anecdote}</dd>
-                            <dt>author:</dt>
+                            <dt>Anecdote Author:</dt>
                             <dd>{pigment.author}</dd>
-                            <dt>iconImg:</dt>
+                            <dt>Icon Image:</dt>
                             <dd>{pigment.images.iconImg}</dd>
-                            <dt>sourceImg:</dt>
+                            <dt>Source Image:</dt>
                             <dd>{pigment.images.sourceImg}</dd>
-                            <dt>pigImg:</dt>
+                            <dt>Pigment Image:</dt>
                             <dd>{pigment.images.pigImg}</dd>
-                            <dt>primary:</dt>
+                            <dt>Primary Hex Color:</dt>
                             <dd>{pigment.images.primary}</dd>
-                            <dt>secondary:</dt>
-                            <dt>colorFamily:</dt>
+                            <dt>Color Family:</dt>
                             <dd>{pigment.colorFamily}</dd>
                         </dl>
+                        <button><Link to='/devTools'>Back</Link></button>
                         <button onClick={this.handleEditClick}>Edit</button>
                         <button onClick={this.handleDeleteClick}>Delete</button>
                     </div>

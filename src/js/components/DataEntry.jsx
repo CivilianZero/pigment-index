@@ -1,8 +1,7 @@
 var React = require('react'),
 	Link = require('react-router').Link;
 
-var pigmentStore = require('../stores/pigmentStore.js'),
-	PigmentData = require('./PigmentData.jsx');
+var pigmentStore = require('../stores/pigmentStore.js');
 
 var DataEntry = React.createClass({
 
@@ -54,116 +53,116 @@ var DataEntry = React.createClass({
 					type='text'
 					ref='common' 
 					value={this.state.commonValue} 
-					placeholder='common' 
+					placeholder='Common Name' 
 					onChange={this.handleChange} />
 				<input 
 					type='text'
 					ref='pronunc' 
 					value={this.state.pronuncValue} 
-					placeholder='pronunc' 
+					placeholder='Pronunciation' 
 					onChange={this.handleChange} />
 				<input 
 					type='text'
 					ref='etym' 
 					value={this.state.etymValue} 
-					placeholder='etym'
+					placeholder='Etymology'
 					onChange={this.handleChange} />
 				<input 
 					type='text'
-					ref='altNames' 
+					ref='Alternate Names' 
 					value={this.state.altNamesValue} 
 					placeholder='altNames' 
 					onChange={this.handleChange} />
 				<textarea 
 					ref='shortDescript' 
 					value={this.state.shortDescriptValue} 
-					placeholder='shortDescript' 
+					placeholder='Short Description' 
 					onChange={this.handleChange} />
 				<textarea 
 					ref='descript' 
 					value={this.state.descriptValue} 
-					placeholder='descript' 
+					placeholder='Description' 
 					onChange={this.handleChange} />
 				<input 
 					type='text'
 					ref='source' 
 					value={this.state.sourceValue} 
-					placeholder='source' 
+					placeholder='Source' 
 					onChange={this.handleChange} />
 				<input 
 					type='text'
 					ref='location' 
 					value={this.state.locationValue} 
-					placeholder='location' 
+					placeholder='Location' 
 					onChange={this.handleChange} />
 				<textarea 
 					type='text'
 					ref='sourceDescript' 
 					value={this.state.sourceDescriptValue} 
-					placeholder='sourceDescript' 
+					placeholder='Source Description' 
 					onChange={this.handleChange} />
 				<input 
 					type='text'
 					ref='production' 
 					value={this.state.productionValue} 
-					placeholder='production' 
+					placeholder='Production' 
 					onChange={this.handleChange} />
 				<input 
 					type='text'
 					ref='useStart' 
 					value={this.state.useStartValue} 
-					placeholder='useStart' 
+					placeholder='Use Start' 
 					onChange={this.handleChange} />
 				<input 
 					type='text'
 					ref='useEnd' 
 					value={this.state.useEndValue} 
-					placeholder='useEnd' 
+					placeholder='Use End' 
 					onChange={this.handleChange} />
 				<textarea 
 					ref='anecdote' 
 					value={this.state.anecdoteValue} 
-					placeholder='anecdote' 
+					placeholder='Anecdote' 
 					onChange={this.handleChange} />
 				<input 
 					ref='author' 
 					value={this.state.authorValue} 
-					placeholder='author' 
+					placeholder='Anecdote Author' 
 					onChange={this.handleChange} />
 				<input 
 					ref='iconImg' 
 					value={this.state.iconImgValue} 
-					placeholder='iconImg' 
+					placeholder='Icon Image' 
 					onChange={this.handleChange} />
 				<input 
 					type='text'
 					ref='sourceImg' 
 					value={this.state.sourceImgValue} 
-					placeholder='sourceImg' 
+					placeholder='Source Image' 
 					onChange={this.handleChange} />
 				<input 
 					type='text'
 					ref='pigImg' 
 					value={this.state.pigImgValue} 
-					placeholder='pigImg' 
+					placeholder='Pigment Image' 
 					onChange={this.handleChange} />
 				<input 
 					type='text'
 					ref='prodImg' 
 					value={this.state.prodImgValue} 
-					placeholder='prodImg' 
+					placeholder='Production Image' 
 					onChange={this.handleChange} />
 				<input 
 					type='text'
 					ref='primary' 
 					value={this.state.primaryValue} 
-					placeholder='primary' 
+					placeholder='Primary Hex Color' 
 					onChange={this.handleChange} />
 				<input 
 					type='text'
 					ref='colorFamily' 
 					value={this.state.colorFamilyValue} 
-					placeholder='colorFamily' 
+					placeholder='Color Family' 
 					onChange={this.handleChange} />
 				<button onClick={this.handleClick}>Submit</button>
 				<ul>{links}</ul>
