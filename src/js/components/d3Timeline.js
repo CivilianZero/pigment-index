@@ -8,15 +8,7 @@ d3Timeline.create = function(dataset, width) {
 	var w = parseInt(width),
 		start,
 		end,
-		maxX = 0,
 		maxY = 0;
-
-	var timeBegin = d3.min(dataset, function(d) {
-		return timeConverter(d.origins.useStart)
-	});
-	var timeEnd = d3.max(dataset, function(d) {
-		return timeConverter(d.origins.useEnd)
-	})
 
 	var xScale = d3.scaleLinear()
 		.domain([0, 28])
@@ -27,19 +19,11 @@ d3Timeline.create = function(dataset, width) {
 		.range([-20, w-30]);
 
 	for (var i = 0; i < dataset.length; i++) {
-		let tempX, 
-			tempY,
-			start = timeConverter(dataset[i].origins.useStart),
-			end = timeConverter(dataset[i].origins.useEnd),
-			x = xScale(start),
+		let tempY,
 			y = i * 15;
 
-		tempX = x + xScale(end - start);
 		tempY = y + 10;
 	
-		if ( tempX >= maxX ) { 
-			maxX = tempX; 
-		}
 		if ( tempY >= maxY ) { 
 			maxY = tempY; 
 		}

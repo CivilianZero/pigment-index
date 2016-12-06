@@ -29,6 +29,11 @@ var Sidebar = React.createClass({
 						onClick={_this.props.handler}
 						id={value} 
 						src='assets/icons/clear_button.svg'/>
+						<div style={
+							{
+								backgroundColor: value
+							}
+						}></div>
 						{value}
 					</li>;
 			})
