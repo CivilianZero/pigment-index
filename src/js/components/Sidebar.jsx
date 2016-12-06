@@ -33,7 +33,7 @@ var Sidebar = React.createClass({
 					</li>;
 			})
 		} else {
-			sidebarContent = <p>This is a paragraph with some words lorem ipsum is for people who</p>
+			sidebarContent = <p>Since before recorded history, humans have been producing colors from natural origins. Through the years, artists and scientists have continued to develop pigments and dyes from an increasing number of sources, and through ever evolving methods.</p>
 		}
 		return (
 			<section className='sidebar'>

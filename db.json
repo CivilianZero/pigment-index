@@ -17,8 +17,8 @@
         "useStart": "Ancient",
         "useEnd": ""
       },
-      "anecdote": "\"Ultramarine blue is a color illustrious, beautiful, and most perfect, beyond all other colors; one could not say anything about it, or do anything with it, that its quality would not still surpass. And, because of its excellence, I want to discuss it at length, and to show you in detail how it is made. And pay close attention to this, for you will gain great honor and service from it. And let some of that color, combined with gold, which adorns all the works of our profession, whether on wall or on panel, shine forth in every object.\" -Cennini",
-      "author": "",
+      "anecdote": "\"Ultramarine blue is a color illustrious, beautiful, and most perfect, beyond all other colors; one could not say anything about it, or do anything with it, that its quality would not still surpass. And, because of its excellence, I want to discuss it at length, and to show you in detail how it is made. And pay close attention to this, for you will gain great honor and service from it. And let some of that color, combined with gold, which adorns all the works of our profession, whether on wall or on panel, shine forth in every object.\"",
+      "author": "- Cennino Cennini",
       "practical": {
         "suitable": "Oil, acrylic, watercolor, gouache, tempera",
         "ratio": "''",
@@ -233,8 +233,8 @@
         "useStart": "Prehistoric",
         "useEnd": ""
       },
-      "anecdote": "\"The native [cinnabar], which is found in Spain, is hard and stony, as is also that brought from Colchis, which they say is produced in the rocks and on precipices, from which they get it down with darts and arrows\" -Theophrastus",
-      "author": "",
+      "anecdote": "\"The native [cinnabar], which is found in Spain, is hard and stony, as is also that brought from Colchis, which they say is produced in the rocks and on precipices, from which they get it down with darts and arrows\"",
+      "author": "- Theophrastus",
       "images": {
         "iconImg": "/assets/icons/vermilion.svg",
         "sourceImg": "/assets/sources/vermilion.jpg",
@@ -253,11 +253,11 @@
         "altNames": "Rose madder"
       },
       "shortDescript": "Red from plant roots",
-      "descript": "Madder has been used as a pigment since the time of the Ancient Egyptians. The production of dyes from the madder plant was an important industry in Europe, where it was used to color color military uniforms, up until the mid-nineteenth century when it was replaced by alizarin crimson.",
+      "descript": "Madder has been used as a pigment since the time of the Ancient Egyptians. The production of dyes from the madder plant was an important industry in Europe, where it was used to color military uniforms, up until the mid-nineteenth century when it was replaced by alizarin crimson.",
       "origins": {
         "source": "Madder plant",
         "location": "Various locations",
-        "sourceDescript": "Madder lake is made from the root of the madder plant (rubia tinctorium). It is said to have been introduced to Europe by Crusaders.",
+        "sourceDescript": "Madder lake is made from the root of the madder plant (rubia tinctorium). It is said to have been introduced to Europe by Crusaders returning from the Holy Land.",
         "production": "Dried madder root and potash are simmered until a deep red liquid is created. Alum is added to the resulting liquid, the excess is poured off and the sediment is allowed to dry. The powder is soaked in water and dried multiple times until the water remains clear. The powder is dried and ground after each washing.",
         "useStart": "Ancient",
         "useEnd": ""
@@ -291,8 +291,8 @@
         "useStart": "Ancient",
         "useEnd": ""
       },
-      "anecdote": "\"It lies, therefore, coiled up and concealed in the rivers, in wait for the elephants, when they come to drink; upon which it darts out, fastens itself around the trunk, and then fixes its teeth behind the ear, that being the only place which the elephant cannot protect with the trunk. The dragons, it is said, are of such vast size, that they can swallow the whole of the blood; consequently, the elephant, being thus drained of its blood, falls to the earth exhausted; while the dragon, intoxicated with the draught, is crushed beneath it, and so shares its fate.\" -Pliny the Elder",
-      "author": "",
+      "anecdote": "\"It lies, therefore, coiled up and concealed in the rivers, in wait for the elephants, when they come to drink; upon which it darts out, fastens itself around the trunk, and then fixes its teeth behind the ear, that being the only place which the elephant cannot protect with the trunk. The dragons, it is said, are of such vast size, that they can swallow the whole of the blood; consequently, the elephant, being thus drained of its blood, falls to the earth exhausted; while the dragon, intoxicated with the draught, is crushed beneath it, and so shares its fate.\"",
+      "author": "- Pliny the Elder",
       "images": {
         "iconImg": "/assets/icons/dragons-blood.svg",
         "sourceImg": "/assets/sources/dragons-blood.jpg",
@@ -378,8 +378,8 @@
         "useStart": "Prehistoric",
         "useEnd": ""
       },
-      "anecdote": "\"I went in behind with my little knife, prospecting at the scar of this pigment, and in this way, I promise you, I never sampled a more lovely and perfect ochre pigment\" - Cennini",
-      "author": "",
+      "anecdote": "\"I went in behind with my little knife, prospecting at the scar of this pigment, and in this way, I promise you, I never sampled a more lovely and perfect ochre pigment\"",
+      "author": "- Cennino Cennini",
       "images": {
         "iconImg": "/assets/icons/yellow-ochre.svg",
         "sourceImg": "/assets/sources/yellow-ochre.jpg",
@@ -668,8 +668,8 @@
         "useStart": "Ancient",
         "useEnd": ""
       },
-      "anecdote": "\"The most favourable season for taking these [shellfish] is after the rising of the Dog-star, or else before spring; for when they have once discharged their waxy secretion, their juices have no consistency: this, however, is a fact unknown in the dyers' workshops, although it is a point of primary importance.\" -Pliny the Elder",
-      "author": "",
+      "anecdote": "\"The most favourable season for taking these [shellfish] is after the rising of the Dog-star, or else before spring; for when they have once discharged their waxy secretion, their juices have no consistency: this, however, is a fact unknown in the dyers' workshops, although it is a point of primary importance.\"",
+      "author": "- Pliny the Elder",
       "images": {
         "iconImg": "/assets/icons/tyrian-purple.svg",
         "sourceImg": "/assets/sources/tyrian-purple.jpg",
