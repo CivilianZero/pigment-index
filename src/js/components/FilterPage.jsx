@@ -121,15 +121,12 @@ var FilterPage = React.createClass({
 
 		if (this.state.hideTime && this.state.hideColor) {
 			$('div.bar, .color-filter, .time-filter').addClass('hidden');
-			$('#collapse-color').addClass('hidden');
 		} else if (this.state.hideColor) {
 			$('div.bar, .color-filter').addClass('hidden');
-			$('#collapse-color').addClass('hidden');
 			$('.time-filter').removeClass('hidden');
 		} else if (this.state.hideTime) {
 			$('.time-filter').addClass('hidden');
 			$('div.bar, .color-filter').removeClass('hidden');
-			$('#collapse-color').removeClass('hidden');
 		}
 
 		return (
@@ -159,20 +156,17 @@ var FilterPage = React.createClass({
 	},
 
 	handleHide(e) {
-		if (e.target.id === 'show-color' || 
-			e.target.id === 'collapse-color') {
-				this.setState({
-					hideColor: !this.state.hideColor,
-					hideTime: true
-				});
+		if (e.target.id === 'show-color') {
+			this.setState({
+				hideColor: !this.state.hideColor,
+				hideTime: true
+			});
 		} 
-		if (e.target.id === 'show-time' || 
-			e.target.id === 'collapse-time' || 
-			e.target.id === 'collapse-time-mobile') {
-				this.setState({
-					hideTime: !this.state.hideTime,
-					hideColor: true
-				});
+		if (e.target.id === 'show-time') {
+			this.setState({
+				hideTime: !this.state.hideTime,
+				hideColor: true
+			});
 		}
 	},
 
