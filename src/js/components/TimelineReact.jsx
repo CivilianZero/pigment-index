@@ -59,7 +59,7 @@ var TimelineReact = React.createClass({
 						id={'Contemporary'}>Contemporary</button>
 				</div>
 				<div className='timeline-filter'>
-					<button id='collapse-time' onClick={this.props.collapse}>collapse</button>
+					
 				</div>
 			</section>
 		)

@@ -141,10 +141,6 @@ var FilterPage = React.createClass({
 						<section className='filters'>
 							<div className='filterShow'>
 								<div className='color-filter'></div>
-								<button 
-									id = 'collapse-color'
-									onClick={this.handleHide}>collapse
-								</button>
 							</div>
 							<TimelineReact
 								collapse={this.handleHide}
