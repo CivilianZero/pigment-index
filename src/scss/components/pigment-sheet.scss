@@ -84,12 +84,20 @@
 			}
 		}
 	}
-	.quote > p {
+	.quote {
 		font-family: CrimsonItalic;
 		text-align: center;
 		margin-top: 0;
 		padding: 1rem 1.5rem 2rem 1.5rem;
 		border-bottom: 1px solid #ccc;
+		p {
+			padding-bottom: 0;
+		}
+		p:last-of-type {
+			text-align: right;
+			padding: 0;
+			margin: 0;
+		}
 	}
 }
 
@@ -122,6 +130,9 @@
 	}
 
 	.pigment-sheet > .quote > p {
-		padding: 1rem 3rem 2rem 3rem;
+		padding: 1rem 3rem 0 3rem;
+		&:last-of-type {
+			padding-right: 3rem;
+		}
 	}
 }

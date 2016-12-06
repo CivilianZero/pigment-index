@@ -38,6 +38,7 @@ var PigmentSheet = React.createClass({
 		if (pigment.anecdote) {
 			var pigmentQuote = <div className='quote'>
 									<p>{pigment.anecdote}</p>
+									<p>{pigment.author}</p>
 								</div>
 		}
 
