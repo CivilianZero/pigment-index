@@ -25,9 +25,10 @@ $serif: Crimson, serif;
 		&:last-of-type {
 			font-family: Lato;
 			color: #777;
+			font-size: .8rem;
 			text-transform: uppercase;
 			text-align: center;
-			
+			padding: 1rem .5rem;
 		}
 	}
 	ul {
@@ -45,7 +46,7 @@ $serif: Crimson, serif;
 			cursor: pointer;
 			img {
 				height: 1.5rem;
-				opacity: .3;
+				opacity: .5;
 				padding-right: .25rem;
 				&:hover {
 					opacity: 1;
@@ -66,6 +67,11 @@ li {
 	&:hover {
 		opacity: 1;
 	}
+}
+
+.color-item div {
+	width: .5rem;
+	margin-right: .25rem;
 }
 
 .search-results {
@@ -128,6 +134,12 @@ li {
 				height: 70vh;
 				overflow: scroll;
 			}
+		}
+	}
+	.filter-list {
+		flex-direction: column;
+		li {
+			padding: .5rem 0;
 		}
 	}
 
