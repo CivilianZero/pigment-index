@@ -38,7 +38,10 @@ var Sidebar = React.createClass({
 					</li>;
 			})
 		} else {
-			sidebarContent = <p>Since before recorded history, humans have been producing colors from natural origins. Through the years, artists and scientists have continued to develop pigments and dyes from an increasing number of sources, and through ever evolving methods.</p>
+			sidebarContent = <div>
+								<p>Since before recorded history, humans have been producing colors from natural origins. Through the years, artists and scientists have continued to develop pigments and dyes from an increasing number of sources, and through ever evolving methods.</p>
+								<p className='directions'>Use the filters to narrow your search by color and period of discovery</p>
+							</div>
 		}
 		return (
 			<section className='sidebar'>
