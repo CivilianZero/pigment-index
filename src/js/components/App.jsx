@@ -33,6 +33,8 @@ var App = React.createClass({
 			<div>
 				<header>
 					<nav>
+						<img src='assets/icons/logo.svg'/>
+						<Link to='/' className={getActiveClass('/')} id='logo'>The Pigment Index</Link>
 						<Link to='/' className={getActiveClass('/')}>Home</Link>
 						{devTools}
 						<Link to='/about' className={getActiveClass('/about')}>About</Link>
