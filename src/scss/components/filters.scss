@@ -16,8 +16,8 @@
 		opacity: .7;
 		&:last-of-type {
 			border-right: none;
-			padding-left: 2.5%;
-			margin-left: 0;
+			padding: .5rem 0 .5rem 2.5%;
+			margin: .5rem 0;
 		}
 		&:hover {
 			opacity: 1;
@@ -54,6 +54,17 @@
 	height: 0;
 	position: absolute;
 	z-index: 99;
+}
+
+@media (max-width: 450px) {
+	.show-hide {
+		justify-content: space-around;
+		button {
+			margin: .5rem 0;
+			padding: .5rem;
+			border: 0;
+		}
+	}
 }
 
 @media (min-width: 600px) {
