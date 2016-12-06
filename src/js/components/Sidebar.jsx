@@ -14,13 +14,24 @@ var Sidebar = React.createClass({
 	render() {
 		var sidebarContent,
 			_this = this,
-			type = 'color-item';
+			type = 'color-item',
+			divColor;
 
 		if (this.state.filterList.length > 0) {
 			sidebarContent = this.state.filterList.map(function(value) {
 				if (typeof value === 'number') {
 					value = timeConverter(value, 'reverse');
 					type = 'time-item'
+				}
+				if(value === 'white') {
+					divColor = {
+						backgroundColor: value,
+						border: '1px solid black'
+					};
+				} else {
+					divColor = {
+						backgroundColor: value
+					};
 				}
 				return <li 
 					key={value} 
@@ -29,16 +40,16 @@ var Sidebar = React.createClass({
 						onClick={_this.props.handler}
 						id={value} 
 						src='assets/icons/clear_button.svg'/>
-						<div style={
-							{
-								backgroundColor: value
-							}
-						}></div>
+						<div style={divColor}></div>
 						{value}
 					</li>;
 			})
 		} else {
-			sidebarContent = <p>Since before recorded history, humans have been producing colors from natural origins. Through the years, artists and scientists have continued to develop pigments and dyes from an increasing number of sources, and through ever evolving methods.</p>
+			sidebarContent = <p>Since before recorded history, 
+				humans have been producing colors from natural origins. 
+				Through the years, artists and scientists have continued to develop 
+				pigments and dyes from an increasing number of sources, 
+				and through ever evolving methods.</p>
 		}
 		return (
 			<section className='sidebar'>

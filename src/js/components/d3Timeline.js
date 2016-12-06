@@ -36,7 +36,7 @@ d3Timeline.create = function(dataset, width) {
 
 	var svg = d3.select('.timeline-filter')
 		.append('svg')
-		.attr('height', maxY + 5)
+		.attr('height', maxY + 10)
 		.attr('width', '100%');
 
 	d3.select('svg')
@@ -56,7 +56,7 @@ d3Timeline.create = function(dataset, width) {
 			return xScale(start);
 		})
 		.attr('y', function(d, i) {
-			return ((i * 15)+2);
+			return ((i * 15)+5);
 		})
 		.attr('fill', function(d) {
 			return d.images.primary;
