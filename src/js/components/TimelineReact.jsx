@@ -30,6 +30,7 @@ var TimelineReact = React.createClass({
 	},
 
 	render() {
+		setTimeout(() => this.updateSize(), 1);
 		return (
 			<section className={'filterShow time-filter'}>
 				<div className='timeline-buttons'>
