@@ -21,14 +21,13 @@ var findByWhat = function(what, stateChose) {
 	if (what === 'time') {
 		return stateChose.filter(function(p) {
 			let isBetween = false,
-				start = timeConverter(p.origins.useStart),
-				end = timeConverter(p.origins.useEnd);
+				start = timeConverter(p.origins.useStart);
 			for (var i = 2; i < args.length; i++) {
-				if (start <= args[i] && args[i] <= end) {
+				if (start === args[i]) {
 					isBetween = true;
+					break;
 				} else {
 					isBetween = false;
-					break;
 				}
 			}
 			if (isBetween) {

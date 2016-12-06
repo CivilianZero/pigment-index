@@ -19,12 +19,12 @@ d3Timeline.create = function(dataset, width) {
 	})
 
 	var xScale = d3.scaleLinear()
-		.domain([timeBegin, timeEnd])
+		.domain([0, 28])
 		.range([0, w - 33]);
 
 	var axisScale= d3.scaleLinear()
-		.domain([timeBegin, timeEnd])
-		.range([-15, w - 75]);
+		.domain([0, 30])
+		.range([-20, w-30]);
 
 	for (var i = 0; i < dataset.length; i++) {
 		let tempX, 
@@ -52,7 +52,7 @@ d3Timeline.create = function(dataset, width) {
 
 	var svg = d3.select('.timeline-filter')
 		.append('svg')
-		.attr('height', maxY)
+		.attr('height', maxY + 5)
 		.attr('width', '100%');
 
 	d3.select('svg')
@@ -72,7 +72,7 @@ d3Timeline.create = function(dataset, width) {
 			return xScale(start);
 		})
 		.attr('y', function(d, i) {
-			return (i * 15);
+			return ((i * 15)+2);
 		})
 		.attr('fill', function(d) {
 			return d.images.primary;
@@ -118,21 +118,18 @@ d3Timeline.update = function (dataset, width) {
 	d3.select('svg')
 		.call(axis);
 
-	var resize = function () {
-		w = width;
-		d3.selectAll('rect')
-			.data(dataset)
-			.attr('x', function(d) {
-				start = timeConverter(d.origins.useStart)
-				return xScale(start);
-			})
-			.attr('width', function(d) {
-				start = timeConverter(d.origins.useStart);
-				end = timeConverter(d.origins.useEnd);
-				return xScale(end - start);
-			});
-	};
-	resize();
+	w = width;
+	d3.selectAll('rect')
+		.data(dataset)
+		.attr('x', function(d) {
+			start = timeConverter(d.origins.useStart)
+			return xScale(start);
+		})
+		.attr('width', function(d) {
+			start = timeConverter(d.origins.useStart);
+			end = timeConverter(d.origins.useEnd);
+			return xScale(end - start);
+		});
 }
 
 module.exports = d3Timeline;

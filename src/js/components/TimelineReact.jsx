@@ -6,7 +6,7 @@ var d3Timeline = require('./d3Timeline');
 var TimelineReact = React.createClass({
 
 	getInitialState() {
-		var calcWidth = $('.filters').css('width')
+		var calcWidth = $('.filters').css('width');
 		return {
 			filteredPigments: this.props.pigments,
 			calcWidth: calcWidth,

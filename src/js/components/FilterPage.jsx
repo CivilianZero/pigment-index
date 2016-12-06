@@ -1,5 +1,6 @@
 var React = require('react'),
-	$ = require('jquery');
+	$ = require('jquery'),
+	TweenMax = require('gsap');
 
 var pigmentStore = require('../stores/pigmentStore.js'),
 	d3Colors = require('./d3Colors.js'),
