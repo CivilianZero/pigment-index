@@ -76,22 +76,15 @@ d3Timeline.create = function(dataset, width) {
 
 d3Timeline.update = function (dataset, width) {
 
-	var timeBegin = d3.min(dataset, function(d) {
-		return timeConverter(d.origins.useStart)
-	});
-	var timeEnd = d3.max(dataset, function(d) {
-		return timeConverter(d.origins.useEnd)
-	})
-
 	var w = parseInt(width);
 
 	var xScale = d3.scaleLinear()
-		.domain([timeBegin, timeEnd])
-		.range([0, w]);
+		.domain([0, 28])
+		.range([0, w - 33]);
 
 	var axisScale= d3.scaleLinear()
-		.domain([timeBegin, timeEnd])
-		.range([0, w-60]);
+		.domain([0, 30])
+		.range([-20, w-30]);
 
 	var start,
 		end,
