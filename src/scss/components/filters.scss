@@ -11,7 +11,6 @@
 		padding: .5rem 2.5% .5rem 1rem;
 		margin: .5rem 0 .5rem 2.5%;
 		border-right: 1px solid #ccc;
-		background-color: #fdfdfd;
 		cursor: pointer;
 		opacity: .7;
 		&:last-of-type {
@@ -46,7 +45,6 @@
 
 .filterShow {
 	background-color: #fff;
-	// border-bottom: 1px solid #ccc;
 }
 
 .filters {
@@ -63,6 +61,9 @@
 			margin: .5rem 0;
 			padding: .5rem;
 			border: 0;
+			&:last-of-type {
+				padding: .5rem;
+			}
 		}
 	}
 }
