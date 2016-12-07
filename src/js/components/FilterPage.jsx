@@ -119,17 +119,17 @@ var FilterPage = React.createClass({
 
 		if (this.state.hideTime && this.state.hideColor) {
 			$('div.bar, .color-filter, .time-filter').addClass('hidden');
-			$('#show-color').html('Filter By Color');
-			$('#show-time').html('Filter By Period');
+			$('#show-color').html('Filter By Color <img id="show-color" class="carat" src="/assets/icons/down-01.svg"/>');
+			$('#show-time').html('Filter By Period <img id="show-time" class="carat" src="/assets/icons/down-01.svg"/>');
 		} else if (this.state.hideColor) {
-			$('#show-color').html('Filter By Color')
+			$('#show-color').html('Filter By Color <img id="show-color" class="carat" src="/assets/icons/down-01.svg"/>')
 			$('div.bar, .color-filter').addClass('hidden');
-			$('#show-time').html('Close Filter');
+			$('#show-time').html('Close Filter <img id="show-time" class="carat" src="assets/icons/up-02.svg"/>');
 			$('.time-filter').removeClass('hidden');
 		} else if (this.state.hideTime) {
-			$('#show-time').html('Filter By Period');
+			$('#show-time').html('Filter By Period <img id="show-time" class="carat" src="/assets/icons/down-01.svg"/>');
 			$('.time-filter').addClass('hidden');
-			$('#show-color').html('Close Filter');
+			$('#show-color').html('Close Filter <img id="show-color" class="carat" src="assets/icons/up-02.svg"/>');
 			$('div.bar, .color-filter').removeClass('hidden');
 		}
 
