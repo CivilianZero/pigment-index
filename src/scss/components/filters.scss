@@ -25,6 +25,7 @@
 }
 
 .desktop-buttons {
+	min-width: 190px;
 	display: flex;
 	img {
 		height: 1.2rem;
@@ -66,6 +67,7 @@
 	.show-hide {
 		justify-content: space-around;
 		button {
+			min-width: 0;
 			margin: .5rem 0;
 			padding: .5rem;
 			border: 0;
@@ -76,7 +78,7 @@
 	}
 	.carat {
 		display: none;
-}
+	}
 
 }
 
