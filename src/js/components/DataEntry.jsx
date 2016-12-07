@@ -69,9 +69,9 @@ var DataEntry = React.createClass({
 					onChange={this.handleChange} />
 				<input 
 					type='text'
-					ref='Alternate Names' 
+					ref='altNames' 
 					value={this.state.altNamesValue} 
-					placeholder='altNames' 
+					placeholder='Alternate Names' 
 					onChange={this.handleChange} />
 				<textarea 
 					ref='shortDescript' 

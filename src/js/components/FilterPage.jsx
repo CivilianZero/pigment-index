@@ -43,8 +43,6 @@ var FilterPage = React.createClass({
 			_this.setState({
 				pigments: pigmentStore.get(),
 				filteredPigments: pigmentStore.get(),
-				colorBackup: pigmentStore.get(),
-				timelineBackup: pigmentStore.get(),
 				selectPigment: null
 			});
 		});

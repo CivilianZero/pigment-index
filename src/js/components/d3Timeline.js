@@ -30,9 +30,9 @@ d3Timeline.create = function(dataset, width) {
 
 	}
 
-	var axis= d3.axisBottom(axisScale)
+	var axis = d3.axisBottom(axisScale)
 			.ticks(5)
-			.tickSizeInner(350);
+			.tickSize(999);
 
 	var svg = d3.select('.timeline-filter')
 		.append('svg')
@@ -42,7 +42,9 @@ d3Timeline.create = function(dataset, width) {
 	d3.select('svg')
 		.append('g')
 		.attr('class', 'axis')
-		.call(axis);
+		.call(axis)
+		.selectAll("text")
+		.remove();
 
 	svg.selectAll('rect')
 		.data(dataset)
@@ -90,10 +92,12 @@ d3Timeline.update = function (dataset, width) {
 		end,
 		axis= d3.axisBottom(axisScale)
 			.ticks(5)
-			.tickSizeInner(350);
+			.tickSizeInner(999);
 
 	d3.select('svg')
-		.call(axis);
+		.call(axis)
+		.selectAll("text")
+		.remove();
 
 	w = width;
 	d3.selectAll('rect')
