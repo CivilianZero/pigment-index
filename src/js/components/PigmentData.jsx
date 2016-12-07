@@ -278,9 +278,11 @@ var PigmentData = React.createClass({
                             <dt>Color Family:</dt>
                             <dd>{pigment.colorFamily}</dd>
                         </dl>
-                        <button><Link to='/devTools'>Back</Link></button>
-                        <button onClick={this.handleEditClick}>Edit</button>
-                        <button onClick={this.handleDeleteClick}>Delete</button>
+                        <div className='edit-buttons'>
+                            <button><Link to='/devTools'>Back</Link></button>
+                            <button onClick={this.handleEditClick}>Edit</button>
+                            <button onClick={this.handleDeleteClick}>Delete</button>
+                        </div>
                     </div>
                 );
             }

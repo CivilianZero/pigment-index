@@ -63,6 +63,7 @@ $serif: Crimson, serif;
 }
 
 li {
+	margin: .25rem;
 	opacity: .7;
 	&:hover {
 		opacity: 1;
@@ -139,7 +140,7 @@ li {
 	.filter-list {
 		flex-direction: column;
 		li {
-			padding: .5rem 0;
+			padding: .25rem 0;
 		}
 	}
 
