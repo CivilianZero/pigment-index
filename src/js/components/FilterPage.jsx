@@ -121,11 +121,17 @@ var FilterPage = React.createClass({
 
 		if (this.state.hideTime && this.state.hideColor) {
 			$('div.bar, .color-filter, .time-filter').addClass('hidden');
+			$('#show-color').html('Filter By Color');
+			$('#show-time').html('Filter By Period');
 		} else if (this.state.hideColor) {
+			$('#show-color').html('Filter By Color')
 			$('div.bar, .color-filter').addClass('hidden');
+			$('#show-time').html('Close Filter');
 			$('.time-filter').removeClass('hidden');
 		} else if (this.state.hideTime) {
+			$('#show-time').html('Filter By Period');
 			$('.time-filter').addClass('hidden');
+			$('#show-color').html('Close Filter');
 			$('div.bar, .color-filter').removeClass('hidden');
 		}
 
