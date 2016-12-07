@@ -124,12 +124,12 @@ var FilterPage = React.createClass({
 		} else if (this.state.hideColor) {
 			$('#show-color').html('Filter By Color <img id="show-color" class="carat" src="/assets/icons/down-01.svg"/>')
 			$('div.bar, .color-filter').addClass('hidden');
-			$('#show-time').html('Close Filter <img id="show-time" class="carat" src="assets/icons/up-02.svg"/>');
+			$('#show-time').html('Filter By Period <img id="show-time" class="carat" src="assets/icons/up-02.svg"/>');
 			$('.time-filter').removeClass('hidden');
 		} else if (this.state.hideTime) {
 			$('#show-time').html('Filter By Period <img id="show-time" class="carat" src="/assets/icons/down-01.svg"/>');
 			$('.time-filter').addClass('hidden');
-			$('#show-color').html('Close Filter <img id="show-color" class="carat" src="assets/icons/up-02.svg"/>');
+			$('#show-color').html('Filter By Color <img id="show-color" class="carat" src="assets/icons/up-02.svg"/>');
 			$('div.bar, .color-filter').removeClass('hidden');
 		}
 
