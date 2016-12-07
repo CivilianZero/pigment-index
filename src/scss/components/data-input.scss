@@ -28,10 +28,27 @@ button {
 	button {
 		background-color: #fff;
 		text-transform: uppercase;
-		font-family: Lato;
+		font-family: LatoLight;
 		border: 1px solid #ccc;
 		max-width: 200px;
 		margin: auto;
+	}
+}
+
+.edit-buttons {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 2rem;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	button {
+		width: 100%;
+	}
+	a {
+		text-decoration: none;
 	}
 }
 
@@ -43,7 +60,7 @@ button {
 		margin: 1rem auto;
 		border: 1px solid #ccc;
 		text-transform: uppercase;
-		font-family: Lato;
+		font-family: LatoLight;
 		background-color: #fff;
 	}
 	dt {
