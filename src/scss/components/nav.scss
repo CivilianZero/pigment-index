@@ -15,6 +15,9 @@ nav {
 		&:hover {
 			opacity: 1;
 		}
+		&:first-of-type {
+			padding: 0;
+		}
 	}
 	img {
 		height: 2rem;
@@ -40,7 +43,7 @@ header {
 	#logo {
 		display: none;
 	}
-	nav img {
+	nav a:first-of-type {
 		margin-right: auto;
 	}
 }
